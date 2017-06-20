@@ -127,7 +127,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="_SaqBAGAGEeatGJv7WGjxOg - rubros_sicapital" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="REPOSITORY"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT ROWNUM \&quot;id\&quot;, TAB1.* FROM (SELECT&#xA;INTERNO_RUBRO,&#xA;1 \&quot;entidad\&quot;,&#xA;CODIGO_NIVEL1||'-'||CODIGO_NIVEL2||'-'||CODIGO_NIVEL3||'-'||CODIGO_NIVEL4||'-'||CODIGO_NIVEL5||'-'|&#xA; |CODIGO_NIVEL6||'-'||CODIGO_NIVEL7||'-'||CODIGO_NIVEL8 CODIGO,&#xA;VIGENCIA AS \&quot;vigencia\&quot;,&#xA;DESCRIPCION AS \&quot;descripcion\&quot;,&#xA;1 \&quot;tipo_plan\&quot;,&#xA;'1' \&quot;administracion\&quot;,&#xA;1 \&quot;estado\&quot;&#xA;FROM PR.PR_V_RUBROS&#xA;ORDER BY VIGENCIA, CODIGO) TAB1&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT ROWNUM \&quot;id\&quot;, TAB1.* FROM (SELECT&#xA;INTERNO_RUBRO,&#xA;1 \&quot;entidad\&quot;,&#xA;CODIGO_NIVEL1||'-'||CODIGO_NIVEL2||'-'||CODIGO_NIVEL3||'-'||CODIGO_NIVEL4||'-'||CODIGO_NIVEL5||'-'|&#xA; |CODIGO_NIVEL6||'-'||CODIGO_NIVEL7||'-'||CODIGO_NIVEL8 AS \&quot;codigo\&quot;,&#xA;VIGENCIA AS \&quot;vigencia\&quot;,&#xA;DESCRIPCION AS \&quot;descripcion\&quot;,&#xA;1 \&quot;tipo_plan\&quot;,&#xA;'1' \&quot;administracion\&quot;,&#xA;1 \&quot;estado\&quot;&#xA;FROM PR.PR_V_RUBROS&#xA;ORDER BY VIGENCIA, 3) TAB1&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -148,7 +148,7 @@
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="entidad"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="CODIGO"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="codigo"/>
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="vigencia"/>
       <elementValue elementRef="TRIM" value="false"/>
@@ -165,15 +165,15 @@
     <elementParameter field="TEXT" name="LABEL" value="rubros_sicapital"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tOracleInput_1">
-      <column comment="" defaultValue="" key="false" length="0" name="id" nullable="true" pattern="" precision="0" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="0" name="id" nullable="true" pattern="" precision="0" sourceType="DEC" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="INTERNO_RUBRO" nullable="false" pattern="" precision="0" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="0" name="entidad" nullable="true" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="87" name="CODIGO" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="4" name="vigencia" nullable="false" pattern="" precision="0" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="0" name="entidad" nullable="true" pattern="" precision="-1" sourceType="DEC" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="87" name="codigo" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="4" name="vigencia" nullable="false" pattern="" precision="0" sourceType="DEC" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="250" name="descripcion" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="0" name="tipo_plan" nullable="true" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="0" name="tipo_plan" nullable="true" pattern="" precision="-1" sourceType="DEC" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="1" name="administracion" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="0" name="estado" nullable="true" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="0" name="estado" nullable="true" pattern="" precision="-1" sourceType="DEC" type="id_Integer" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="160" posY="224">
@@ -199,22 +199,22 @@
       <column comment="" key="false" length="0" name="ESTADO" nullable="true" pattern="" precision="-1" sourceType="DEC" type="id_Integer" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <metadata connector="FLOW" label="salida_postgres" name="salida_postgres">
-      <column comment="" defaultValue="" key="false" length="0" name="id_1" nullable="true" originalDbColumnName="id" pattern="" precision="0" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="0" name="entidad_1" nullable="true" originalDbColumnName="entidad" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="87" name="CODIGO_1" nullable="true" originalDbColumnName="CODIGO" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="4" name="vigencia_1" nullable="false" originalDbColumnName="vigencia" pattern="" precision="0" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="250" name="descripcion_1" nullable="true" originalDbColumnName="descripcion" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="0" name="tipo_plan_1" nullable="true" originalDbColumnName="tipo_plan" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="1" name="administracion_1" nullable="true" originalDbColumnName="administracion" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="0" name="estado_1" nullable="true" originalDbColumnName="estado" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="0" name="id" nullable="true" pattern="" precision="0" sourceType="DEC" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="0" name="entidad" nullable="true" pattern="" precision="-1" sourceType="DEC" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="87" name="codigo" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="4" name="vigencia" nullable="false" pattern="" precision="0" sourceType="DEC" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="250" name="descripcion" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="0" name="tipo_plan" nullable="true" pattern="" precision="-1" sourceType="DEC" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="administracion" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="0" name="estado" nullable="true" pattern="" precision="-1" sourceType="DEC" type="id_Integer" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="MapperData">
       <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="salida_rubro">
-        <mapperTableEntries name="ID" expression="row1.ID  row1.id " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="ID" expression="row1.id " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="ENTIDAD" expression="row1.entidad " type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="CODIGO" expression="row1.CODIGO " type="id_String" nullable="true"/>
+        <mapperTableEntries name="CODIGO" expression="row1.codigo " type="id_String" nullable="true"/>
         <mapperTableEntries name="VIGENCIA" expression="row1.vigencia " type="id_Integer"/>
         <mapperTableEntries name="DESCRIPCION" expression="row1.descripcion" type="id_String" nullable="true"/>
         <mapperTableEntries name="TIPO_PLAN" expression="row1.tipo_plan" type="id_Integer" nullable="true"/>
@@ -222,25 +222,25 @@
         <mapperTableEntries name="ESTADO" expression="row1.estado" type="id_Integer" nullable="true"/>
       </outputTables>
       <outputTables sizeState="INTERMEDIATE" name="salida_postgres">
-        <mapperTableEntries name="id_1" expression="row1.id " type="id_BigDecimal" nullable="true"/>
-        <mapperTableEntries name="entidad_1" expression="row1.entidad " type="id_BigDecimal" nullable="true"/>
-        <mapperTableEntries name="CODIGO_1" expression="row1.CODIGO " type="id_String" nullable="true"/>
-        <mapperTableEntries name="vigencia_1" expression="row1.vigencia " type="id_BigDecimal"/>
-        <mapperTableEntries name="descripcion_1" expression="row1.descripcion " type="id_String" nullable="true"/>
-        <mapperTableEntries name="tipo_plan_1" expression="row1.tipo_plan " type="id_BigDecimal" nullable="true"/>
-        <mapperTableEntries name="administracion_1" expression="row1.administracion " type="id_String" nullable="true"/>
-        <mapperTableEntries name="estado_1" expression="row1.estado " type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="id" expression="row1.id " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="entidad" expression="row1.entidad " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="codigo" expression="row1.codigo " type="id_String" nullable="true"/>
+        <mapperTableEntries name="vigencia" expression="row1.vigencia " type="id_Integer"/>
+        <mapperTableEntries name="descripcion" expression="row1.descripcion " type="id_String" nullable="true"/>
+        <mapperTableEntries name="tipo_plan" expression="row1.tipo_plan " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="administracion" expression="row1.administracion " type="id_String" nullable="true"/>
+        <mapperTableEntries name="estado" expression="row1.estado " type="id_Integer" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row1" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
-        <mapperTableEntries name="id" type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="id" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="INTERNO_RUBRO" type="id_BigDecimal"/>
-        <mapperTableEntries name="entidad" type="id_BigDecimal" nullable="true"/>
-        <mapperTableEntries name="CODIGO" type="id_String" nullable="true"/>
-        <mapperTableEntries name="vigencia" type="id_BigDecimal"/>
+        <mapperTableEntries name="entidad" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="codigo" type="id_String" nullable="true"/>
+        <mapperTableEntries name="vigencia" type="id_Integer"/>
         <mapperTableEntries name="descripcion" type="id_String" nullable="true"/>
-        <mapperTableEntries name="tipo_plan" type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="tipo_plan" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="administracion" type="id_String" nullable="true"/>
-        <mapperTableEntries name="estado" type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="estado" type="id_Integer" nullable="true"/>
       </inputTables>
     </nodeData>
   </node>
@@ -496,42 +496,42 @@
     <elementParameter field="TABLE" name="ADD_COLS"/>
     <elementParameter field="CHECK" name="USE_FIELD_OPTIONS" value="false"/>
     <elementParameter field="TABLE" name="FIELD_OPTIONS" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="id_1"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="id"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="entidad_1"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="entidad"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="CODIGO_1"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="codigo"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="vigencia_1"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="vigencia"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="descripcion_1"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="descripcion"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="tipo_plan_1"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="tipo_plan"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="administracion_1"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="administracion"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="estado_1"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="estado"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
@@ -544,24 +544,24 @@
     <elementParameter field="TEXT" name="LABEL" value="Fabio_Postgres"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="salida_postgres" name="tPostgresqlOutput_1">
-      <column comment="" defaultValue="" key="false" length="0" name="id_1" nullable="true" originalDbColumnName="id" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="0" name="entidad_1" nullable="true" originalDbColumnName="entidad" pattern="" precision="-1" sourceType="NUMERIC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="87" name="CODIGO_1" nullable="true" originalDbColumnName="CODIGO" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="4" name="vigencia_1" nullable="false" originalDbColumnName="vigencia" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="250" name="descripcion_1" nullable="true" originalDbColumnName="descripcion" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="0" name="tipo_plan_1" nullable="true" originalDbColumnName="tipo_plan" pattern="" precision="-1" sourceType="NUMERIC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="1" name="administracion_1" nullable="true" originalDbColumnName="administracion" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="0" name="estado_1" nullable="true" originalDbColumnName="estado" pattern="" precision="-1" sourceType="NUMERIC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="0" name="id" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="0" name="entidad" nullable="true" pattern="" precision="-1" sourceType="INT4" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="87" name="codigo" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="4" name="vigencia" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="250" name="descripcion" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="0" name="tipo_plan" nullable="true" pattern="" precision="-1" sourceType="INT4" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="administracion" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="0" name="estado" nullable="true" pattern="" precision="-1" sourceType="INT4" type="id_Integer" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" label="salida_postgres" name="REJECT">
-      <column comment="" defaultValue="" key="false" length="0" name="id_1" nullable="true" originalDbColumnName="id" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="0" name="entidad_1" nullable="true" originalDbColumnName="entidad" pattern="" precision="-1" sourceType="NUMERIC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="87" name="CODIGO_1" nullable="true" originalDbColumnName="CODIGO" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="4" name="vigencia_1" nullable="false" originalDbColumnName="vigencia" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="250" name="descripcion_1" nullable="true" originalDbColumnName="descripcion" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="0" name="tipo_plan_1" nullable="true" originalDbColumnName="tipo_plan" pattern="" precision="-1" sourceType="NUMERIC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="1" name="administracion_1" nullable="true" originalDbColumnName="administracion" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="0" name="estado_1" nullable="true" originalDbColumnName="estado" pattern="" precision="-1" sourceType="NUMERIC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="0" name="id" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="0" name="entidad" nullable="true" pattern="" precision="-1" sourceType="INT4" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="87" name="codigo" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="4" name="vigencia" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="250" name="descripcion" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="0" name="tipo_plan" nullable="true" pattern="" precision="-1" sourceType="INT4" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="administracion" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="0" name="estado" nullable="true" pattern="" precision="-1" sourceType="INT4" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
@@ -580,35 +580,35 @@
     <elementParameter field="CHECK" name="PRINT_COLNAMES" value="false"/>
     <elementParameter field="CHECK" name="USE_FIXED_LENGTH" value="false"/>
     <elementParameter field="TABLE" name="LENGTHS" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="id_1"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="id"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="entidad_1"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="entidad"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="CODIGO_1"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="codigo"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="vigencia_1"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="vigencia"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="descripcion_1"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="descripcion"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="tipo_plan_1"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="tipo_plan"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="administracion_1"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="administracion"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="estado_1"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="estado"/>
       <elementValue elementRef="LENGTH" value="10"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="salida_postgres" name="tLogRow_3">
-      <column comment="" defaultValue="" key="false" length="0" name="id_1" nullable="true" originalDbColumnName="id" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="0" name="entidad_1" nullable="true" originalDbColumnName="entidad" pattern="" precision="-1" sourceType="NUMERIC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="87" name="CODIGO_1" nullable="true" originalDbColumnName="CODIGO" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="4" name="vigencia_1" nullable="false" originalDbColumnName="vigencia" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="250" name="descripcion_1" nullable="true" originalDbColumnName="descripcion" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="0" name="tipo_plan_1" nullable="true" originalDbColumnName="tipo_plan" pattern="" precision="-1" sourceType="NUMERIC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="1" name="administracion_1" nullable="true" originalDbColumnName="administracion" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="0" name="estado_1" nullable="true" originalDbColumnName="estado" pattern="" precision="-1" sourceType="NUMERIC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="0" name="id" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="0" name="entidad" nullable="true" pattern="" precision="-1" sourceType="INT4" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="87" name="codigo" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="4" name="vigencia" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="250" name="descripcion" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="0" name="tipo_plan" nullable="true" pattern="" precision="-1" sourceType="INT4" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="administracion" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="0" name="estado" nullable="true" pattern="" precision="-1" sourceType="INT4" type="id_Integer" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tOracleInput_1" offsetLabelX="0" offsetLabelY="0" source="tOracleInput_1" target="tMap_3">
@@ -627,7 +627,7 @@
       <elementValue elementRef="TRACE_COLUMN" value="vigencia_1"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="estado_1"/>
+      <elementValue elementRef="TRACE_COLUMN" value="estado"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
       <elementValue elementRef="TRACE_COLUMN" value="entidad_1"/>
@@ -643,6 +643,27 @@
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
       <elementValue elementRef="TRACE_COLUMN" value="descripcion_1"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="vigencia"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="descripcion"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="codigo"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="tipo_plan"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="entidad"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="id"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="administracion"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
