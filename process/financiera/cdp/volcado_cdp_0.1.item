@@ -104,7 +104,7 @@
     <routinesParameter id="_Zej-EGAFEeatGJv7WGjxOg" name="TalendDate"/>
     <routinesParameter id="_ZelMMGAFEeatGJv7WGjxOg" name="TalendString"/>
   </parameters>
-  <node componentName="tOracleInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="160" posY="96">
+  <node componentName="tOracleInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="160" posY="128">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tOracleInput_1" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_SaqBAGAGEeatGJv7WGjxOg" show="false"/>
