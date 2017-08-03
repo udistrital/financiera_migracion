@@ -138,6 +138,8 @@
       <relatedItems xmi:id="_28u--3IHEee6zKWLLFcreg" id="Mathematical" version="Latest" type="routine"/>
       <relatedItems xmi:id="_PZ9JgHINEee6zKWLLFcreg" id="_bk9fEGCjEeatGJv7WGjxOg - dedicacion_persona" version="Latest" type="schema"/>
       <relatedItems xmi:id="_013lAHJHEee6zKWLLFcreg" id="_bk9fEGCjEeatGJv7WGjxOg - estado_disponibilidad" version="Latest" type="schema"/>
+      <relatedItems xmi:id="_mfNFMHecEeeCWu4uBlaHoQ" id="_SaqBAGAGEeatGJv7WGjxOg - solicitud_necesidad_sicapital" version="Latest" type="query"/>
+      <relatedItems xmi:id="_mfNFMXecEeeCWu4uBlaHoQ" id="_SaqBAGAGEeatGJv7WGjxOg - solicitud_cdp_sicapital" version="Latest" type="query"/>
     </ItemsRelations>
     <migrationTask xmi:id="_ZbkUcGAFEeatGJv7WGjxOg" id="org.talend.designer.core.ui.preferences.migration.ChangeMysqlVersionForProjectSetting" breaks="5.2.0" version="5.1.3" status="ok"/>
     <migrationTask xmi:id="_ZbkUcWAFEeatGJv7WGjxOg" id="org.talend.designer.core.ui.preferences.migration.ChangeOracleVersionForProjectSetting" breaks="5.2.0" version="5.2.1" status="ok"/>
