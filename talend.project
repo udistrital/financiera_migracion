@@ -95,10 +95,7 @@
       <relatedItems xmi:id="_SCK7_KhSEeeIG9S70570pw" id="Mathematical" version="Latest" type="routine"/>
       <relatedItems xmi:id="_SCK7_ahSEeeIG9S70570pw" id="Relational" version="Latest" type="routine"/>
       <relatedItems xmi:id="_jQvZgKk-EeeYD8F7pf8Xmw" id="_ili94KkyEeeYD8F7pf8Xmw" version="Latest" type="property"/>
-      <relatedItems xmi:id="_jQvZgak-EeeYD8F7pf8Xmw" id="_bk9fEGCjEeatGJv7WGjxOg" version="Latest" type="property"/>
-      <relatedItems xmi:id="_jQvZgqk-EeeYD8F7pf8Xmw" id="_SaqBAGAGEeatGJv7WGjxOg - rubros_sicapital_plano" version="Latest" type="query"/>
       <relatedItems xmi:id="_jQvZg6k-EeeYD8F7pf8Xmw" id="TalendStringUtil" version="Latest" type="routine"/>
-      <relatedItems xmi:id="_jQvZhKk-EeeYD8F7pf8Xmw" id="_bk9fEGCjEeatGJv7WGjxOg - rubro" version="Latest" type="schema"/>
     </ItemsRelations>
     <ItemsRelations xmi:id="_SCK7_6hSEeeIG9S70570pw">
       <baseItem xmi:id="_SCK8AKhSEeeIG9S70570pw" id="_HHvxMEGFEeeDkv0nwW2QiA" version="0.1" type="job"/>
