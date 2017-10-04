@@ -85,8 +85,6 @@
     <ItemsRelations xmi:id="_SCK78KhSEeeIG9S70570pw">
       <baseItem xmi:id="_SCK78ahSEeeIG9S70570pw" id="_7T518HF3Eee6zKWLLFcreg" version="0.1" type="job"/>
       <relatedItems xmi:id="_SCK78qhSEeeIG9S70570pw" id="_SaqBAGAGEeatGJv7WGjxOg" version="Latest" type="property"/>
-      <relatedItems xmi:id="_SCK786hSEeeIG9S70570pw" id="_SaqBAGAGEeatGJv7WGjxOg - solicitud_necesidad_sicapital" version="Latest" type="query"/>
-      <relatedItems xmi:id="_SCK79KhSEeeIG9S70570pw" id="_SaqBAGAGEeatGJv7WGjxOg - solicitud_cdp_sicapital" version="Latest" type="query"/>
       <relatedItems xmi:id="_SCK79ahSEeeIG9S70570pw" id="_SaqBAGAGEeatGJv7WGjxOg - disponibilidad_sicapital" version="Latest" type="query"/>
       <relatedItems xmi:id="_SCK79qhSEeeIG9S70570pw" id="Numeric" version="Latest" type="routine"/>
       <relatedItems xmi:id="_SCK796hSEeeIG9S70570pw" id="TalendString" version="Latest" type="routine"/>
@@ -96,7 +94,11 @@
       <relatedItems xmi:id="_SCK7-6hSEeeIG9S70570pw" id="TalendDate" version="Latest" type="routine"/>
       <relatedItems xmi:id="_SCK7_KhSEeeIG9S70570pw" id="Mathematical" version="Latest" type="routine"/>
       <relatedItems xmi:id="_SCK7_ahSEeeIG9S70570pw" id="Relational" version="Latest" type="routine"/>
-      <relatedItems xmi:id="_SCK7_qhSEeeIG9S70570pw" id="_bk9fEGCjEeatGJv7WGjxOg - estado_disponibilidad" version="Latest" type="schema"/>
+      <relatedItems xmi:id="_jQvZgKk-EeeYD8F7pf8Xmw" id="_ili94KkyEeeYD8F7pf8Xmw" version="Latest" type="property"/>
+      <relatedItems xmi:id="_jQvZgak-EeeYD8F7pf8Xmw" id="_bk9fEGCjEeatGJv7WGjxOg" version="Latest" type="property"/>
+      <relatedItems xmi:id="_jQvZgqk-EeeYD8F7pf8Xmw" id="_SaqBAGAGEeatGJv7WGjxOg - rubros_sicapital_plano" version="Latest" type="query"/>
+      <relatedItems xmi:id="_jQvZg6k-EeeYD8F7pf8Xmw" id="TalendStringUtil" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_jQvZhKk-EeeYD8F7pf8Xmw" id="_bk9fEGCjEeatGJv7WGjxOg - rubro" version="Latest" type="schema"/>
     </ItemsRelations>
     <ItemsRelations xmi:id="_SCK7_6hSEeeIG9S70570pw">
       <baseItem xmi:id="_SCK8AKhSEeeIG9S70570pw" id="_HHvxMEGFEeeDkv0nwW2QiA" version="0.1" type="job"/>
