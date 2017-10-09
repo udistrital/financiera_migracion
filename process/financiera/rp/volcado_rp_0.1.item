@@ -300,7 +300,7 @@
         <mapperTableEntries name="estado" type="id_Short"/>
         <mapperTableEntries name="numero_registro_presupuestal" expression="row1.NUMERO_REGISTRO " type="id_Integer"/>
         <mapperTableEntries name="compromiso" expression="row1.NUMERO_COMPROMISO " type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="beneficiario" expression="" type="id_Integer"/>
+        <mapperTableEntries name="beneficiario" expression="row3.NUMERO_DOCUMENTO " type="id_Integer"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row1" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="VIGENCIA" type="id_BigDecimal"/>
@@ -321,14 +321,14 @@
         <mapperTableEntries name="ID_LIMAY_RESERVA" type="id_BigDecimal" nullable="true"/>
         <mapperTableEntries name="MOD_SEL" type="id_String" nullable="true"/>
       </inputTables>
-      <inputTables sizeState="INTERMEDIATE" name="row3" matchingMode="ALL_ROWS" lookupMode="LOAD_ONCE">
-        <mapperTableEntries name="VIGENCIA" type="id_BigDecimal"/>
-        <mapperTableEntries name="CODIGO_COMPANIA" type="id_String"/>
-        <mapperTableEntries name="CODIGO_UNIDAD_EJECUTORA" type="id_String"/>
-        <mapperTableEntries name="NUMERO_REGISTRO" type="id_BigDecimal"/>
-        <mapperTableEntries name="NUMERO_COMPROMISO" type="id_BigDecimal"/>
+      <inputTables sizeState="INTERMEDIATE" name="row3" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="VIGENCIA" expression="row1.VIGENCIA " type="id_BigDecimal" operator="="/>
+        <mapperTableEntries name="CODIGO_COMPANIA" expression="row1.CODIGO_COMPANIA " type="id_String" operator="="/>
+        <mapperTableEntries name="CODIGO_UNIDAD_EJECUTORA" expression="row1.CODIGO_UNIDAD_EJECUTORA " type="id_String" operator="="/>
+        <mapperTableEntries name="NUMERO_REGISTRO" expression="row1.NUMERO_REGISTRO " type="id_BigDecimal" operator="="/>
+        <mapperTableEntries name="NUMERO_COMPROMISO" expression="row1.NUMERO_COMPROMISO " type="id_BigDecimal" operator="="/>
         <mapperTableEntries name="TIPO_COMPROMISO" type="id_String"/>
-        <mapperTableEntries name="NUMERO_DOCUMENTO" type="id_String"/>
+        <mapperTableEntries name="NUMERO_DOCUMENTO" expression="" type="id_String"/>
         <mapperTableEntries name="TIPO_DOCUMENTO" type="id_String"/>
         <mapperTableEntries name="ORIGEN" type="id_BigDecimal"/>
         <mapperTableEntries name="OBJETO" type="id_String"/>
