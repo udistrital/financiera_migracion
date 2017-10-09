@@ -205,6 +205,24 @@
       <relatedItems xmi:id="_37o0w6q-EeeYD8F7pf8Xmw" id="_SaqBAGAGEeatGJv7WGjxOg - cdp_rubros_sicapital" version="Latest" type="query"/>
       <relatedItems xmi:id="_Ji9bUKrAEeeYD8F7pf8Xmw" id="_SaqBAGAGEeatGJv7WGjxOg - rubros_sicapital_plano" version="Latest" type="query"/>
     </ItemsRelations>
+    <ItemsRelations xmi:id="_TlmT0K0DEeeYoJpXA1f6Kg">
+      <baseItem xmi:id="_TlmT0a0DEeeYoJpXA1f6Kg" id="_b7FxYKz-EeeYoJpXA1f6Kg" version="0.1" type="job"/>
+      <relatedItems xmi:id="_TlmT0q0DEeeYoJpXA1f6Kg" id="Numeric" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_TlmT060DEeeYoJpXA1f6Kg" id="Relational" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_TlmT1K0DEeeYoJpXA1f6Kg" id="TalendString" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_TlmT1a0DEeeYoJpXA1f6Kg" id="TalendStringUtil" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_TlmT1q0DEeeYoJpXA1f6Kg" id="DataOperation" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_TlmT160DEeeYoJpXA1f6Kg" id="StringHandling" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_TlmT2K0DEeeYoJpXA1f6Kg" id="TalendDataGenerator" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_TlmT2a0DEeeYoJpXA1f6Kg" id="TalendDate" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_TlmT2q0DEeeYoJpXA1f6Kg" id="Mathematical" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_prClUK0hEee2I8fVwbIt8Q" id="_ili94KkyEeeYD8F7pf8Xmw" version="Latest" type="property"/>
+      <relatedItems xmi:id="_prClUa0hEee2I8fVwbIt8Q" id="_SaqBAGAGEeatGJv7WGjxOg" version="Latest" type="property"/>
+      <relatedItems xmi:id="_prClUq0hEee2I8fVwbIt8Q" id="_bk9fEGCjEeatGJv7WGjxOg" version="Latest" type="property"/>
+      <relatedItems xmi:id="_prClU60hEee2I8fVwbIt8Q" id="_SaqBAGAGEeatGJv7WGjxOg - rp_sicapital" version="Latest" type="query"/>
+      <relatedItems xmi:id="_prClVK0hEee2I8fVwbIt8Q" id="_bk9fEGCjEeatGJv7WGjxOg - registro_presupuestal" version="Latest" type="schema"/>
+      <relatedItems xmi:id="_X7FmMK0rEee2I8fVwbIt8Q" id="_SaqBAGAGEeatGJv7WGjxOg - compromisos_sicapital" version="Latest" type="query"/>
+    </ItemsRelations>
     <migrationTask xmi:id="_ZbkUcGAFEeatGJv7WGjxOg" id="org.talend.designer.core.ui.preferences.migration.ChangeMysqlVersionForProjectSetting" breaks="5.2.0" version="5.1.3" status="ok"/>
     <migrationTask xmi:id="_ZbkUcWAFEeatGJv7WGjxOg" id="org.talend.designer.core.ui.preferences.migration.ChangeOracleVersionForProjectSetting" breaks="5.2.0" version="5.2.1" status="ok"/>
     <migrationTask xmi:id="_ZbkUcmAFEeatGJv7WGjxOg" id="org.talend.designer.maven.ui.ConfigMavenRepositoryRemove" breaks="6.0.1" version="6.0.2" status="ok"/>
