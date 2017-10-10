@@ -220,8 +220,8 @@
       <relatedItems xmi:id="_prClUa0hEee2I8fVwbIt8Q" id="_SaqBAGAGEeatGJv7WGjxOg" version="Latest" type="property"/>
       <relatedItems xmi:id="_prClUq0hEee2I8fVwbIt8Q" id="_bk9fEGCjEeatGJv7WGjxOg" version="Latest" type="property"/>
       <relatedItems xmi:id="_prClU60hEee2I8fVwbIt8Q" id="_SaqBAGAGEeatGJv7WGjxOg - rp_sicapital" version="Latest" type="query"/>
-      <relatedItems xmi:id="_prClVK0hEee2I8fVwbIt8Q" id="_bk9fEGCjEeatGJv7WGjxOg - registro_presupuestal" version="Latest" type="schema"/>
       <relatedItems xmi:id="_X7FmMK0rEee2I8fVwbIt8Q" id="_SaqBAGAGEeatGJv7WGjxOg - compromisos_sicapital" version="Latest" type="query"/>
+      <relatedItems xmi:id="_W3ev4K32Eee2I8fVwbIt8Q" id="_bk9fEGCjEeatGJv7WGjxOg - disponibilidad" version="Latest" type="schema"/>
     </ItemsRelations>
     <ItemsRelations xmi:id="_eTvdMK3iEee2I8fVwbIt8Q">
       <baseItem xmi:id="_eTvdMa3iEee2I8fVwbIt8Q" id="_1Yb9UK3hEee2I8fVwbIt8Q" version="0.1" type="job"/>
