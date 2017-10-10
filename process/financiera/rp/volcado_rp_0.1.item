@@ -128,7 +128,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="_SaqBAGAGEeatGJv7WGjxOg - rp_sicapital" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="REPOSITORY"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT * FROM PR.PR_REGISTRO_PRESUPUESTAL&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT * &#xA; FROM PR.PR_REGISTRO_PRESUPUESTAL WHERE VIGENCIA = 2017 AND CODIGO_UNIDAD_EJECUTORA = '01' AND &#xA; NUMERO_REGISTRO IN (5574,&#xA;5575,&#xA;5576,&#xA;5577,&#xA;5578,&#xA;5579,&#xA;5580,&#xA;5581,&#xA;5582,&#xA;5583,&#xA;5584,&#xA;5585,&#xA;5451,&#xA;5586,&#xA;5587,&#xA;5588,&#xA;5589,&#xA;5590,&#xA;5591,&#xA;5592,&#xA;5593,&#xA;5594,&#xA;5595,&#xA;5596,&#xA;5597,&#xA;5598,&#xA;5599,&#xA;5600,&#xA;5601,&#xA;5602,&#xA;5603,&#xA;5604,&#xA;5605,&#xA;5606,&#xA;5607,&#xA;5608,&#xA;5609,&#xA;6396,&#xA;5612,&#xA;5613,&#xA;6335,&#xA;6336,&#xA;6337,&#xA;6338,&#xA;6793,&#xA;6794,&#xA;6795,&#xA;6796,&#xA;6797,&#xA;7292,&#xA;7293,&#xA;7302,&#xA;7294,&#xA;7295,&#xA;7448,&#xA;6339,&#xA;6340,&#xA;6341,&#xA;6342,&#xA;6343,&#xA;6344,&#xA;6345,&#xA;6346,&#xA;6347,&#xA;6348,&#xA;6791,&#xA;6798,&#xA;6799,&#xA;6800,&#xA;6801,&#xA;6802,&#xA;6803,&#xA;7492,&#xA;6804,&#xA;6805,&#xA;6806,&#xA;6874,&#xA;6911,&#xA;6809,&#xA;6810,&#xA;6811,&#xA;6812,&#xA;6813,&#xA;6814,&#xA;6815,&#xA;6816,&#xA;6351,&#xA;6352,&#xA;6353,&#xA;6354,&#xA;6355,&#xA;6356,&#xA;6357,&#xA;6358,&#xA;6359,&#xA;6360,&#xA;6361,&#xA;6792,&#xA;6363,&#xA;6364,&#xA;6365,&#xA;6818,&#xA;6819,&#xA;6366,&#xA;6367,&#xA;6368,&#xA;6820,&#xA;7296,&#xA;6369,&#xA;6370,&#xA;6371,&#xA;6372,&#xA;6373,&#xA;6374,&#xA;6375,&#xA;6376,&#xA;6377,&#xA;6378,&#xA;6379,&#xA;6380,&#xA;6381,&#xA;6382,&#xA;6827,&#xA;6383,&#xA;6384,&#xA;6385,&#xA;6386,&#xA;6821,&#xA;6388,&#xA;6389,&#xA;6390,&#xA;6391,&#xA;6822,&#xA;6823,&#xA;6824,&#xA;6349,&#xA;6350,&#xA;6817,&#xA;6392,&#xA;6393,&#xA;6394,&#xA;6395,&#xA;6825,&#xA;6826,&#xA;6917,&#xA;5417,&#xA;5418,&#xA;5435,&#xA;6397,&#xA;5436,&#xA;5437,&#xA;5438,&#xA;5439,&#xA;5440,&#xA;5441,&#xA;5442,&#xA;5443,&#xA;5444,&#xA;5445,&#xA;5446,&#xA;5447,&#xA;5448,&#xA;5449,&#xA;5450,&#xA;5452,&#xA;5453,&#xA;5454,&#xA;5455,&#xA;5456,&#xA;5457,&#xA;5458,&#xA;5459,&#xA;5460,&#xA;6398,&#xA;5461,&#xA;6477,&#xA;5462,&#xA;5463,&#xA;5464,&#xA;5465,&#xA;5466,&#xA;5467,&#xA;5468,&#xA;6399,&#xA;6476,&#xA;6400,&#xA;6830,&#xA;7218,&#xA;7245,&#xA;7246,&#xA;7422,&#xA;7367,&#xA;5419,&#xA;5420,&#xA;5421,&#xA;5422,&#xA;5423,&#xA;5469,&#xA;5470,&#xA;5471,&#xA;5472,&#xA;5473,&#xA;5474,&#xA;5475,&#xA;5476,&#xA;5477,&#xA;5478,&#xA;5479,&#xA;5480,&#xA;5481,&#xA;5482,&#xA;5483,&#xA;5484,&#xA;5424,&#xA;5425,&#xA;5426,&#xA;5485,&#xA;5486,&#xA;7217,&#xA;5487,&#xA;5488,&#xA;5489,&#xA;6478,&#xA;5490,&#xA;5491,&#xA;5492,&#xA;5493,&#xA;5494,&#xA;5495,&#xA;5496,&#xA;5497,&#xA;5498,&#xA;5499,&#xA;5500,&#xA;5501,&#xA;5502,&#xA;5503,&#xA;5504,&#xA;5505,&#xA;5506,&#xA;5507,&#xA;5508,&#xA;5509,&#xA;5510,&#xA;5511,&#xA;5512,&#xA;5513,&#xA;5514,&#xA;5515,&#xA;5516,&#xA;5517,&#xA;6491,&#xA;5538,&#xA;7410,&#xA;5427,&#xA;5428,&#xA;5429,&#xA;5430,&#xA;5518,&#xA;5519,&#xA;5520,&#xA;5521,&#xA;5522,&#xA;5523,&#xA;5524,&#xA;5525,&#xA;5526,&#xA;5527,&#xA;5528,&#xA;5529,&#xA;5530,&#xA;5531,&#xA;5532,&#xA;5533,&#xA;5534,&#xA;5535,&#xA;5536,&#xA;5537,&#xA;5431,&#xA;5432,&#xA;5433,&#xA;5434,&#xA;5539,&#xA;5540,&#xA;5541,&#xA;5542,&#xA;5543,&#xA;5544,&#xA;5545,&#xA;5546,&#xA;5547,&#xA;5548,&#xA;5549,&#xA;5550,&#xA;5551,&#xA;5552,&#xA;5553,&#xA;6828,&#xA;5554,&#xA;5555,&#xA;5556,&#xA;5557,&#xA;5558,&#xA;5559,&#xA;5560,&#xA;5561,&#xA;5562,&#xA;5563,&#xA;5564,&#xA;7366,&#xA;5565,&#xA;5566,&#xA;5567,&#xA;5568,&#xA;5569,&#xA;5570,&#xA;5571,&#xA;5572,&#xA;5573,&#xA;7280,&#xA;6311,&#xA;6312,&#xA;6313,&#xA;6314,&#xA;6315,&#xA;6316,&#xA;6317,&#xA;6318,&#xA;6319,&#xA;6320,&#xA;6321,&#xA;6479,&#xA;6480,&#xA;6481,&#xA;7457,&#xA;6482,&#xA;6483,&#xA;6490,&#xA;6484,&#xA;6861,&#xA;6862,&#xA;6864,&#xA;6865,&#xA;7425,&#xA;6322,&#xA;6323,&#xA;6324,&#xA;6326,&#xA;6327,&#xA;7289,&#xA;6328,&#xA;6485,&#xA;6486,&#xA;7290,&#xA;6308,&#xA;6309,&#xA;6310,&#xA;6860,&#xA;7282,&#xA;7283,&#xA;7284,&#xA;7285,&#xA;7287,&#xA;7288,&#xA;7455,&#xA;7456,&#xA;7451,&#xA;7452,&#xA;7453,&#xA;6329,&#xA;6330,&#xA;6331,&#xA;6332,&#xA;6333,&#xA;6334,&#xA;6866,&#xA;6325)&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -212,9 +212,9 @@
       <column comment="" defaultValue="" key="false" length="4" name="VIGENCIA" nullable="false" pattern="" precision="0" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="3" name="CODIGO_COMPANIA" nullable="false" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="2" name="CODIGO_UNIDAD_EJECUTORA" nullable="false" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="6" name="NUMERO_REGISTRO" nullable="false" pattern="" precision="0" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="6" name="NUMERO_REGISTRO" nullable="false" pattern="" precision="0" sourceType="DEC" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="6" name="NUMERO_DISPONIBILIDAD" nullable="false" pattern="" precision="0" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="16" name="NUMERO_COMPROMISO" nullable="false" pattern="" precision="0" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="16" name="NUMERO_COMPROMISO" nullable="false" pattern="" precision="0" sourceType="DEC" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="30" name="TIPO_COMPROMISO" nullable="false" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="FECHA_REGISTRO" nullable="false" pattern="" precision="0" sourceType="DATE" type="id_Date" originalLength="-1" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="1" name="TIPO_MOVIMIENTO" nullable="false" pattern="" precision="0" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
@@ -287,6 +287,7 @@
       <column comment="referencia el id del beneficiario del rp (id_proveedor)" key="false" length="10" name="beneficiario" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value="referencia el id del beneficiario del rp (id_proveedor)"/>
       </column>
+      <column comment="" key="false" length="-1" name="cdp" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <additionalProperties key="Comment" value=""/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
@@ -296,19 +297,20 @@
         <mapperTableEntries name="id_solicitud" expression="Numeric.sequence(&quot;1&quot;,1,1) " type="id_Integer"/>
         <mapperTableEntries name="vigencia" expression="row1.VIGENCIA " type="id_BigDecimal"/>
         <mapperTableEntries name="fecha_registro" expression="row1.FECHA_REGISTRO " type="id_Date"/>
-        <mapperTableEntries name="responsable" expression="" type="id_Integer"/>
-        <mapperTableEntries name="estado" type="id_Short"/>
+        <mapperTableEntries name="responsable" expression="1" type="id_Integer"/>
+        <mapperTableEntries name="estado" expression="1" type="id_Short"/>
         <mapperTableEntries name="numero_registro_presupuestal" expression="row1.NUMERO_REGISTRO " type="id_Integer"/>
-        <mapperTableEntries name="compromiso" expression="row1.NUMERO_COMPROMISO " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="compromiso" expression="(10000*row1.NUMERO_COMPROMISO)+  row1.NUMERO_REGISTRO " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="beneficiario" expression="row3.NUMERO_DOCUMENTO " type="id_Integer"/>
+        <mapperTableEntries name="cdp" type="id_Integer" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row1" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="VIGENCIA" type="id_BigDecimal"/>
         <mapperTableEntries name="CODIGO_COMPANIA" type="id_String"/>
         <mapperTableEntries name="CODIGO_UNIDAD_EJECUTORA" type="id_String"/>
-        <mapperTableEntries name="NUMERO_REGISTRO" type="id_BigDecimal"/>
+        <mapperTableEntries name="NUMERO_REGISTRO" type="id_Integer"/>
         <mapperTableEntries name="NUMERO_DISPONIBILIDAD" type="id_BigDecimal"/>
-        <mapperTableEntries name="NUMERO_COMPROMISO" type="id_BigDecimal"/>
+        <mapperTableEntries name="NUMERO_COMPROMISO" type="id_Integer"/>
         <mapperTableEntries name="TIPO_COMPROMISO" type="id_String"/>
         <mapperTableEntries name="FECHA_REGISTRO" type="id_Date"/>
         <mapperTableEntries name="TIPO_MOVIMIENTO" type="id_BigDecimal"/>
@@ -412,9 +414,6 @@
       <column comment="" key="false" length="2147483647" name="numero_contrato" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="10" name="vigencia_contrato" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
       <column comment="" key="false" length="10" name="compromiso" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
@@ -431,7 +430,7 @@
         <mapperTableEntries name="vigencia" expression="salida_registro_presupuestal.vigencia " type="id_BigDecimal"/>
         <mapperTableEntries name="fecha_registro" expression="salida_registro_presupuestal.fecha_registro " type="id_Date"/>
         <mapperTableEntries name="responsable" expression="salida_registro_presupuestal.responsable " type="id_Integer"/>
-        <mapperTableEntries name="estado" expression="" type="id_Short"/>
+        <mapperTableEntries name="estado" expression="1" type="id_Short"/>
         <mapperTableEntries name="numero_registro_presupuestal" expression="salida_registro_presupuestal.numero_registro_presupuestal " type="id_Integer"/>
         <mapperTableEntries name="compromiso" expression="salida_registro_presupuestal.compromiso " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="beneficiario" expression="salida_registro_presupuestal.beneficiario " type="id_Integer"/>
@@ -442,10 +441,9 @@
         <mapperTableEntries name="vigencia" expression="salida_registro_presupuestal.vigencia " type="id_Integer"/>
         <mapperTableEntries name="fecha_solicitud" expression="salida_registro_presupuestal.fecha_registro " type="id_Date" nullable="true"/>
         <mapperTableEntries name="cdp" expression="" type="id_Integer"/>
-        <mapperTableEntries name="expedida" expression="" type="id_Boolean" nullable="true"/>
-        <mapperTableEntries name="numero_contrato" expression="" type="id_String"/>
-        <mapperTableEntries name="vigencia_contrato" expression="" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="compromiso" expression="" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="expedida" expression="true" type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="numero_contrato" expression="1" type="id_String"/>
+        <mapperTableEntries name="compromiso" expression="salida_registro_presupuestal.compromiso " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="masivo" expression="false" type="id_Boolean" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="salida_registro_presupuestal" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
@@ -457,6 +455,7 @@
         <mapperTableEntries name="numero_registro_presupuestal" type="id_Integer"/>
         <mapperTableEntries name="compromiso" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="beneficiario" type="id_Integer"/>
+        <mapperTableEntries name="cdp" type="id_Integer" nullable="true"/>
       </inputTables>
     </nodeData>
   </node>
@@ -666,11 +665,6 @@
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="vigencia_contrato"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="id"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
@@ -709,9 +703,6 @@
       <column comment="" key="false" length="2147483647" name="numero_contrato" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="10" name="vigencia_contrato" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
       <column comment="" defaultValue="nextval('administrativa.solicitud_rp_id_seq'::regclass)" key="true" length="10" name="id" nullable="false" pattern="" precision="0" sourceType="SERIAL" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
@@ -739,9 +730,6 @@
       <column comment="" key="false" length="2147483647" name="numero_contrato" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="10" name="vigencia_contrato" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
       <column comment="" defaultValue="nextval('administrativa.solicitud_rp_id_seq'::regclass)" key="true" length="10" name="id" nullable="false" pattern="" precision="0" sourceType="SERIAL" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
@@ -756,7 +744,7 @@
       <additionalProperties key="Comment" value=""/>
     </metadata>
   </node>
-  <node componentName="tConvertType" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="256" posY="352">
+  <node componentName="tConvertType" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="224" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tConvertType_2" show="false"/>
     <elementParameter field="CHECK" name="AUTOCAST" value="true"/>
     <elementParameter field="TABLE" name="MANUALTABLE" show="false"/>
@@ -822,7 +810,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tOracleInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="352">
+  <node componentName="tOracleInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tOracleInput_2" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_SaqBAGAGEeatGJv7WGjxOg" show="false"/>
@@ -845,7 +833,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="_SaqBAGAGEeatGJv7WGjxOg - compromisos_sicapital" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="REPOSITORY"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT * FROM PR.PR_COMPROMISOS&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT * &#xA; FROM PR.PR_COMPROMISOS WHERE VIGENCIA=2017 AND CODIGO_UNIDAD_EJECUTORA = '01' AND NUMERO_COMPROMISO &#xA; IN (156,&#xA;157,&#xA;158,&#xA;159,&#xA;160,&#xA;170,&#xA;172,&#xA;173,&#xA;178,&#xA;190,&#xA;191,&#xA;192,&#xA;193,&#xA;194,&#xA;196,&#xA;204,&#xA;208,&#xA;209,&#xA;210,&#xA;212,&#xA;213,&#xA;217,&#xA;220,&#xA;221,&#xA;222,&#xA;223,&#xA;2688)&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -954,6 +942,11 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="salida_registro_presupuestal" lineStyle="0" metaname="salida_registro_presupuestal" offsetLabelX="0" offsetLabelY="1" source="tMap_1" target="tMap_2">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="cdp"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="salida_registro_presupuestal" show="false"/>
   </connection>
