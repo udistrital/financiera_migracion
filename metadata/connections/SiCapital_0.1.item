@@ -25,7 +25,7 @@
       <query xmi:id="_BtYy0annEeeYD8F7pf8Xmw" id="_BtYy0KnnEeeYD8F7pf8Xmw" label="cdp_rubros_sicapital" value="SELECT * FROM PR.PR_DISPONIBILIDAD_RUBRO"/>
       <query xmi:id="_PygzAa0fEee2I8fVwbIt8Q" id="_PygzAK0fEee2I8fVwbIt8Q" label="rp_sicapital" value="SELECT * FROM PR.PR_REGISTRO_PRESUPUESTAL"/>
       <query xmi:id="_K5W2Qa0gEee2I8fVwbIt8Q" id="_K5W2QK0gEee2I8fVwbIt8Q" label="rp_disponibilidad" value="SELECT * FROM PR.PR_REGISTRO_DISPONIBILIDAD"/>
-      <query xmi:id="_u8NVQa0nEee2I8fVwbIt8Q" id="_u8NVQK0nEee2I8fVwbIt8Q" label="compromisos_sicapital" value="SELECT * FROM PR.PR_COMPROMISOS"/>
+      <query xmi:id="_u8NVQa0nEee2I8fVwbIt8Q" id="_u8NVQK0nEee2I8fVwbIt8Q" label="compromisos_sicapital" value="SELECT * FROM PR.PR_COMPROMISOS WHERE VIGENCIA=2017 AND CODIGO_UNIDAD_EJECUTORA = '01' AND NUMERO_COMPROMISO IN (156,&#xA;157,&#xA;158,&#xA;159,&#xA;160,&#xA;170,&#xA;172,&#xA;173,&#xA;178,&#xA;190,&#xA;191,&#xA;192,&#xA;193,&#xA;194,&#xA;196,&#xA;204,&#xA;208,&#xA;209,&#xA;210,&#xA;212,&#xA;213,&#xA;217,&#xA;220,&#xA;221,&#xA;222,&#xA;223,&#xA;2688)"/>
     </queries>
     <parameters xmi:id="_sIQnoWAGEeatGJv7WGjxOg" key="CONN_PARA_KEY_USERNAME" value="SICGEFAD"/>
   </TalendMetadata:DatabaseConnection>

@@ -5070,52 +5070,52 @@
           <sqlDataType xmi:id="_WJSw7j8sEeeDkv0nwW2QiA" name="INT4" numericPrecisionRadix="10" javaDataType="4"/>
         </feature>
       </ownedElement>
-      <ownedElement xsi:type="relational:TdTable" xmi:id="_WJ504D8sEeeDkv0nwW2QiA" name="compromiso" id="_WJ5N0D8sEeeDkv0nwW2QiA" comment="tabla en la que se registran los compromisos financieros para un periodo determinado" label="compromiso" tableType="TABLE">
+      <ownedElement xsi:type="relational:TdTable" xmi:id="_WJ504D8sEeeDkv0nwW2QiA" name="compromiso_financiero" id="_WJ5N0D8sEeeDkv0nwW2QiA" comment="tabla en la que se registran los compromisos financieros para un periodo determinado" label="compromiso_financiero" tableType="TABLE">
         <taggedValue xmi:id="_WJ504T8sEeeDkv0nwW2QiA" tag="Comment" value="tabla en la que se registran los compromisos financieros para un periodo determinado"/>
-        <feature xsi:type="relational:TdColumn" xmi:id="_WJ504z8sEeeDkv0nwW2QiA" name="id" comment="identificador de la tabla compromiso" label="id" length="10" sourceType="INT4" talendType="id_Integer" key="true" nullable="false">
-          <taggedValue xmi:id="_WJ505D8sEeeDkv0nwW2QiA" tag="Comment" value="identificador de la tabla compromiso"/>
-          <initialValue xsi:type="relational:TdExpression" xmi:id="_WJ505T8sEeeDkv0nwW2QiA" body="nextval('compromiso_id_seq'::regclass)" language="COLUMN_DEF"/>
-          <sqlDataType xmi:id="_WJ505j8sEeeDkv0nwW2QiA" name="SERIAL" numericPrecisionRadix="10" javaDataType="4"/>
+        <feature xsi:type="relational:TdColumn" xmi:id="_YZqEYK3iEee2I8fVwbIt8Q" name="id" comment="identificador de la tabla compromiso" label="id" length="10" sourceType="SERIAL" talendType="id_Integer" key="true" nullable="false">
+          <taggedValue xmi:id="_YZqEYa3iEee2I8fVwbIt8Q" tag="Comment" value="identificador de la tabla compromiso"/>
+          <initialValue xsi:type="relational:TdExpression" xmi:id="_YZqEYq3iEee2I8fVwbIt8Q" body="nextval('financiera.compromiso_id_seq'::regclass)" language="COLUMN_DEF"/>
+          <sqlDataType xmi:id="_YZqEY63iEee2I8fVwbIt8Q" name="SERIAL" numericPrecisionRadix="10" javaDataType="4"/>
         </feature>
-        <feature xsi:type="relational:TdColumn" xmi:id="_WJ505z8sEeeDkv0nwW2QiA" name="objeto" comment="campo en el que se registra el objeto determinado en el compromiso" label="objeto" length="2147483647" sourceType="VARCHAR" talendType="id_String" nullable="false">
-          <taggedValue xmi:id="_WJ506D8sEeeDkv0nwW2QiA" tag="Comment" value="campo en el que se registra el objeto determinado en el compromiso"/>
-          <initialValue xsi:type="relational:TdExpression" xmi:id="_WJ506T8sEeeDkv0nwW2QiA" language="COLUMN_DEF"/>
-          <sqlDataType xmi:id="_WJ506j8sEeeDkv0nwW2QiA" name="VARCHAR" numericPrecisionRadix="10" javaDataType="12"/>
+        <feature xsi:type="relational:TdColumn" xmi:id="_YZqEZK3iEee2I8fVwbIt8Q" name="objeto" comment="campo en el que se registra el objeto determinado en el compromiso" label="objeto" length="2147483647" sourceType="VARCHAR" talendType="id_String" nullable="false">
+          <taggedValue xmi:id="_YZqEZa3iEee2I8fVwbIt8Q" tag="Comment" value="campo en el que se registra el objeto determinado en el compromiso"/>
+          <initialValue xsi:type="relational:TdExpression" xmi:id="_YZqEZq3iEee2I8fVwbIt8Q" language="COLUMN_DEF"/>
+          <sqlDataType xmi:id="_YZqEZ63iEee2I8fVwbIt8Q" name="VARCHAR" numericPrecisionRadix="10" javaDataType="12"/>
         </feature>
-        <feature xsi:type="relational:TdColumn" xmi:id="_WJ506z8sEeeDkv0nwW2QiA" name="vigencia" comment="campo en el que se indica el año de vigencia de un compromiso" label="vigencia" length="4" sourceType="FLOAT8" talendType="id_Double" nullable="false">
-          <taggedValue xmi:id="_WJ507D8sEeeDkv0nwW2QiA" tag="Comment" value="campo en el que se indica el año de vigencia de un compromiso"/>
-          <initialValue xsi:type="relational:TdExpression" xmi:id="_WJ507T8sEeeDkv0nwW2QiA" language="COLUMN_DEF"/>
-          <sqlDataType xmi:id="_WJ507j8sEeeDkv0nwW2QiA" name="NUMERIC" numericPrecisionRadix="10" javaDataType="2"/>
+        <feature xsi:type="relational:TdColumn" xmi:id="_YZqEaK3iEee2I8fVwbIt8Q" name="vigencia" comment="campo en el que se indica el año de vigencia de un compromiso" label="vigencia" length="4" sourceType="NUMERIC" talendType="id_BigDecimal" nullable="false">
+          <taggedValue xmi:id="_YZqEaa3iEee2I8fVwbIt8Q" tag="Comment" value="campo en el que se indica el año de vigencia de un compromiso"/>
+          <initialValue xsi:type="relational:TdExpression" xmi:id="_YZqEaq3iEee2I8fVwbIt8Q" language="COLUMN_DEF"/>
+          <sqlDataType xmi:id="_YZqEa63iEee2I8fVwbIt8Q" name="NUMERIC" numericPrecisionRadix="10" javaDataType="2"/>
         </feature>
-        <feature xsi:type="relational:TdColumn" xmi:id="_WJ507z8sEeeDkv0nwW2QiA" name="fecha_inicio" comment="campo que indica el momento en el que iniciara el compromiso." label="fecha_inicio" length="13" sourceType="TIMESTAMP" talendType="id_Date" nullable="false" pattern="&quot;dd-MM-yyyy&quot;">
-          <taggedValue xmi:id="_WJ508D8sEeeDkv0nwW2QiA" tag="Comment" value="campo que indica el momento en el que iniciara el compromiso."/>
-          <initialValue xsi:type="relational:TdExpression" xmi:id="_WJ508T8sEeeDkv0nwW2QiA" language="COLUMN_DEF"/>
-          <sqlDataType xmi:id="_WJ508j8sEeeDkv0nwW2QiA" name="DATE" numericPrecisionRadix="10" javaDataType="91"/>
+        <feature xsi:type="relational:TdColumn" xmi:id="_YZqEbK3iEee2I8fVwbIt8Q" name="fecha_inicio" comment="campo que indica el momento en el que iniciara el compromiso." label="fecha_inicio" length="13" sourceType="DATE" talendType="id_Date" nullable="false" pattern="&quot;dd-MM-yyyy&quot;">
+          <taggedValue xmi:id="_YZqEba3iEee2I8fVwbIt8Q" tag="Comment" value="campo que indica el momento en el que iniciara el compromiso."/>
+          <initialValue xsi:type="relational:TdExpression" xmi:id="_YZqEbq3iEee2I8fVwbIt8Q" language="COLUMN_DEF"/>
+          <sqlDataType xmi:id="_YZqEb63iEee2I8fVwbIt8Q" name="DATE" numericPrecisionRadix="10" javaDataType="91"/>
         </feature>
-        <feature xsi:type="relational:TdColumn" xmi:id="_WJ508z8sEeeDkv0nwW2QiA" name="fecha_fin" comment="campo que indica la fecha en la que el compromiso finaliza" label="fecha_fin" length="13" sourceType="TIMESTAMP" talendType="id_Date" nullable="false" pattern="&quot;dd-MM-yyyy&quot;">
-          <taggedValue xmi:id="_WJ509D8sEeeDkv0nwW2QiA" tag="Comment" value="campo que indica la fecha en la que el compromiso finaliza"/>
-          <initialValue xsi:type="relational:TdExpression" xmi:id="_WJ509T8sEeeDkv0nwW2QiA" language="COLUMN_DEF"/>
-          <sqlDataType xmi:id="_WJ509j8sEeeDkv0nwW2QiA" name="DATE" numericPrecisionRadix="10" javaDataType="91"/>
+        <feature xsi:type="relational:TdColumn" xmi:id="_YZqEcK3iEee2I8fVwbIt8Q" name="fecha_fin" comment="campo que indica la fecha en la que el compromiso finaliza" label="fecha_fin" length="13" sourceType="DATE" talendType="id_Date" nullable="false" pattern="&quot;dd-MM-yyyy&quot;">
+          <taggedValue xmi:id="_YZqEca3iEee2I8fVwbIt8Q" tag="Comment" value="campo que indica la fecha en la que el compromiso finaliza"/>
+          <initialValue xsi:type="relational:TdExpression" xmi:id="_YZqEcq3iEee2I8fVwbIt8Q" language="COLUMN_DEF"/>
+          <sqlDataType xmi:id="_YZqEc63iEee2I8fVwbIt8Q" name="DATE" numericPrecisionRadix="10" javaDataType="91"/>
         </feature>
-        <feature xsi:type="relational:TdColumn" xmi:id="_WJ509z8sEeeDkv0nwW2QiA" name="fecha_modificacion" comment="campo que indica la fecha en la que se creo el compromiso y si se actualiza la ultima fecha de  modificacion" label="fecha_modificacion" length="13" sourceType="TIMESTAMP" talendType="id_Date" nullable="false" pattern="&quot;dd-MM-yyyy&quot;">
-          <taggedValue xmi:id="_WJ50-D8sEeeDkv0nwW2QiA" tag="Comment" value="campo que indica la fecha en la que se creo el compromiso y si se actualiza la ultima fecha de  modificacion"/>
-          <initialValue xsi:type="relational:TdExpression" xmi:id="_WJ50-T8sEeeDkv0nwW2QiA" language="COLUMN_DEF"/>
-          <sqlDataType xmi:id="_WJ50-j8sEeeDkv0nwW2QiA" name="DATE" numericPrecisionRadix="10" javaDataType="91"/>
+        <feature xsi:type="relational:TdColumn" xmi:id="_YZqEdK3iEee2I8fVwbIt8Q" name="fecha_modificacion" comment="campo que indica la fecha en la que se creo el compromiso y si se actualiza la ultima fecha de  modificacion" label="fecha_modificacion" length="13" sourceType="DATE" talendType="id_Date" nullable="false" pattern="&quot;dd-MM-yyyy&quot;">
+          <taggedValue xmi:id="_YZqEda3iEee2I8fVwbIt8Q" tag="Comment" value="campo que indica la fecha en la que se creo el compromiso y si se actualiza la ultima fecha de  modificacion"/>
+          <initialValue xsi:type="relational:TdExpression" xmi:id="_YZqEdq3iEee2I8fVwbIt8Q" language="COLUMN_DEF"/>
+          <sqlDataType xmi:id="_YZqEd63iEee2I8fVwbIt8Q" name="DATE" numericPrecisionRadix="10" javaDataType="91"/>
         </feature>
-        <feature xsi:type="relational:TdColumn" xmi:id="_WJ50-z8sEeeDkv0nwW2QiA" name="estado_compromiso" comment="campo que indica en que estado se encuentra el compromiso a la fecha" label="estado_compromiso" length="10" sourceType="INT4" talendType="id_Integer" nullable="false">
-          <taggedValue xmi:id="_WJ50_D8sEeeDkv0nwW2QiA" tag="Comment" value="campo que indica en que estado se encuentra el compromiso a la fecha"/>
-          <initialValue xsi:type="relational:TdExpression" xmi:id="_WJ50_T8sEeeDkv0nwW2QiA" language="COLUMN_DEF"/>
-          <sqlDataType xmi:id="_WJ50_j8sEeeDkv0nwW2QiA" name="INT4" numericPrecisionRadix="10" javaDataType="4"/>
+        <feature xsi:type="relational:TdColumn" xmi:id="_YZqEeK3iEee2I8fVwbIt8Q" name="estado_compromiso" comment="campo que indica en que estado se encuentra el compromiso a la fecha" label="estado_compromiso" length="10" sourceType="INT4" talendType="id_Integer" nullable="false">
+          <taggedValue xmi:id="_YZqEea3iEee2I8fVwbIt8Q" tag="Comment" value="campo que indica en que estado se encuentra el compromiso a la fecha"/>
+          <initialValue xsi:type="relational:TdExpression" xmi:id="_YZqEeq3iEee2I8fVwbIt8Q" language="COLUMN_DEF"/>
+          <sqlDataType xmi:id="_YZqEe63iEee2I8fVwbIt8Q" name="INT4" numericPrecisionRadix="10" javaDataType="4"/>
         </feature>
-        <feature xsi:type="relational:TdColumn" xmi:id="_WJ50_z8sEeeDkv0nwW2QiA" name="tipo_compromiso_tesoral" comment="identificador de la tabla tipo_compromiso_tesoral referenciado para situar un compromiso en un tipo" label="tipo_compromiso_tesoral" length="10" sourceType="INT4" talendType="id_Integer" nullable="false">
-          <taggedValue xmi:id="_WJ51AD8sEeeDkv0nwW2QiA" tag="Comment" value="identificador de la tabla tipo_compromiso_tesoral referenciado para situar un compromiso en un tipo"/>
-          <initialValue xsi:type="relational:TdExpression" xmi:id="_WJ51AT8sEeeDkv0nwW2QiA" language="COLUMN_DEF"/>
-          <sqlDataType xmi:id="_WJ51Aj8sEeeDkv0nwW2QiA" name="INT4" numericPrecisionRadix="10" javaDataType="4"/>
+        <feature xsi:type="relational:TdColumn" xmi:id="_YZqEfK3iEee2I8fVwbIt8Q" name="tipo_compromiso_financiero" comment="identificador de la tabla tipo_compromiso_tesoral referenciado para situar un compromiso en un tipo" label="tipo_compromiso_financiero" length="10" sourceType="INT4" talendType="id_Integer" nullable="false">
+          <taggedValue xmi:id="_YZqEfa3iEee2I8fVwbIt8Q" tag="Comment" value="identificador de la tabla tipo_compromiso_tesoral referenciado para situar un compromiso en un tipo"/>
+          <initialValue xsi:type="relational:TdExpression" xmi:id="_YZqEfq3iEee2I8fVwbIt8Q" language="COLUMN_DEF"/>
+          <sqlDataType xmi:id="_YZqEf63iEee2I8fVwbIt8Q" name="INT4" numericPrecisionRadix="10" javaDataType="4"/>
         </feature>
-        <feature xsi:type="relational:TdColumn" xmi:id="_WJ51Az8sEeeDkv0nwW2QiA" name="unidad_ejecutora" comment="identificador de la tabla unidad_ejecutora referenciado para indicar el lugar en el que se aplica el compromiso" label="unidad_ejecutora" length="10" sourceType="INT4" talendType="id_Integer" nullable="false">
-          <taggedValue xmi:id="_WJ51BD8sEeeDkv0nwW2QiA" tag="Comment" value="identificador de la tabla unidad_ejecutora referenciado para indicar el lugar en el que se aplica el compromiso"/>
-          <initialValue xsi:type="relational:TdExpression" xmi:id="_WJ51BT8sEeeDkv0nwW2QiA" language="COLUMN_DEF"/>
-          <sqlDataType xmi:id="_WJ51Bj8sEeeDkv0nwW2QiA" name="INT4" numericPrecisionRadix="10" javaDataType="4"/>
+        <feature xsi:type="relational:TdColumn" xmi:id="_YZqEgK3iEee2I8fVwbIt8Q" name="unidad_ejecutora" comment="identificador de la tabla unidad_ejecutora referenciado para indicar el lugar en el que se aplica el compromiso" label="unidad_ejecutora" length="10" sourceType="INT4" talendType="id_Integer" nullable="false">
+          <taggedValue xmi:id="_YZqEga3iEee2I8fVwbIt8Q" tag="Comment" value="identificador de la tabla unidad_ejecutora referenciado para indicar el lugar en el que se aplica el compromiso"/>
+          <initialValue xsi:type="relational:TdExpression" xmi:id="_YZqEgq3iEee2I8fVwbIt8Q" language="COLUMN_DEF"/>
+          <sqlDataType xmi:id="_YZqEg63iEee2I8fVwbIt8Q" name="INT4" numericPrecisionRadix="10" javaDataType="4"/>
         </feature>
       </ownedElement>
       <ownedElement xsi:type="relational:TdTable" xmi:id="_WKJFcT8sEeeDkv0nwW2QiA" name="clase_transaccion" id="_WKJFcD8sEeeDkv0nwW2QiA" comment="tabla en la que se registran las clases de transacciones disponibles para cada modulo" label="clase_transaccion" tableType="TABLE">
