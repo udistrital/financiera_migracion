@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TalendMetadata:DatabaseConnection xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmi:id="_C866IK6fEee2I8fVwbIt8Q" name="udistrital_cloud_postgres_agora" id="_mikZYK6eEee2I8fVwbIt8Q" label="udistrital_cloud_postgres_agora" DatabaseType="PostgreSQL" DriverClass="org.postgresql.Driver" URL="jdbc:postgresql://pruebaspostgres.c8an9arwoaua.us-east-1.rds.amazonaws.com:5432/" dbVersionString="V9_X" Port="5432" Username=" agora_admin" Password="ugffjTPJpQSLI9zEGsVHk6IQNCXIVf2C" ServerName="pruebaspostgres.c8an9arwoaua.us-east-1.rds.amazonaws.com" DatasourceName="" FileFieldName="" SID="" SqlSynthax="SQL Syntax" DbmsId="postgres_id" ProductId="POSTGRESQL" AdditionalParams="" StandardSQL="true" SQLMode="false" UiSchema="">
+  <taggedValue xmi:id="_C87hMK6fEee2I8fVwbIt8Q" tag="Is Conn Need Reload" value="false"/>
+  <taggedValue xmi:id="_C9QRUK6fEee2I8fVwbIt8Q" tag="package filter" value=""/>
+  <taggedValue xmi:id="_C9UiwK6fEee2I8fVwbIt8Q" tag="Status" value=""/>
+  <taggedValue xmi:id="_C9Uiwa6fEee2I8fVwbIt8Q" tag="Version" value="0.1"/>
+  <taggedValue xmi:id="_C9Uiwq6fEee2I8fVwbIt8Q" tag="Purpose" value=""/>
+  <taggedValue xmi:id="_C9Uiw66fEee2I8fVwbIt8Q" tag="Description" value=""/>
+  <taggedValue xmi:id="_C9UixK6fEee2I8fVwbIt8Q" tag="Author" value=""/>
+  <taggedValue xmi:id="_C9Uixa6fEee2I8fVwbIt8Q" tag="otherParameter"/>
+  <parameters xmi:id="_C87hMa6fEee2I8fVwbIt8Q" key="CONN_PARA_KEY_USERNAME" value=" agora_admin"/>
+</TalendMetadata:DatabaseConnection>
