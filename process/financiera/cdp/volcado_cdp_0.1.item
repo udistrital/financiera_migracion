@@ -253,7 +253,7 @@
         <mapperTableEntries name="VALOR" expression="" type="id_Double"/>
         <mapperTableEntries name="ID_LIMAY" type="id_BigDecimal" nullable="true"/>
       </inputTables>
-      <inputTables sizeState="INTERMEDIATE" name="salida_disponibilidad_financiera" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+      <inputTables sizeState="INTERMEDIATE" name="salida_disponibilidad_financiera" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE" innerJoin="true">
         <mapperTableEntries name="id" type="id_Integer"/>
         <mapperTableEntries name="vigencia" expression="row3.VIGENCIA " type="id_Integer" operator="="/>
         <mapperTableEntries name="numero_disponibilidad" expression="row3.NUMERO_DISPONIBILIDAD " type="id_Integer" operator="="/>
@@ -263,7 +263,7 @@
         <mapperTableEntries name="solicitud" expression="" type="id_Integer"/>
         <mapperTableEntries name="unidad_ejecutora" expression="row3.CODIGO_UNIDAD_EJECUTORA " type="id_Integer" nullable="true" operator="="/>
       </inputTables>
-      <inputTables sizeState="INTERMEDIATE" name="row6" matchingMode="FIRST_MATCH" lookupMode="LOAD_ONCE">
+      <inputTables sizeState="INTERMEDIATE" name="row6" matchingMode="FIRST_MATCH" lookupMode="LOAD_ONCE" innerJoin="true">
         <mapperTableEntries name="MAX_TAB1_INTERNO_RUBRO_" expression="row3.RUBRO_INTERNO " type="id_Integer" nullable="true" operator="="/>
         <mapperTableEntries name="MAX_TAB1_" type="id_BigDecimal" nullable="true"/>
         <mapperTableEntries name="codigo" expression="" type="id_String" nullable="true"/>
@@ -273,7 +273,7 @@
         <mapperTableEntries name="MAX_TAB1_4" type="id_String" nullable="true"/>
         <mapperTableEntries name="MAX_TAB1_5" type="id_BigDecimal" nullable="true"/>
       </inputTables>
-      <inputTables sizeState="INTERMEDIATE" name="row7" matchingMode="FIRST_MATCH" lookupMode="LOAD_ONCE">
+      <inputTables sizeState="INTERMEDIATE" name="row7" matchingMode="FIRST_MATCH" lookupMode="LOAD_ONCE" innerJoin="true">
         <mapperTableEntries name="id" expression="" type="id_Integer"/>
         <mapperTableEntries name="entidad" type="id_Short"/>
         <mapperTableEntries name="codigo" expression="row6.codigo " type="id_String" nullable="true" operator="="/>
@@ -281,7 +281,7 @@
         <mapperTableEntries name="unidad_ejecutora" type="id_Short" nullable="true"/>
         <mapperTableEntries name="descripcion" type="id_String" nullable="true"/>
       </inputTables>
-      <inputTables sizeState="INTERMEDIATE" name="row8" matchingMode="FIRST_MATCH" lookupMode="LOAD_ONCE">
+      <inputTables sizeState="INTERMEDIATE" name="row8" matchingMode="FIRST_MATCH" lookupMode="LOAD_ONCE" innerJoin="true">
         <mapperTableEntries name="id" expression="" type="id_Integer"/>
         <mapperTableEntries name="vigencia" expression="salida_disponibilidad_financiera.vigencia" type="id_Integer" operator="="/>
         <mapperTableEntries name="rubro" expression="row7.id " type="id_Integer" operator="="/>
@@ -534,7 +534,7 @@
       <additionalProperties key="Comment" value="Tabla encargada de gestionar la necesidad"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="salida_necesidad">
         <mapperTableEntries name="id" expression="Numeric.sequence(&quot;1&quot;,1,1) " type="id_Integer" nullable="true"/>
@@ -672,6 +672,29 @@
       <column comment="" key="false" length="-1" name="unidad_ejecutora" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <additionalProperties key="Comment" value=""/>
     </metadata>
+    <metadata connector="FLOW" name="salida_disponibilidadFi">
+      <column comment="identificador de la disponibilidad" defaultValue="nextval('financiera.disponibilidad_id_seq'::regclass)" key="true" length="10" name="id" nullable="false" pattern="" precision="0" sourceType="SERIAL" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value="identificador de la disponibilidad"/>
+      </column>
+      <column comment="Vigencia de la disponibilidad" key="false" length="4" name="vigencia" nullable="false" pattern="" precision="0" sourceType="NUMERIC" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value="Vigencia de la disponibilidad"/>
+      </column>
+      <column comment="número de la disponibilidad" key="false" length="6" name="numero_disponibilidad" nullable="false" pattern="" precision="0" sourceType="NUMERIC" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value="número de la disponibilidad"/>
+      </column>
+      <column comment="Referencia a al responsable de presupuesto." key="false" length="10" name="responsable" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value="Referencia a al responsable de presupuesto."/>
+      </column>
+      <column comment="fecha de registro de la disponibilidad" key="false" length="13" name="fecha_registro" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
+        <additionalField key="Comment" value="fecha de registro de la disponibilidad"/>
+      </column>
+      <column comment="paramétrica estado disponibilidad" key="false" length="5" name="estado" nullable="false" pattern="" precision="0" sourceType="INT2" type="id_Short" usefulColumn="true">
+        <additionalField key="Comment" value="paramétrica estado disponibilidad"/>
+      </column>
+      <column key="false" length="10" name="solicitud" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+    </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
@@ -695,7 +718,7 @@
         <mapperTableEntries name="tipo_necesidad" expression="salida_necesidad.tipo_necesidad" type="id_Integer"/>
       </outputTables>
       <outputTables sizeState="INTERMEDIATE" name="salida_disponibilidad_financiera">
-        <mapperTableEntries name="id" expression="Numeric.sequence(&quot;1&quot;,1,1) " type="id_Integer"/>
+        <mapperTableEntries name="id" expression="salida_necesidad.id " type="id_Integer"/>
         <mapperTableEntries name="vigencia" expression="salida_necesidad.vigencia " type="id_Integer"/>
         <mapperTableEntries name="numero_disponibilidad" expression="salida_necesidad.numero " type="id_Integer"/>
         <mapperTableEntries name="responsable" expression="salida_necesidad.supervisor " type="id_Integer"/>
@@ -703,6 +726,15 @@
         <mapperTableEntries name="estado" expression="1" type="id_Short"/>
         <mapperTableEntries name="solicitud" expression="salida_necesidad.id " type="id_Integer"/>
         <mapperTableEntries name="unidad_ejecutora" expression="salida_necesidad.unidad_ejecutora " type="id_Integer" nullable="true"/>
+      </outputTables>
+      <outputTables sizeState="INTERMEDIATE" name="salida_disponibilidadFi">
+        <mapperTableEntries name="id" expression="salida_necesidad.id " type="id_Integer"/>
+        <mapperTableEntries name="vigencia" expression="salida_necesidad.vigencia " type="id_Integer"/>
+        <mapperTableEntries name="numero_disponibilidad" expression="salida_necesidad.numero " type="id_Integer"/>
+        <mapperTableEntries name="responsable" expression="salida_necesidad.supervisor " type="id_Integer"/>
+        <mapperTableEntries name="fecha_registro" expression="salida_necesidad.fecha_solicitud " type="id_Date"/>
+        <mapperTableEntries name="estado" expression="1" type="id_Short"/>
+        <mapperTableEntries name="solicitud" expression="salida_necesidad.id " type="id_Integer"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="salida_necesidad" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="id" type="id_Integer" nullable="true"/>
@@ -732,7 +764,7 @@
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="V9_X"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;10.20.2.111&quot;"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;10.20.2.145&quot;"/>
     <elementParameter field="TEXT" name="PORT" value="&quot;5432&quot;"/>
     <elementParameter field="TEXT" name="DBNAME" value="&quot;test&quot;"/>
     <elementParameter field="TEXT" name="TYPE" value="POSTGRESQL" show="false"/>
@@ -956,137 +988,14 @@
       <additionalProperties key="Comment" value="Tabla encargada de gestionar la necesidad"/>
     </metadata>
   </node>
-  <node componentName="tPostgresqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1216" posY="256">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlOutput_2" show="false"/>
+  <node componentName="tPostgresqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1216" posY="384">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlOutput_3" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_bk9fEGCjEeatGJv7WGjxOg" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="V9_X"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;10.20.2.111&quot;"/>
-    <elementParameter field="TEXT" name="PORT" value="&quot;5432&quot;"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;test&quot;"/>
-    <elementParameter field="TEXT" name="TYPE" value="POSTGRESQL" show="false"/>
-    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;financiera&quot;"/>
-    <elementParameter field="TEXT" name="USER" value="&quot;test&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="8DG0mZgdk10="/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;disponibilidad&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
-    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
-    <elementParameter field="CHECK" name="USE_SPATIAL_OPTIONS" value="false" show="false"/>
-    <elementParameter field="CHECK" name="SPATIAL_INDEX" value="false" show="false"/>
-    <elementParameter field="CHECK" name="GEOMETRY_COLUMNS" value="false" show="false"/>
-    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
-    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
-    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
-    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="postgres_id" show="false"/>
-    <elementParameter field="CHECK" name="SAVE_POINT" value="false" show="false"/>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
-    <elementParameter field="TEXT" name="COMMIT_EVERY" value="1"/>
-    <elementParameter field="TABLE" name="ADD_COLS"/>
-    <elementParameter field="CHECK" name="USE_FIELD_OPTIONS" value="false"/>
-    <elementParameter field="TABLE" name="FIELD_OPTIONS" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="id"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="vigencia"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="numero_disponibilidad"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="responsable"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="fecha_registro"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="estado"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="solicitud"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="ENABLE_DEBUG_MODE" value="false"/>
-    <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false"/>
-    <elementParameter field="CHECK" name="USE_BATCH_SIZE" value="true"/>
-    <elementParameter field="TEXT" name="BATCH_SIZE" value="10000"/>
-    <elementParameter field="TEXT" name="LABEL" value="udistrital_postgres_financiera"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="disponibilidad" name="tPostgresqlOutput_2">
-      <column comment="identificador de la disponibilidad" defaultValue="nextval('financiera.disponibilidad_id_seq'::regclass)" key="true" length="10" name="id" nullable="false" pattern="" precision="0" sourceType="SERIAL" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value="identificador de la disponibilidad"/>
-      </column>
-      <column comment="Vigencia de la disponibilidad" key="false" length="4" name="vigencia" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value="Vigencia de la disponibilidad"/>
-      </column>
-      <column comment="número de la disponibilidad" key="false" length="6" name="numero_disponibilidad" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value="número de la disponibilidad"/>
-      </column>
-      <column comment="Referencia a al responsable de presupuesto." key="false" length="10" name="responsable" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value="Referencia a al responsable de presupuesto."/>
-      </column>
-      <column comment="fecha de registro de la disponibilidad" key="false" length="13" name="fecha_registro" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value="fecha de registro de la disponibilidad"/>
-      </column>
-      <column comment="paramétrica estado disponibilidad" key="false" length="5" name="estado" nullable="false" pattern="" precision="0" sourceType="INT2" type="id_Short" usefulColumn="true">
-        <additionalField key="Comment" value="paramétrica estado disponibilidad"/>
-      </column>
-      <column key="false" length="10" name="solicitud" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <additionalProperties key="Comment" value=""/>
-    </metadata>
-    <metadata connector="REJECT" label="disponibilidad" name="REJECT">
-      <column comment="identificador de la disponibilidad" defaultValue="nextval('financiera.disponibilidad_id_seq'::regclass)" key="true" length="10" name="id" nullable="false" pattern="" precision="0" sourceType="SERIAL" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value="identificador de la disponibilidad"/>
-      </column>
-      <column comment="Vigencia de la disponibilidad" key="false" length="4" name="vigencia" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value="Vigencia de la disponibilidad"/>
-      </column>
-      <column comment="número de la disponibilidad" key="false" length="6" name="numero_disponibilidad" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value="número de la disponibilidad"/>
-      </column>
-      <column comment="Referencia a al responsable de presupuesto." key="false" length="10" name="responsable" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value="Referencia a al responsable de presupuesto."/>
-      </column>
-      <column comment="fecha de registro de la disponibilidad" key="false" length="13" name="fecha_registro" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value="fecha de registro de la disponibilidad"/>
-      </column>
-      <column comment="paramétrica estado disponibilidad" key="false" length="5" name="estado" nullable="false" pattern="" precision="0" sourceType="INT2" type="id_Short" usefulColumn="true">
-        <additionalField key="Comment" value="paramétrica estado disponibilidad"/>
-      </column>
-      <column key="false" length="10" name="solicitud" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <additionalProperties key="Comment" value=""/>
-    </metadata>
-  </node>
-  <node componentName="tPostgresqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1216" posY="384">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlOutput_3" show="false"/>
-    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
-    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="V9_X"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;10.20.2.111&quot;"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;10.20.2.145&quot;"/>
     <elementParameter field="TEXT" name="PORT" value="&quot;5432&quot;"/>
     <elementParameter field="TEXT" name="DBNAME" value="&quot;test&quot;"/>
     <elementParameter field="TEXT" name="TYPE" value="POSTGRESQL" show="false"/>
@@ -1307,7 +1216,7 @@
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="V9_X"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;10.20.2.111&quot;"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;10.20.2.145&quot;"/>
     <elementParameter field="TEXT" name="TYPE" value="POSTGRESQL" show="false"/>
     <elementParameter field="TEXT" name="PORT" value="&quot;5432&quot;"/>
     <elementParameter field="TEXT" name="DBNAME" value="&quot;test&quot;"/>
@@ -1362,7 +1271,7 @@
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="V9_X"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;10.20.2.111&quot;"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;10.20.2.145&quot;"/>
     <elementParameter field="TEXT" name="TYPE" value="POSTGRESQL" show="false"/>
     <elementParameter field="TEXT" name="PORT" value="&quot;5432&quot;"/>
     <elementParameter field="TEXT" name="DBNAME" value="&quot;test&quot;"/>
@@ -1406,15 +1315,136 @@
       <column comment="" defaultValue="" key="false" length="10" name="estado" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
+  <node componentName="tPostgresqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1248" posY="224">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlOutput_2" show="false"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_bk9fEGCjEeatGJv7WGjxOg" show="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="V9_X"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;10.20.2.145&quot;"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;5432&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;test&quot;"/>
+    <elementParameter field="TEXT" name="TYPE" value="POSTGRESQL" show="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;financiera&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;test&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="8DG0mZgdk10="/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;disponibilidad&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
+    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
+    <elementParameter field="CHECK" name="USE_SPATIAL_OPTIONS" value="false" show="false"/>
+    <elementParameter field="CHECK" name="SPATIAL_INDEX" value="false" show="false"/>
+    <elementParameter field="CHECK" name="GEOMETRY_COLUMNS" value="false" show="false"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="postgres_id" show="false"/>
+    <elementParameter field="CHECK" name="SAVE_POINT" value="false" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="1"/>
+    <elementParameter field="TABLE" name="ADD_COLS"/>
+    <elementParameter field="CHECK" name="USE_FIELD_OPTIONS" value="false"/>
+    <elementParameter field="TABLE" name="FIELD_OPTIONS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="id"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="vigencia"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="numero_disponibilidad"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="responsable"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="fecha_registro"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="estado"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="solicitud"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="ENABLE_DEBUG_MODE" value="false"/>
+    <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false"/>
+    <elementParameter field="CHECK" name="USE_BATCH_SIZE" value="true"/>
+    <elementParameter field="TEXT" name="BATCH_SIZE" value="10000"/>
+    <elementParameter field="TEXT" name="LABEL" value="udistrital_postgres_financiera"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="disponibilidad" name="tPostgresqlOutput_2">
+      <column comment="identificador de la disponibilidad" defaultValue="nextval('financiera.disponibilidad_id_seq'::regclass)" key="true" length="10" name="id" nullable="false" pattern="" precision="0" sourceType="SERIAL" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value="identificador de la disponibilidad"/>
+      </column>
+      <column comment="Vigencia de la disponibilidad" key="false" length="4" name="vigencia" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value="Vigencia de la disponibilidad"/>
+      </column>
+      <column comment="número de la disponibilidad" key="false" length="6" name="numero_disponibilidad" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value="número de la disponibilidad"/>
+      </column>
+      <column comment="Referencia a al responsable de presupuesto." key="false" length="10" name="responsable" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value="Referencia a al responsable de presupuesto."/>
+      </column>
+      <column comment="fecha de registro de la disponibilidad" key="false" length="13" name="fecha_registro" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
+        <additionalField key="Comment" value="fecha de registro de la disponibilidad"/>
+      </column>
+      <column comment="paramétrica estado disponibilidad" key="false" length="5" name="estado" nullable="false" pattern="" precision="0" sourceType="INT2" type="id_Short" usefulColumn="true">
+        <additionalField key="Comment" value="paramétrica estado disponibilidad"/>
+      </column>
+      <column key="false" length="10" name="solicitud" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <additionalProperties key="Comment" value=""/>
+    </metadata>
+    <metadata connector="REJECT" name="REJECT">
+      <column comment="identificador de la disponibilidad" defaultValue="nextval('financiera.disponibilidad_id_seq'::regclass)" key="true" length="10" name="id" nullable="false" pattern="" precision="0" sourceType="SERIAL" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value="identificador de la disponibilidad"/>
+      </column>
+      <column comment="Vigencia de la disponibilidad" key="false" length="4" name="vigencia" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value="Vigencia de la disponibilidad"/>
+      </column>
+      <column comment="número de la disponibilidad" key="false" length="6" name="numero_disponibilidad" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value="número de la disponibilidad"/>
+      </column>
+      <column comment="Referencia a al responsable de presupuesto." key="false" length="10" name="responsable" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value="Referencia a al responsable de presupuesto."/>
+      </column>
+      <column comment="fecha de registro de la disponibilidad" key="false" length="13" name="fecha_registro" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
+        <additionalField key="Comment" value="fecha de registro de la disponibilidad"/>
+      </column>
+      <column comment="paramétrica estado disponibilidad" key="false" length="5" name="estado" nullable="false" pattern="" precision="0" sourceType="INT2" type="id_Short" usefulColumn="true">
+        <additionalField key="Comment" value="paramétrica estado disponibilidad"/>
+      </column>
+      <column key="false" length="10" name="solicitud" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <additionalProperties key="Comment" value=""/>
+    </metadata>
+  </node>
   <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="tOracleInput_2" offsetLabelX="0" offsetLabelY="0" source="tOracleInput_2" target="tConvertType_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row4" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="salida_disponibilidad" lineStyle="0" metaname="salida_disponibilidad" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_3" target="tPostgresqlOutput_2">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="salida_disponibilidad" show="false"/>
-  </connection>
-  <connection connectorName="FLOW" label="salida_disponibilidad_apropiacion" lineStyle="0" metaname="salida_disponibilidad_apropiacion" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_3" target="tPostgresqlOutput_3">
+  <connection connectorName="FLOW" label="salida_disponibilidad_apropiacion" lineStyle="0" metaname="salida_disponibilidad_apropiacion" offsetLabelX="0" offsetLabelY="0" source="tMap_3" target="tPostgresqlOutput_3">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="salida_disponibilidad_apropiacion" show="false"/>
   </connection>
@@ -1447,6 +1477,10 @@
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="salida_disponibilidad_financiera" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="salida_disponibilidadFi" lineStyle="0" metaname="salida_disponibilidadFi" offsetLabelX="0" offsetLabelY="0" outputId="3" source="tMap_2" target="tPostgresqlOutput_2">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="salida_disponibilidadFi" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tConvertType_2" offsetLabelX="0" offsetLabelY="0" source="tConvertType_2" target="tMap_3">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>

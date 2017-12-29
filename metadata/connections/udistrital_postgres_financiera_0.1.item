@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.relational="http:///orgomg/cwm/resource/relational.ecore" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
-  <TalendMetadata:DatabaseConnection xmi:id="_kkdwsGCjEeatGJv7WGjxOg" name="udistrital_postgres_financiera" id="_bk9fEGCjEeatGJv7WGjxOg" label="udistrital_postgres_financiera" dataPackage="__4DjcD8rEeeDkv0nwW2QiA" DatabaseType="PostgreSQL" DriverClass="org.postgresql.Driver" URL="jdbc:postgresql://10.20.2.111:5432/test" dbVersionString="V9_X" Port="5432" Username="test" Password="A6+FeQ5U2Pw=" ServerName="10.20.2.111" DatasourceName="" FileFieldName="" SID="test" SqlSynthax="SQL Syntax" StringQuote="'" DbmsId="postgres_id" ProductId="POSTGRESQL" AdditionalParams="" StandardSQL="true" SQLMode="false" UiSchema="financiera">
+  <TalendMetadata:DatabaseConnection xmi:id="_kkdwsGCjEeatGJv7WGjxOg" name="udistrital_postgres_financiera" id="_bk9fEGCjEeatGJv7WGjxOg" label="udistrital_postgres_financiera" dataPackage="__4DjcD8rEeeDkv0nwW2QiA" DatabaseType="PostgreSQL" DriverClass="org.postgresql.Driver" URL="jdbc:postgresql://10.20.2.145:5432/test" dbVersionString="V9_X" Port="5432" Username="test" Password="A6+FeQ5U2Pw=" ServerName="10.20.2.145" DatasourceName="" FileFieldName="" SID="test" SqlSynthax="SQL Syntax" StringQuote="'" DbmsId="postgres_id" ProductId="POSTGRESQL" AdditionalParams="" StandardSQL="true" SQLMode="false" UiSchema="financiera">
     <taggedValue xmi:id="_kkdwsWCjEeatGJv7WGjxOg" tag="Is Conn Need Reload" value="true"/>
     <taggedValue xmi:id="_knzYkGCjEeatGJv7WGjxOg" tag="package filter" value=""/>
     <taggedValue xmi:id="_kn-XsGCjEeatGJv7WGjxOg" tag="Status" value=""/>
@@ -10,7 +10,7 @@
     <taggedValue xmi:id="_kn-XtGCjEeatGJv7WGjxOg" tag="Author" value=""/>
     <taggedValue xmi:id="_kn-XtWCjEeatGJv7WGjxOg" tag="otherParameter"/>
     <taggedValue xmi:id="_koU9AGCjEeatGJv7WGjxOg" tag="DB ProductName" value="PostgreSQL"/>
-    <taggedValue xmi:id="_koU9AWCjEeatGJv7WGjxOg" tag="DB ProductVersion" value="9.5.4"/>
+    <taggedValue xmi:id="_koU9AWCjEeatGJv7WGjxOg" tag="DB ProductVersion" value="9.5.10"/>
     <taggedValue xmi:id="_koU9AmCjEeatGJv7WGjxOg" tag="DB IdentifierQuoteString" value="&quot;"/>
     <parameters xmi:id="_kkdwsmCjEeatGJv7WGjxOg" key="CONN_PARA_KEY_USERNAME" value="test"/>
     <parameters xmi:id="_PEYe4KiDEeeIG9S70570pw" key="CONN_PARA_KEY_MAPRDB_TABLE_NS_MAPPING" value=""/>

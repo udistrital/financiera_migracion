@@ -171,7 +171,9 @@
       <relatedItems xmi:id="_XOEl7aoPEeeYD8F7pf8Xmw" id="Relational" version="Latest" type="routine"/>
       <relatedItems xmi:id="_XOEl7qoPEeeYD8F7pf8Xmw" id="TalendStringUtil" version="Latest" type="routine"/>
       <relatedItems xmi:id="_ac4rQKoPEeeYD8F7pf8Xmw" id="_7T518HF3Eee6zKWLLFcreg" version="Latest" type="job"/>
-      <relatedItems xmi:id="_YTXcwKz-EeeYoJpXA1f6Kg" id="_ngA3gKlYEeeYD8F7pf8Xmw" version="Latest" type="job"/>
+      <relatedItems xmi:id="_fizz0OXGEeezYsvm2hLtYw" id="_QmcgkK3_Eee2I8fVwbIt8Q" version="Latest" type="job"/>
+      <relatedItems xmi:id="_fizz0eXGEeezYsvm2hLtYw" id="_1Yb9UK3hEee2I8fVwbIt8Q" version="Latest" type="job"/>
+      <relatedItems xmi:id="_fizz0uXGEeezYsvm2hLtYw" id="_b7FxYKz-EeeYoJpXA1f6Kg" version="Latest" type="job"/>
     </ItemsRelations>
     <ItemsRelations xmi:id="_VD_koKq3EeeYD8F7pf8Xmw">
       <baseItem xmi:id="_VD_koaq3EeeYD8F7pf8Xmw" id="_ngA3gKlYEeeYD8F7pf8Xmw" version="0.1" type="job"/>
