@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.relational="http:///orgomg/cwm/resource/relational.ecore" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
-  <TalendMetadata:DatabaseConnection xmi:id="_inih8KkyEeeYD8F7pf8Xmw" name="udistrital_postgres_administrativa" id="_ili94KkyEeeYD8F7pf8Xmw" label="udistrital_postgres_administrativa" dataPackage="__4DjcD8rEeeDkv0nwW2QiA" DatabaseType="PostgreSQL" DriverClass="org.postgresql.Driver" URL="jdbc:postgresql://10.20.2.145:5432/test" dbVersionString="V9_X" Port="5432" Username="test" Password="A6+FeQ5U2Pw=" ServerName="10.20.2.145" DatasourceName="" FileFieldName="" SID="test" SqlSynthax="SQL Syntax" StringQuote="'" DbmsId="postgres_id" ProductId="POSTGRESQL" AdditionalParams="" StandardSQL="true" SQLMode="false" UiSchema="administrativa">
+  <TalendMetadata:DatabaseConnection xmi:id="_inih8KkyEeeYD8F7pf8Xmw" name="udistrital_postgres_administrativa" id="_ili94KkyEeeYD8F7pf8Xmw" label="udistrital_postgres_administrativa" dataPackage="_eTBkUO_1Eeea2fQh16nt2Q __4DjcD8rEeeDkv0nwW2QiA" DatabaseType="PostgreSQL" DriverClass="org.postgresql.Driver" URL="jdbc:postgresql://pruebaspostgres.c8an9arwoaua.us-east-1.rds.amazonaws.com:5432/udistrital_core_db" dbVersionString="V9_X" Port="5432" Username="administrativa_carga" Password="svVKH3+nDSx4qk+Maoash1EoPQSDWUBS" ServerName="pruebaspostgres.c8an9arwoaua.us-east-1.rds.amazonaws.com" DatasourceName="" FileFieldName="" SID="udistrital_core_db" SqlSynthax="SQL Syntax" StringQuote="'" DbmsId="postgres_id" ProductId="POSTGRESQL" AdditionalParams="" StandardSQL="true" SQLMode="false" UiSchema="administrativa">
     <taggedValue xmi:id="_kkdwsWCjEeatGJv7WGjxOg" tag="Is Conn Need Reload" value="true"/>
     <taggedValue xmi:id="_knzYkGCjEeatGJv7WGjxOg" tag="package filter" value=""/>
     <taggedValue xmi:id="_kn-XsGCjEeatGJv7WGjxOg" tag="Status" value=""/>
@@ -10,11 +10,14 @@
     <taggedValue xmi:id="_kn-XtGCjEeatGJv7WGjxOg" tag="Author" value=""/>
     <taggedValue xmi:id="_kn-XtWCjEeatGJv7WGjxOg" tag="otherParameter"/>
     <taggedValue xmi:id="_koU9AGCjEeatGJv7WGjxOg" tag="DB ProductName" value="PostgreSQL"/>
-    <taggedValue xmi:id="_koU9AWCjEeatGJv7WGjxOg" tag="DB ProductVersion" value="9.5.10"/>
+    <taggedValue xmi:id="_koU9AWCjEeatGJv7WGjxOg" tag="DB ProductVersion" value="9.5.2"/>
     <taggedValue xmi:id="_koU9AmCjEeatGJv7WGjxOg" tag="DB IdentifierQuoteString" value="&quot;"/>
-    <parameters xmi:id="_kkdwsmCjEeatGJv7WGjxOg" key="CONN_PARA_KEY_USERNAME" value="test"/>
+    <parameters xmi:id="_kkdwsmCjEeatGJv7WGjxOg" key="CONN_PARA_KEY_USERNAME" value="administrativa_carga"/>
     <parameters xmi:id="_PEYe4KiDEeeIG9S70570pw" key="CONN_PARA_KEY_MAPRDB_TABLE_NS_MAPPING" value=""/>
   </TalendMetadata:DatabaseConnection>
+  <orgomg.cwm.resource.relational:Catalog xmi:id="_eTBkUO_1Eeea2fQh16nt2Q" name="udistrital_core_db" dataManager="_inih8KkyEeeYD8F7pf8Xmw">
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_eTBkUe_1Eeea2fQh16nt2Q" name="administrativa"/>
+  </orgomg.cwm.resource.relational:Catalog>
   <orgomg.cwm.resource.relational:Catalog xmi:id="__4DjcD8rEeeDkv0nwW2QiA" name="test" dataManager="_inih8KkyEeeYD8F7pf8Xmw">
     <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="__4DjcT8rEeeDkv0nwW2QiA" name="administrativa">
       <ownedElement xsi:type="relational:TdTable" xmi:id="_Q1THsD8sEeeDkv0nwW2QiA" name="servicio" id="_Q1SgoD8sEeeDkv0nwW2QiA" comment="Tabla encargada de gestionar los servicios posibles para una solicitud de la necesidad" label="servicio" tableType="TABLE">

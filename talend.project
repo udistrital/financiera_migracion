@@ -273,6 +273,19 @@
       <relatedItems xmi:id="__mvvvOQsEeezYsvm2hLtYw" id="TalendDate" version="Latest" type="routine"/>
       <relatedItems xmi:id="__mvvveQsEeezYsvm2hLtYw" id="Mathematical" version="Latest" type="routine"/>
     </ItemsRelations>
+    <ItemsRelations xmi:id="_sna8MO_jEeea2fQh16nt2Q">
+      <baseItem xmi:id="_sna8Me_jEeea2fQh16nt2Q" id="_JflPwO_jEeea2fQh16nt2Q" version="0.1" type="job"/>
+      <relatedItems xmi:id="_sna8Mu_jEeea2fQh16nt2Q" id="_bk9fEGCjEeatGJv7WGjxOg" version="Latest" type="property"/>
+      <relatedItems xmi:id="_sna8M-_jEeea2fQh16nt2Q" id="Numeric" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_sna8NO_jEeea2fQh16nt2Q" id="Relational" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_sna8Ne_jEeea2fQh16nt2Q" id="TalendString" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_sna8Nu_jEeea2fQh16nt2Q" id="TalendStringUtil" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_sna8N-_jEeea2fQh16nt2Q" id="DataOperation" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_sna8OO_jEeea2fQh16nt2Q" id="StringHandling" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_sna8Oe_jEeea2fQh16nt2Q" id="TalendDataGenerator" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_sna8Ou_jEeea2fQh16nt2Q" id="TalendDate" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_sna8O-_jEeea2fQh16nt2Q" id="Mathematical" version="Latest" type="routine"/>
+    </ItemsRelations>
     <migrationTask xmi:id="_ZbkUcGAFEeatGJv7WGjxOg" id="org.talend.designer.core.ui.preferences.migration.ChangeMysqlVersionForProjectSetting" breaks="5.2.0" version="5.1.3" status="ok"/>
     <migrationTask xmi:id="_ZbkUcWAFEeatGJv7WGjxOg" id="org.talend.designer.core.ui.preferences.migration.ChangeOracleVersionForProjectSetting" breaks="5.2.0" version="5.2.1" status="ok"/>
     <migrationTask xmi:id="_ZbkUcmAFEeatGJv7WGjxOg" id="org.talend.designer.maven.ui.ConfigMavenRepositoryRemove" breaks="6.0.1" version="6.0.2" status="ok"/>

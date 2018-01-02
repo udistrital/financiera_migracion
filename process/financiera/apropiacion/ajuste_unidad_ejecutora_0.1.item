@@ -105,45 +105,7 @@
     <routinesParameter id="_R7iIcKhSEeeIG9S70570pw" name="TalendStringUtil"/>
     <routinesParameter id="_ZelMMGAFEeatGJv7WGjxOg" name="TalendString"/>
   </parameters>
-  <node componentName="tPostgresqlRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="32">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlRow_2" show="false"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_bk9fEGCjEeatGJv7WGjxOg" show="false"/>
-    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
-    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="V9_X"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;pruebaspostgres.c8an9arwoaua.us-east-1.rds.amazonaws.com&quot;"/>
-    <elementParameter field="TEXT" name="PORT" value="&quot;5432&quot;"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;udistrital_core_db&quot;"/>
-    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;financiera&quot;"/>
-    <elementParameter field="TEXT" name="TYPE" value="POSTGRESQL" show="false"/>
-    <elementParameter field="TEXT" name="USER" value="&quot;financiera_carga&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="W9UzJ+l/py6Y0MlTRn2niBzQk78LFVo6"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
-    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
-    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
-    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;INSERT INTO financiera.rubro_rubro (rubro_padre, rubro_hijo) SELECT r1.id, r2.id FROM&#xA;(SELECT padre, codigo&#xA;FROM&#xA;(SELECT financiera.rubro.*, (regexp_matches (codigo, '^(([0-9]*){1}(-[0-9]*){0})'))[1] AS padre FROM financiera.rubro WHERE codigo ~ '^([0-9]*){1}(-[0-9]*){1}$' ORDER BY codigo) tabla_1&#xA;ORDER BY padre) tabla1,&#xA;financiera.rubro r1, financiera.rubro r2 &#xA;WHERE r1.codigo = tabla1.padre AND r2.codigo = tabla1.codigo;&quot;"/>
-    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
-    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
-    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
-    <elementParameter field="CHECK" name="PROPAGATE_RECORD_SET" value="false"/>
-    <elementParameter field="COLUMN_LIST" name="RECORD_SET_COLUMN" value="" show="false"/>
-    <elementParameter field="CHECK" name="USE_PREPAREDSTATEMENT" value="false"/>
-    <elementParameter field="TABLE" name="SET_PREPAREDSTATEMENT_PARAMETERS" show="false"/>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
-    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
-    <elementParameter field="TEXT" name="LABEL" value="Fabio_Postgres"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tPostgresqlRow_2"/>
-    <metadata connector="REJECT" name="REJECT">
-      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tPostgresqlRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="256" posY="32">
+  <node componentName="tPostgresqlRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="352" posY="32">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlRow_1" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_bk9fEGCjEeatGJv7WGjxOg" show="false"/>
@@ -161,7 +123,7 @@
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;INSERT INTO financiera.rubro_rubro (rubro_padre, rubro_hijo) SELECT r1.id, r2.id FROM&#xA;(SELECT padre, codigo&#xA;FROM&#xA;(SELECT financiera.rubro.*, (regexp_matches (codigo, '^(([0-9]*){1}(-[0-9]*){1})'))[1] AS padre FROM financiera.rubro WHERE codigo ~ '^([0-9]*){1}(-[0-9]*){2}$' ORDER BY codigo) tabla_1&#xA;ORDER BY padre) tabla1,&#xA;financiera.rubro r1, financiera.rubro r2 &#xA;WHERE r1.codigo = tabla1.padre AND r2.codigo = tabla1.codigo;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;UPDATE financiera.rubro&#xA;SET unidad_ejecutora=subquery.ue&#xA;FROM (&#xA;SELECT r.id, tabla1.ue&#xA;FROM (SELECT padre, POWER(mul(tabla_1.unidad_ejecutora), 1.0/COUNT(*)) as ue FROM&#xA;(SELECT financiera.rubro.*, (regexp_matches (codigo,&#xA;  '^(([0-9]*){1}(-[0-9]*){6})'))[1] AS padre &#xA; FROM financiera.rubro WHERE codigo ~ '^([0-9]*){1}(-[0-9]*){7}$' ORDER BY codigo) tabla_1 GROUP BY &#xA; padre ORDER BY padre) tabla1, financiera.rubro r&#xA;WHERE r.codigo = tabla1.padre&#xA;) subquery&#xA;WHERE financiera.rubro.id = subquery.id;&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -173,7 +135,7 @@
     <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
-    <elementParameter field="TEXT" name="LABEL" value="Fabio_Postgres"/>
+    <elementParameter field="TEXT" name="LABEL" value="nivel_6-7"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tPostgresqlRow_1"/>
     <metadata connector="REJECT" name="REJECT">
@@ -181,7 +143,45 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tPostgresqlRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="416" posY="32">
+  <node componentName="tPostgresqlRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="32">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlRow_2" show="false"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_bk9fEGCjEeatGJv7WGjxOg" show="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="V9_X"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;pruebaspostgres.c8an9arwoaua.us-east-1.rds.amazonaws.com&quot;"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;5432&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;udistrital_core_db&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;financiera&quot;"/>
+    <elementParameter field="TEXT" name="TYPE" value="POSTGRESQL" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;financiera_carga&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="W9UzJ+l/py6Y0MlTRn2niBzQk78LFVo6"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;DROP AGGREGATE IF EXISTS mul(bigint);&#xA;CREATE AGGREGATE mul(bigint) ( SFUNC = int8mul, STYPE=bigint );&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="CHECK" name="PROPAGATE_RECORD_SET" value="false"/>
+    <elementParameter field="COLUMN_LIST" name="RECORD_SET_COLUMN" value="" show="false"/>
+    <elementParameter field="CHECK" name="USE_PREPAREDSTATEMENT" value="false"/>
+    <elementParameter field="TABLE" name="SET_PREPAREDSTATEMENT_PARAMETERS" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
+    <elementParameter field="TEXT" name="LABEL" value="udistrital_postgres_financiera"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tPostgresqlRow_2"/>
+    <metadata connector="REJECT" name="REJECT">
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tPostgresqlRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="480" posY="32">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlRow_3" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_bk9fEGCjEeatGJv7WGjxOg" show="false"/>
@@ -199,7 +199,7 @@
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;INSERT INTO financiera.rubro_rubro (rubro_padre, rubro_hijo) SELECT r1.id, r2.id FROM&#xA;(SELECT padre, codigo&#xA;FROM&#xA;(SELECT financiera.rubro.*, (regexp_matches (codigo, '^(([0-9]*){1}(-[0-9]*){2})'))[1] AS padre FROM financiera.rubro WHERE codigo ~ '^([0-9]*){1}(-[0-9]*){3}$' ORDER BY codigo) tabla_1&#xA;ORDER BY padre) tabla1,&#xA;financiera.rubro r1, financiera.rubro r2 &#xA;WHERE r1.codigo = tabla1.padre AND r2.codigo = tabla1.codigo;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;UPDATE financiera.rubro&#xA;SET unidad_ejecutora=subquery.ue&#xA;FROM (&#xA;SELECT r.id, tabla1.ue&#xA;FROM (SELECT padre, POWER(mul(tabla_1.unidad_ejecutora), 1.0/COUNT(*)) as ue FROM&#xA;(SELECT financiera.rubro.*, (regexp_matches (codigo, '^(([0-9]*){1}(-[0-9]*){5})'))[1] AS padre FROM financiera.rubro WHERE codigo ~ '^([0-9]*){1}(-[0-9]*){6}$' ORDER BY codigo) tabla_1 GROUP BY padre ORDER BY padre) tabla1, financiera.rubro r&#xA;WHERE r.codigo = tabla1.padre&#xA;) subquery&#xA;WHERE financiera.rubro.id = subquery.id;&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -211,7 +211,7 @@
     <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
-    <elementParameter field="TEXT" name="LABEL" value="Fabio_Postgres"/>
+    <elementParameter field="TEXT" name="LABEL" value="nivel_5-6"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tPostgresqlRow_3"/>
     <metadata connector="REJECT" name="REJECT">
@@ -219,7 +219,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tPostgresqlRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="576" posY="32">
+  <node componentName="tPostgresqlRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="608" posY="32">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlRow_4" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_bk9fEGCjEeatGJv7WGjxOg" show="false"/>
@@ -237,7 +237,7 @@
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;INSERT INTO financiera.rubro_rubro (rubro_padre, rubro_hijo) SELECT r1.id, r2.id FROM&#xA;(SELECT padre, codigo&#xA;FROM&#xA;(SELECT financiera.rubro.*, (regexp_matches (codigo, '^(([0-9]*){1}(-[0-9]*){3})'))[1] AS padre FROM financiera.rubro WHERE codigo ~ '^([0-9]*){1}(-[0-9]*){4}$' ORDER BY codigo) tabla_1&#xA;ORDER BY padre) tabla1,&#xA;financiera.rubro r1, financiera.rubro r2 &#xA;WHERE r1.codigo = tabla1.padre AND r2.codigo = tabla1.codigo;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;UPDATE financiera.rubro&#xA;SET unidad_ejecutora=subquery.ue&#xA;FROM (&#xA;SELECT r.id, tabla1.ue&#xA;FROM (SELECT padre, POWER(mul(tabla_1.unidad_ejecutora), 1.0/COUNT(*)) as ue FROM&#xA;(SELECT financiera.rubro.*, (regexp_matches (codigo, '^(([0-9]*){1}(-[0-9]*){4})'))[1] AS padre FROM financiera.rubro WHERE codigo ~ '^([0-9]*){1}(-[0-9]*){5}$' ORDER BY codigo) tabla_1 GROUP BY padre ORDER BY padre) tabla1, financiera.rubro r&#xA;WHERE r.codigo = tabla1.padre&#xA;) subquery&#xA;WHERE financiera.rubro.id = subquery.id;&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -249,7 +249,7 @@
     <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
-    <elementParameter field="TEXT" name="LABEL" value="Fabio_Postgres"/>
+    <elementParameter field="TEXT" name="LABEL" value="nivel_4-5"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tPostgresqlRow_4"/>
     <metadata connector="REJECT" name="REJECT">
@@ -257,7 +257,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tPostgresqlRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="736" posY="32">
+  <node componentName="tPostgresqlRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="608" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlRow_5" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_bk9fEGCjEeatGJv7WGjxOg" show="false"/>
@@ -275,7 +275,7 @@
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;INSERT INTO financiera.rubro_rubro (rubro_padre, rubro_hijo) SELECT r1.id, r2.id FROM&#xA;(SELECT padre, codigo&#xA;FROM&#xA;(SELECT financiera.rubro.*, (regexp_matches (codigo, '^(([0-9]*){1}(-[0-9]*){4})'))[1] AS padre FROM financiera.rubro WHERE codigo ~ '^([0-9]*){1}(-[0-9]*){5}$' ORDER BY codigo) tabla_1&#xA;ORDER BY padre) tabla1,&#xA;financiera.rubro r1, financiera.rubro r2 &#xA;WHERE r1.codigo = tabla1.padre AND r2.codigo = tabla1.codigo;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;UPDATE financiera.rubro&#xA;SET unidad_ejecutora=subquery.ue&#xA;FROM (&#xA;SELECT r.id, tabla1.ue&#xA;FROM (SELECT padre, POWER(mul(tabla_1.unidad_ejecutora), 1.0/COUNT(*)) as ue FROM&#xA;(SELECT financiera.rubro.*, (regexp_matches (codigo, '^(([0-9]*){1}(-[0-9]*){3})'))[1] AS padre FROM financiera.rubro WHERE codigo ~ '^([0-9]*){1}(-[0-9]*){4}$' ORDER BY codigo) tabla_1 GROUP BY padre ORDER BY padre) tabla1, financiera.rubro r&#xA;WHERE r.codigo = tabla1.padre&#xA;) subquery&#xA;WHERE financiera.rubro.id = subquery.id;&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -287,7 +287,7 @@
     <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
-    <elementParameter field="TEXT" name="LABEL" value="Fabio_Postgres"/>
+    <elementParameter field="TEXT" name="LABEL" value="nivel_3-4"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tPostgresqlRow_5"/>
     <metadata connector="REJECT" name="REJECT">
@@ -295,7 +295,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tPostgresqlRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="128">
+  <node componentName="tPostgresqlRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="480" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlRow_6" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_bk9fEGCjEeatGJv7WGjxOg" show="false"/>
@@ -313,7 +313,7 @@
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;INSERT INTO financiera.rubro_rubro (rubro_padre, rubro_hijo) SELECT r1.id, r2.id FROM&#xA;(SELECT padre, codigo&#xA;FROM&#xA;(SELECT financiera.rubro.*, (regexp_matches (codigo, '^(([0-9]*){1}(-[0-9]*){5})'))[1] AS padre FROM financiera.rubro WHERE codigo ~ '^([0-9]*){1}(-[0-9]*){6}$' ORDER BY codigo) tabla_1&#xA;ORDER BY padre) tabla1,&#xA;financiera.rubro r1, financiera.rubro r2 &#xA;WHERE r1.codigo = tabla1.padre AND r2.codigo = tabla1.codigo;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;UPDATE financiera.rubro&#xA;SET unidad_ejecutora=subquery.ue&#xA;FROM (&#xA;SELECT r.id, tabla1.ue&#xA;FROM (SELECT padre, POWER(mul(tabla_1.unidad_ejecutora), 1.0/COUNT(*)) as ue FROM&#xA;(SELECT financiera.rubro.*, (regexp_matches (codigo, '^(([0-9]*){1}(-[0-9]*){2})'))[1] AS padre FROM financiera.rubro WHERE codigo ~ '^([0-9]*){1}(-[0-9]*){3}$' ORDER BY codigo) tabla_1 GROUP BY padre ORDER BY padre) tabla1, financiera.rubro r&#xA;WHERE r.codigo = tabla1.padre&#xA;) subquery&#xA;WHERE financiera.rubro.id = subquery.id;&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -325,7 +325,7 @@
     <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
-    <elementParameter field="TEXT" name="LABEL" value="Fabio_Postgres"/>
+    <elementParameter field="TEXT" name="LABEL" value="nivel_2-3"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tPostgresqlRow_6"/>
     <metadata connector="REJECT" name="REJECT">
@@ -333,7 +333,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tPostgresqlRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="256" posY="128">
+  <node componentName="tPostgresqlRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="352" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlRow_7" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_bk9fEGCjEeatGJv7WGjxOg" show="false"/>
@@ -351,7 +351,7 @@
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;INSERT INTO financiera.rubro_rubro (rubro_padre, rubro_hijo) SELECT r1.id, r2.id FROM&#xA;(SELECT padre, codigo&#xA;FROM&#xA;(SELECT financiera.rubro.*, (regexp_matches (codigo, '^(([0-9]*){1}(-[0-9]*){6})'))[1] AS padre FROM financiera.rubro WHERE codigo ~ '^([0-9]*){1}(-[0-9]*){7}$' ORDER BY codigo) tabla_1&#xA;ORDER BY padre) tabla1,&#xA;financiera.rubro r1, financiera.rubro r2 &#xA;WHERE r1.codigo = tabla1.padre AND r2.codigo = tabla1.codigo;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;UPDATE financiera.rubro&#xA;SET unidad_ejecutora=subquery.ue&#xA;FROM (&#xA;SELECT r.id, tabla1.ue&#xA;FROM (SELECT padre, POWER(mul(tabla_1.unidad_ejecutora), 1.0/COUNT(*)) as ue FROM&#xA;(SELECT financiera.rubro.*, (regexp_matches (codigo, '^(([0-9]*){1}(-[0-9]*){1})'))[1] AS padre FROM financiera.rubro WHERE codigo ~ '^([0-9]*){1}(-[0-9]*){2}$' ORDER BY codigo) tabla_1 GROUP BY padre ORDER BY padre) tabla1, financiera.rubro r&#xA;WHERE r.codigo = tabla1.padre&#xA;) subquery&#xA;WHERE financiera.rubro.id = subquery.id;&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -363,7 +363,7 @@
     <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
-    <elementParameter field="TEXT" name="LABEL" value="Fabio_Postgres"/>
+    <elementParameter field="TEXT" name="LABEL" value="nivel_1-2"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tPostgresqlRow_7"/>
     <metadata connector="REJECT" name="REJECT">
@@ -371,13 +371,72 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
+  <node componentName="tPostgresqlRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="224" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlRow_8" show="false"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_bk9fEGCjEeatGJv7WGjxOg" show="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="V9_X"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;pruebaspostgres.c8an9arwoaua.us-east-1.rds.amazonaws.com&quot;"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;5432&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;udistrital_core_db&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;financiera&quot;"/>
+    <elementParameter field="TEXT" name="TYPE" value="POSTGRESQL" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;financiera_carga&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="W9UzJ+l/py6Y0MlTRn2niBzQk78LFVo6"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;UPDATE financiera.rubro&#xA;SET unidad_ejecutora=subquery.ue&#xA;FROM (&#xA;SELECT r.id, tabla1.ue&#xA;FROM (SELECT padre, POWER(mul(tabla_1.unidad_ejecutora), 1.0/COUNT(*)) as ue FROM&#xA;(SELECT financiera.rubro.*, (regexp_matches (codigo, '^(([0-9]*){1}(-[0-9]*){0})'))[1] AS padre FROM financiera.rubro WHERE codigo ~ '^([0-9]*){1}(-[0-9]*){1}$' ORDER BY codigo) tabla_1 GROUP BY padre ORDER BY padre) tabla1, financiera.rubro r&#xA;WHERE r.codigo = tabla1.padre&#xA;) subquery&#xA;WHERE financiera.rubro.id = subquery.id;&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="CHECK" name="PROPAGATE_RECORD_SET" value="false"/>
+    <elementParameter field="COLUMN_LIST" name="RECORD_SET_COLUMN" value="" show="false"/>
+    <elementParameter field="CHECK" name="USE_PREPAREDSTATEMENT" value="false"/>
+    <elementParameter field="TABLE" name="SET_PREPAREDSTATEMENT_PARAMETERS" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
+    <elementParameter field="TEXT" name="LABEL" value="nivel_0-1"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tPostgresqlRow_8"/>
+    <metadata connector="REJECT" name="REJECT">
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tPostgresqlRow_1" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlRow_1" target="tPostgresqlRow_3">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk2" show="false"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tPostgresqlRow_2" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlRow_2" target="tPostgresqlRow_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk1" show="false"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tPostgresqlRow_3" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlRow_3" target="tPostgresqlRow_4">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk3" show="false"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tPostgresqlRow_4" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlRow_4" target="tPostgresqlRow_5">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk4" show="false"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tPostgresqlRow_5" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlRow_5" target="tPostgresqlRow_6">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk5" show="false"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tPostgresqlRow_6" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlRow_6" target="tPostgresqlRow_7">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk6" show="false"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tPostgresqlRow_7" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlRow_7" target="tPostgresqlRow_8">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk7" show="false"/>
+  </connection>
   <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlRow_2" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlRow_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
   <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlRow_1" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlRow_2" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
@@ -403,6 +462,11 @@
   </subjob>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlRow_7" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlRow_8" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
