@@ -260,9 +260,7 @@
     </ItemsRelations>
     <ItemsRelations xmi:id="__mvvsOQsEeezYsvm2hLtYw">
       <baseItem xmi:id="__mvvseQsEeezYsvm2hLtYw" id="_WTeRMOQrEeezYsvm2hLtYw" version="0.1" type="job"/>
-      <relatedItems xmi:id="__mvvsuQsEeezYsvm2hLtYw" id="_SaqBAGAGEeatGJv7WGjxOg" version="Latest" type="property"/>
       <relatedItems xmi:id="__mvvs-QsEeezYsvm2hLtYw" id="_bk9fEGCjEeatGJv7WGjxOg" version="Latest" type="property"/>
-      <relatedItems xmi:id="__mvvtOQsEeezYsvm2hLtYw" id="_SaqBAGAGEeatGJv7WGjxOg - fuentes_financiamiento_sicapital" version="Latest" type="query"/>
       <relatedItems xmi:id="__mvvteQsEeezYsvm2hLtYw" id="Numeric" version="Latest" type="routine"/>
       <relatedItems xmi:id="__mvvtuQsEeezYsvm2hLtYw" id="Relational" version="Latest" type="routine"/>
       <relatedItems xmi:id="__mvvt-QsEeezYsvm2hLtYw" id="TalendString" version="Latest" type="routine"/>
