@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<recyclebin:RecycleBin xmlns:recyclebin="http://www.talend.org/recyclebin" lastUpdate="2017-10-04T13:33:32.817-0500">
+<recyclebin:RecycleBin xmlns:recyclebin="http://www.talend.org/recyclebin" lastUpdate="2018-02-20T09:01:26.349-0500">
   <deletedItems id="_SaqBAGAGEeatGJv7WGjxOg" path="" type="METADATA_CONNECTIONS"/>
   <deletedItems id="_HHvxMEGFEeeDkv0nwW2QiA" path="financiera/apropiacion" type="PROCESS"/>
   <deletedItems id="_iNpowE-BEeekFNFu5oRNTA" path="" type="METADATA_CONNECTIONS"/>
+  <deletedItems id="_MhVUYBWREei-UZ8C8ZwLhg" path="financiera/conceptos_tesorales" type="PROCESS"/>
 </recyclebin:RecycleBin>
