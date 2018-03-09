@@ -480,9 +480,6 @@
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata comment="tabla de registro para los diferentes procesos que pueden generar una disponibilidad" label="disponibilidad_proceso_externo" name="salida_financiera_disponibilidad_proceso_externo">
-      <column comment="identificador de la tabla" defaultValue="nextval('financiera.disponibilidad_proceso_externo_id_seq'::regclass)" key="true" length="10" name="id" nullable="false" pattern="" precision="0" sourceType="SERIAL" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value="identificador de la tabla"/>
-      </column>
       <column comment="tipo de la disponibilidad" key="false" length="10" name="tipo_disponibilidad" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value="tipo de la disponibilidad"/>
       </column>
@@ -498,7 +495,7 @@
       <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="salida_financiera_disponibilidad_proceso_externo" id="_bk9fEGCjEeatGJv7WGjxOg - disponibilidad_proceso_externo">
-        <mapperTableEntries name="id" expression="row2.id" type="id_Integer"/>
+        <mapperTableEntries name="id" type="id_Integer"/>
         <mapperTableEntries name="tipo_disponibilidad" expression="1 " type="id_Integer"/>
         <mapperTableEntries name="proceso_externo" expression="row2.id " type="id_Integer"/>
         <mapperTableEntries name="disponibilidad" expression="row3.id " type="id_Integer"/>
