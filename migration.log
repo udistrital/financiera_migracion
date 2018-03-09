@@ -20,3 +20,23 @@
  * Task [Set the Spark Dataframe Alphabatical sort order in tHiveOutput and tFileOutputParquet] : Nothing to do
  * Task [AutoUpdateRelationsMigrationTask] : Applied successfully
  ---=== End of migration ===---
+ ---=== Start Migration of project migraciones ===---
+ * Task [MoveHDFSAndHCatalogToHadoopFolderMigrationTask] : Applied successfully
+ * Task [Add Product Values] : Nothing to do
+ * Task [Fix a problem of project resources linked to items] : Nothing to do
+ * Task [PushHCatalogIntoHadoopClusterMigrationTask] : Nothing to do
+ * Task [PushHDFSIntoHadoopClusterMigrationTask] : Nothing to do
+ * Task [UnifyPasswordEncryption4NoSQLConnectionMigrationTask] : Nothing to do
+ * Task [ChangeMongoDBConnectionMinimalVersionMigrationTask] : Nothing to do
+ * Task [FixCassandraDataStaxDbtypesProblemMigrationTask] : Nothing to do
+ * Task [ChangeHadoopConfJarNameMigrationTask] : Nothing to do
+ * Task [AdaptDeprecatedHadoopVersionsMigrationTask] : Nothing to do
+ * Task [ReviseInvalidContextNamesOfHadoopPropertiesMigrationTask] : Nothing to do
+ * Task [UpdateHadoopConfsForContextualHadoopClusterMigrationTask] : Nothing to do
+ * Task [Set the 'skip tailing zeros for BigDecimal' setting to false if it was null] : Applied successfully
+ * Task [reset the 'COLUMN_DELIMITER' parameter] : Applied successfully
+ * Task [MigrationTaskFortOleDbCoseConnection] : Applied successfully
+ * Task [Fill the default db version of mssql for Jobsetting] : Nothing to do
+ * Task [ChangeTMatchGroupOutputConnectorTask] : Applied successfully
+ * Task [AutoUpdateRelationsMigrationTask] : Applied successfully
+ ---=== End of migration ===---
