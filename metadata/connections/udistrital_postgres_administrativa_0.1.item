@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.relational="http:///orgomg/cwm/resource/relational.ecore" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
-  <TalendMetadata:DatabaseConnection xmi:id="_inih8KkyEeeYD8F7pf8Xmw" name="udistrital_postgres_administrativa" id="_ili94KkyEeeYD8F7pf8Xmw" label="udistrital_postgres_administrativa" dataPackage="__5eNsCPCEeiNXelZPRM7zw __4DjcD8rEeeDkv0nwW2QiA" DatabaseType="PostgreSQL" DriverClass="org.postgresql.Driver" URL="jdbc:postgresql://localhost:5433/udistrital_core_db" dbVersionString="V9_X" Port="5433" Username="crud_user" Password="1QY6ZyNqCD4BAhKeqSkILQ==" ServerName="localhost" DatasourceName="" FileFieldName="" SID="udistrital_core_db" SqlSynthax="SQL Syntax" StringQuote="'" DbmsId="postgres_id" ProductId="POSTGRESQL" AdditionalParams="" StandardSQL="true" SQLMode="false" UiSchema="administrativa">
+  <TalendMetadata:DatabaseConnection xmi:id="_inih8KkyEeeYD8F7pf8Xmw" name="udistrital_postgres_administrativa" id="_ili94KkyEeeYD8F7pf8Xmw" label="udistrital_postgres_administrativa" dataPackage="_jwuW8CYKEeibELI8SSYiXg __4DjcD8rEeeDkv0nwW2QiA" DatabaseType="PostgreSQL" DriverClass="org.postgresql.Driver" URL="jdbc:postgresql://localhost:5433/udistrital_core_db" dbVersionString="V9_X" Port="5433" Username="crud_user" Password="1QY6ZyNqCD4BAhKeqSkILQ==" ServerName="localhost" DatasourceName="" FileFieldName="" SID="udistrital_core_db" SqlSynthax="SQL Syntax" StringQuote="'" DbmsId="postgres_id" ProductId="POSTGRESQL" AdditionalParams="" StandardSQL="true" SQLMode="false" UiSchema="administrativa">
     <taggedValue xmi:id="_kkdwsWCjEeatGJv7WGjxOg" tag="Is Conn Need Reload" value="true"/>
     <taggedValue xmi:id="_knzYkGCjEeatGJv7WGjxOg" tag="package filter" value=""/>
     <taggedValue xmi:id="_kn-XsGCjEeatGJv7WGjxOg" tag="Status" value=""/>
@@ -15,8 +15,71 @@
     <parameters xmi:id="_kkdwsmCjEeatGJv7WGjxOg" key="CONN_PARA_KEY_USERNAME" value="crud_user"/>
     <parameters xmi:id="_PEYe4KiDEeeIG9S70570pw" key="CONN_PARA_KEY_MAPRDB_TABLE_NS_MAPPING" value=""/>
   </TalendMetadata:DatabaseConnection>
-  <orgomg.cwm.resource.relational:Catalog xmi:id="__5eNsCPCEeiNXelZPRM7zw" name="udistrital_core_db" dataManager="_inih8KkyEeeYD8F7pf8Xmw">
-    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="__5eNsSPCEeiNXelZPRM7zw" name="administrativa"/>
+  <orgomg.cwm.resource.relational:Catalog xmi:id="_jwuW8CYKEeibELI8SSYiXg" name="udistrital_core_db" dataManager="_inih8KkyEeeYD8F7pf8Xmw">
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_jwuW8SYKEeibELI8SSYiXg" name="administrativa">
+      <ownedElement xsi:type="relational:TdTable" xmi:id="_nxxxkCYKEeibELI8SSYiXg" name="solicitud_rp" id="_nxwjcCYKEeibELI8SSYiXg" label="solicitud_rp" tableType="TABLE">
+        <feature xsi:type="relational:TdColumn" xmi:id="_nxxxkSYKEeibELI8SSYiXg" name="vigencia" label="vigencia" length="10" sourceType="INT4" talendType="id_Integer" nullable="false">
+          <taggedValue xmi:id="_nxxxkiYKEeibELI8SSYiXg" tag="Comment" value=""/>
+          <initialValue xsi:type="relational:TdExpression" xmi:id="_nxxxkyYKEeibELI8SSYiXg" language="COLUMN_DEF"/>
+          <sqlDataType xmi:id="_nxxxlCYKEeibELI8SSYiXg" name="INT4" numericPrecisionRadix="10" javaDataType="4"/>
+        </feature>
+        <feature xsi:type="relational:TdColumn" xmi:id="_nxxxlSYKEeibELI8SSYiXg" name="fecha_solicitud" label="fecha_solicitud" length="13" sourceType="DATE" talendType="id_Date" pattern="&quot;dd-MM-yyyy&quot;">
+          <taggedValue xmi:id="_nxxxliYKEeibELI8SSYiXg" tag="Comment" value=""/>
+          <initialValue xsi:type="relational:TdExpression" xmi:id="_nxxxlyYKEeibELI8SSYiXg" language="COLUMN_DEF"/>
+          <sqlDataType xmi:id="_nxxxmCYKEeibELI8SSYiXg" name="DATE" numericPrecisionRadix="10" javaDataType="91" nullable="columnNullable"/>
+        </feature>
+        <feature xsi:type="relational:TdColumn" xmi:id="_nxxxmSYKEeibELI8SSYiXg" name="cdp" label="cdp" length="10" sourceType="INT4" talendType="id_Integer" nullable="false">
+          <taggedValue xmi:id="_nxxxmiYKEeibELI8SSYiXg" tag="Comment" value=""/>
+          <initialValue xsi:type="relational:TdExpression" xmi:id="_nxxxmyYKEeibELI8SSYiXg" language="COLUMN_DEF"/>
+          <sqlDataType xmi:id="_nxxxnCYKEeibELI8SSYiXg" name="INT4" numericPrecisionRadix="10" javaDataType="4"/>
+        </feature>
+        <feature xsi:type="relational:TdColumn" xmi:id="_nxxxnSYKEeibELI8SSYiXg" name="expedida" label="expedida" length="1" sourceType="BOOL" talendType="id_Boolean">
+          <taggedValue xmi:id="_nxxxniYKEeibELI8SSYiXg" tag="Comment" value=""/>
+          <initialValue xsi:type="relational:TdExpression" xmi:id="_nxxxnyYKEeibELI8SSYiXg" body="'false'" language="COLUMN_DEF"/>
+          <sqlDataType xmi:id="_nxxxoCYKEeibELI8SSYiXg" name="BOOL" numericPrecisionRadix="10" javaDataType="-7" nullable="columnNullable"/>
+        </feature>
+        <feature xsi:type="relational:TdColumn" xmi:id="_nxxxoSYKEeibELI8SSYiXg" name="numero_contrato" label="numero_contrato" length="2147483647" sourceType="VARCHAR" talendType="id_String">
+          <taggedValue xmi:id="_nxxxoiYKEeibELI8SSYiXg" tag="Comment" value=""/>
+          <initialValue xsi:type="relational:TdExpression" xmi:id="_nxxxoyYKEeibELI8SSYiXg" language="COLUMN_DEF"/>
+          <sqlDataType xmi:id="_nxxxpCYKEeibELI8SSYiXg" name="VARCHAR" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
+        </feature>
+        <feature xsi:type="relational:TdColumn" xmi:id="_nxxxpSYKEeibELI8SSYiXg" name="vigencia_contrato" label="vigencia_contrato" length="10" sourceType="INT4" talendType="id_Integer">
+          <taggedValue xmi:id="_nxxxpiYKEeibELI8SSYiXg" tag="Comment" value=""/>
+          <initialValue xsi:type="relational:TdExpression" xmi:id="_nxxxpyYKEeibELI8SSYiXg" language="COLUMN_DEF"/>
+          <sqlDataType xmi:id="_nxxxqCYKEeibELI8SSYiXg" name="INT4" numericPrecisionRadix="10" javaDataType="4" nullable="columnNullable"/>
+        </feature>
+        <feature xsi:type="relational:TdColumn" xmi:id="_nxxxqSYKEeibELI8SSYiXg" name="id" label="id" length="10" sourceType="SERIAL" talendType="id_Integer" key="true" nullable="false">
+          <taggedValue xmi:id="_nxxxqiYKEeibELI8SSYiXg" tag="Comment" value=""/>
+          <initialValue xsi:type="relational:TdExpression" xmi:id="_nxxxqyYKEeibELI8SSYiXg" body="nextval('administrativa.solicitud_rp_id_seq'::regclass)" language="COLUMN_DEF"/>
+          <sqlDataType xmi:id="_nxxxrCYKEeibELI8SSYiXg" name="SERIAL" numericPrecisionRadix="10" javaDataType="4"/>
+        </feature>
+        <feature xsi:type="relational:TdColumn" xmi:id="_nxxxrSYKEeibELI8SSYiXg" name="tipo_compromiso" label="tipo_compromiso" length="10" sourceType="INT4" talendType="id_Integer">
+          <taggedValue xmi:id="_nxxxriYKEeibELI8SSYiXg" tag="Comment" value=""/>
+          <initialValue xsi:type="relational:TdExpression" xmi:id="_nxxxryYKEeibELI8SSYiXg" language="COLUMN_DEF"/>
+          <sqlDataType xmi:id="_nxxxsCYKEeibELI8SSYiXg" name="INT4" numericPrecisionRadix="10" javaDataType="4" nullable="columnNullable"/>
+        </feature>
+        <feature xsi:type="relational:TdColumn" xmi:id="_nxxxsSYKEeibELI8SSYiXg" name="justificacion_rechazo" comment="Justificación de rechazo de la solicitud de disponibilidad, si la solicitud es aprobada se debe dejar este campo nulo." label="justificacion_rechazo" length="250" sourceType="VARCHAR" talendType="id_String">
+          <taggedValue xmi:id="_nxxxsiYKEeibELI8SSYiXg" tag="Comment" value="Justificación de rechazo de la solicitud de disponibilidad, si la solicitud es aprobada se debe dejar este campo nulo."/>
+          <initialValue xsi:type="relational:TdExpression" xmi:id="_nxxxsyYKEeibELI8SSYiXg" language="COLUMN_DEF"/>
+          <sqlDataType xmi:id="_nxxxtCYKEeibELI8SSYiXg" name="VARCHAR" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
+        </feature>
+        <feature xsi:type="relational:TdColumn" xmi:id="_nxxxtSYKEeibELI8SSYiXg" name="masivo" label="masivo" length="1" sourceType="BOOL" talendType="id_Boolean">
+          <taggedValue xmi:id="_nxxxtiYKEeibELI8SSYiXg" tag="Comment" value=""/>
+          <initialValue xsi:type="relational:TdExpression" xmi:id="_nxxxtyYKEeibELI8SSYiXg" language="COLUMN_DEF"/>
+          <sqlDataType xmi:id="_nxxxuCYKEeibELI8SSYiXg" name="BOOL" numericPrecisionRadix="10" javaDataType="-7" nullable="columnNullable"/>
+        </feature>
+        <feature xsi:type="relational:TdColumn" xmi:id="_nxxxuSYKEeibELI8SSYiXg" name="id_proveedor" comment="referencia al proveedor objetivo de la solicitud de crp" label="id_proveedor" length="10" sourceType="INT4" talendType="id_Integer">
+          <taggedValue xmi:id="_nxxxuiYKEeibELI8SSYiXg" tag="Comment" value="referencia al proveedor objetivo de la solicitud de crp"/>
+          <initialValue xsi:type="relational:TdExpression" xmi:id="_nxxxuyYKEeibELI8SSYiXg" language="COLUMN_DEF"/>
+          <sqlDataType xmi:id="_nxxxvCYKEeibELI8SSYiXg" name="INT4" numericPrecisionRadix="10" javaDataType="4" nullable="columnNullable"/>
+        </feature>
+        <feature xsi:type="relational:TdColumn" xmi:id="_nxxxvSYKEeibELI8SSYiXg" name="numero_compromiso" comment="referencia al numero del documento fisico que genera la solicitud de CRP" label="numero_compromiso" length="10" sourceType="INT4" talendType="id_Integer">
+          <taggedValue xmi:id="_nxxxviYKEeibELI8SSYiXg" tag="Comment" value="referencia al numero del documento fisico que genera la solicitud de CRP"/>
+          <initialValue xsi:type="relational:TdExpression" xmi:id="_nxxxvyYKEeibELI8SSYiXg" language="COLUMN_DEF"/>
+          <sqlDataType xmi:id="_nxxxwCYKEeibELI8SSYiXg" name="INT4" numericPrecisionRadix="10" javaDataType="4" nullable="columnNullable"/>
+        </feature>
+      </ownedElement>
+    </ownedElement>
   </orgomg.cwm.resource.relational:Catalog>
   <orgomg.cwm.resource.relational:Catalog xmi:id="__4DjcD8rEeeDkv0nwW2QiA" name="test" dataManager="_inih8KkyEeeYD8F7pf8Xmw">
     <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="__4DjcT8rEeeDkv0nwW2QiA" name="administrativa">
@@ -132,7 +195,6 @@
       </ownedElement>
       <ownedElement xsi:type="relational:TdTable" xmi:id="_v_ncsak6EeeYD8F7pf8Xmw" name="asignacion_pension_user_role" id="_v_ncsKk6EeeYD8F7pf8Xmw" comment="Relaciona una pension a una persona con un rol de pensionado, beneficiario o sustituto" label="asignacion_pension_user_role" tableType="TABLE">
         <taggedValue xmi:id="_v_ncsqk6EeeYD8F7pf8Xmw" tag="Comment" value="Relaciona una pension a una persona con un rol de pensionado, beneficiario o sustituto"/>
-        <taggedValue xmi:id="_v_ncs6k6EeeYD8F7pf8Xmw" tag="Comment" value="Relaciona una pension a una persona con un rol de pensionado, beneficiario o sustituto"/>
         <feature xsi:type="relational:TdColumn" xmi:id="_v_nctKk6EeeYD8F7pf8Xmw" name="id" comment="Llave primaria de la tabla asignacion_pension_user_role" label="id" length="10" sourceType="SERIAL" talendType="id_Integer" key="true" nullable="false">
           <taggedValue xmi:id="_v_nctak6EeeYD8F7pf8Xmw" tag="Comment" value="Llave primaria de la tabla asignacion_pension_user_role"/>
           <initialValue xsi:type="relational:TdExpression" xmi:id="_v_nctqk6EeeYD8F7pf8Xmw" body="nextval('administrativa.asignacion_pension_user_role_id_seq'::regclass)" language="COLUMN_DEF"/>
@@ -176,7 +238,6 @@
       </ownedElement>
       <ownedElement xsi:type="relational:TdTable" xmi:id="_v_3UUKk6EeeYD8F7pf8Xmw" name="amparo_contractual" id="_v_2tQKk6EeeYD8F7pf8Xmw" comment="Esta tabla almacena los posibles amparos que se pueden vincular a una poliza para un contrato." label="amparo_contractual" tableType="TABLE">
         <taggedValue xmi:id="_v_3UUak6EeeYD8F7pf8Xmw" tag="Comment" value="Esta tabla almacena los posibles amparos que se pueden vincular a una poliza para un contrato."/>
-        <taggedValue xmi:id="_v_3UUqk6EeeYD8F7pf8Xmw" tag="Comment" value="Esta tabla almacena los posibles amparos que se pueden vincular a una poliza para un contrato."/>
         <feature xsi:type="relational:TdColumn" xmi:id="_v_3UU6k6EeeYD8F7pf8Xmw" name="id" comment="Identificador primario de la tabla, seria unico independiente del modelo negocio" label="id" length="10" sourceType="SERIAL" talendType="id_Integer" key="true" nullable="false">
           <taggedValue xmi:id="_v_3UVKk6EeeYD8F7pf8Xmw" tag="Comment" value="Identificador primario de la tabla, seria unico independiente del modelo negocio"/>
           <initialValue xsi:type="relational:TdExpression" xmi:id="_v_3UVak6EeeYD8F7pf8Xmw" body="nextval('administrativa.amparos_id_seq'::regclass)" language="COLUMN_DEF"/>
@@ -251,7 +312,6 @@
       </ownedElement>
       <ownedElement xsi:type="relational:TdTable" xmi:id="_wAb8EKk6EeeYD8F7pf8Xmw" name="concepto_nomina" id="_wAbVAKk6EeeYD8F7pf8Xmw" comment="Describen a que corresponden los distintos pagos calculados por la nomina" label="concepto_nomina" tableType="TABLE">
         <taggedValue xmi:id="_wAb8Eak6EeeYD8F7pf8Xmw" tag="Comment" value="Describen a que corresponden los distintos pagos calculados por la nomina"/>
-        <taggedValue xmi:id="_wAb8Eqk6EeeYD8F7pf8Xmw" tag="Comment" value="Describen a que corresponden los distintos pagos calculados por la nomina"/>
         <feature xsi:type="relational:TdColumn" xmi:id="_wAb8E6k6EeeYD8F7pf8Xmw" name="id" label="id" length="10" sourceType="SERIAL" talendType="id_Integer" key="true" nullable="false">
           <taggedValue xmi:id="_wAb8FKk6EeeYD8F7pf8Xmw" tag="Comment" value=""/>
           <initialValue xsi:type="relational:TdExpression" xmi:id="_wAb8Fak6EeeYD8F7pf8Xmw" body="nextval('administrativa.concepto_nomina_id_seq'::regclass)" language="COLUMN_DEF"/>
@@ -399,7 +459,6 @@
       </ownedElement>
       <ownedElement xsi:type="relational:TdTable" xmi:id="_wBaMcKk6EeeYD8F7pf8Xmw" name="concepto_nomina_por_persona" id="_wBZlYKk6EeeYD8F7pf8Xmw" comment="Describe las novedades asociadas a las personas" label="concepto_nomina_por_persona" tableType="TABLE">
         <taggedValue xmi:id="_wBaMcak6EeeYD8F7pf8Xmw" tag="Comment" value="Describe las novedades asociadas a las personas"/>
-        <taggedValue xmi:id="_wBaMcqk6EeeYD8F7pf8Xmw" tag="Comment" value="Describe las novedades asociadas a las personas"/>
         <feature xsi:type="relational:TdColumn" xmi:id="_wBaMc6k6EeeYD8F7pf8Xmw" name="id" label="id" length="10" sourceType="SERIAL" talendType="id_Integer" key="true" nullable="false">
           <taggedValue xmi:id="_wBaMdKk6EeeYD8F7pf8Xmw" tag="Comment" value=""/>
           <initialValue xsi:type="relational:TdExpression" xmi:id="_wBaMdak6EeeYD8F7pf8Xmw" body="nextval('administrativa.concepto_nomina_por_persona_id_seq'::regclass)" language="COLUMN_DEF"/>
@@ -572,7 +631,6 @@
       </ownedElement>
       <ownedElement xsi:type="relational:TdTable" xmi:id="_w8U8kKk6EeeYD8F7pf8Xmw" name="detalle_preliquidacion" id="_w8UVgKk6EeeYD8F7pf8Xmw" comment="Tabla que detalla los pagos realizados a las personas por preliquidacion" label="detalle_preliquidacion" tableType="TABLE">
         <taggedValue xmi:id="_w8U8kak6EeeYD8F7pf8Xmw" tag="Comment" value="Tabla que detalla los pagos realizados a las personas por preliquidacion"/>
-        <taggedValue xmi:id="_w8U8kqk6EeeYD8F7pf8Xmw" tag="Comment" value="Tabla que detalla los pagos realizados a las personas por preliquidacion"/>
         <feature xsi:type="relational:TdColumn" xmi:id="_w8U8k6k6EeeYD8F7pf8Xmw" name="id" label="id" length="10" sourceType="SERIAL" talendType="id_Integer" key="true" nullable="false">
           <taggedValue xmi:id="_w8U8lKk6EeeYD8F7pf8Xmw" tag="Comment" value=""/>
           <initialValue xsi:type="relational:TdExpression" xmi:id="_w8U8lak6EeeYD8F7pf8Xmw" body="nextval('administrativa.detalle_preliquidacion_id_seq'::regclass)" language="COLUMN_DEF"/>
@@ -616,7 +674,6 @@
       </ownedElement>
       <ownedElement xsi:type="relational:TdTable" xmi:id="_w8k0MKk6EeeYD8F7pf8Xmw" name="entrada" id="_w8kNIKk6EeeYD8F7pf8Xmw" comment="Tabla Permite hacer registro de  Entradas de Inventarios" label="entrada" tableType="TABLE">
         <taggedValue xmi:id="_w8k0Mak6EeeYD8F7pf8Xmw" tag="Comment" value="Tabla Permite hacer registro de  Entradas de Inventarios"/>
-        <taggedValue xmi:id="_w8k0Mqk6EeeYD8F7pf8Xmw" tag="Comment" value="Tabla Permite hacer registro de  Entradas de Inventarios"/>
         <feature xsi:type="relational:TdColumn" xmi:id="_w8k0M6k6EeeYD8F7pf8Xmw" name="id_entrada" label="id_entrada" length="10" sourceType="SERIAL" talendType="id_Integer" key="true" nullable="false">
           <taggedValue xmi:id="_w8k0NKk6EeeYD8F7pf8Xmw" tag="Comment" value=""/>
           <initialValue xsi:type="relational:TdExpression" xmi:id="_w8k0Nak6EeeYD8F7pf8Xmw" body="nextval('administrativa.entrada_id_entrada_seq'::regclass)" language="COLUMN_DEF"/>
@@ -740,7 +797,6 @@
       </ownedElement>
       <ownedElement xsi:type="relational:TdTable" xmi:id="_w8waYKk6EeeYD8F7pf8Xmw" name="disponibilidad_contrato" id="_w8vzUKk6EeeYD8F7pf8Xmw" comment="tabla que almacena los Certificados de disponibilidad presupuestal que se relacionan al contrato pueden ser uno o pueden ser varios" label="disponibilidad_contrato" tableType="TABLE">
         <taggedValue xmi:id="_w8waYak6EeeYD8F7pf8Xmw" tag="Comment" value="tabla que almacena los Certificados de disponibilidad presupuestal que se relacionan al contrato pueden ser uno o pueden ser varios"/>
-        <taggedValue xmi:id="_w8waYqk6EeeYD8F7pf8Xmw" tag="Comment" value="tabla que almacena los Certificados de disponibilidad presupuestal que se relacionan al contrato pueden ser uno o pueden ser varios"/>
         <feature xsi:type="relational:TdColumn" xmi:id="_w8waY6k6EeeYD8F7pf8Xmw" name="id" comment="Identificador primario de la tabla" label="id" length="10" sourceType="SERIAL" talendType="id_Integer" key="true" nullable="false">
           <taggedValue xmi:id="_w8waZKk6EeeYD8F7pf8Xmw" tag="Comment" value="Identificador primario de la tabla"/>
           <initialValue xsi:type="relational:TdExpression" xmi:id="_w8waZak6EeeYD8F7pf8Xmw" body="nextval('administrativa.disponibilidad_contrato_id_seq'::regclass)" language="COLUMN_DEF"/>
@@ -782,7 +838,6 @@
       </ownedElement>
       <ownedElement xsi:type="relational:TdTable" xmi:id="_w9G_sak6EeeYD8F7pf8Xmw" name="detalle_servicio_necesidad" id="_w9G_sKk6EeeYD8F7pf8Xmw" comment="Tabla con parámetros de una necesidad que requiera un servicio" label="detalle_servicio_necesidad" tableType="TABLE">
         <taggedValue xmi:id="_w9G_sqk6EeeYD8F7pf8Xmw" tag="Comment" value="Tabla con parámetros de una necesidad que requiera un servicio"/>
-        <taggedValue xmi:id="_w9G_s6k6EeeYD8F7pf8Xmw" tag="Comment" value="Tabla con parámetros de una necesidad que requiera un servicio"/>
         <feature xsi:type="relational:TdColumn" xmi:id="_w9G_tKk6EeeYD8F7pf8Xmw" name="id" comment="Identificador de la tabla de parámetros detalle_servicio_necesidad" label="id" length="10" sourceType="SERIAL" talendType="id_Integer" key="true" nullable="false">
           <taggedValue xmi:id="_w9G_tak6EeeYD8F7pf8Xmw" tag="Comment" value="Identificador de la tabla de parámetros detalle_servicio_necesidad"/>
           <initialValue xsi:type="relational:TdExpression" xmi:id="_w9G_tqk6EeeYD8F7pf8Xmw" body="nextval('administrativa.servicio_necesidad_id_seq'::regclass)" language="COLUMN_DEF"/>
@@ -905,7 +960,6 @@
       </ownedElement>
       <ownedElement xsi:type="relational:TdTable" xmi:id="_xHJFcak6EeeYD8F7pf8Xmw" name="estado_contrato" id="_xHJFcKk6EeeYD8F7pf8Xmw" comment="Tabla que almacena todos los posibles estados por los cuales puede pasar un contrato desde su registro en el sistema hasta la aprobación del mismo" label="estado_contrato" tableType="TABLE">
         <taggedValue xmi:id="_xHJFcqk6EeeYD8F7pf8Xmw" tag="Comment" value="Tabla que almacena todos los posibles estados por los cuales puede pasar un contrato desde su registro en el sistema hasta la aprobación del mismo"/>
-        <taggedValue xmi:id="_xHJFc6k6EeeYD8F7pf8Xmw" tag="Comment" value="Tabla que almacena todos los posibles estados por los cuales puede pasar un contrato desde su registro en el sistema hasta la aprobación del mismo"/>
         <feature xsi:type="relational:TdColumn" xmi:id="_xHJFdKk6EeeYD8F7pf8Xmw" name="id" comment="identificador unico del estado del contrato" label="id" length="10" sourceType="SERIAL" talendType="id_Integer" key="true" nullable="false">
           <taggedValue xmi:id="_xHJFdak6EeeYD8F7pf8Xmw" tag="Comment" value="identificador unico del estado del contrato"/>
           <initialValue xsi:type="relational:TdExpression" xmi:id="_xHJFdqk6EeeYD8F7pf8Xmw" body="nextval('administrativa.estado_contrato_id_seq'::regclass)" language="COLUMN_DEF"/>
@@ -962,7 +1016,6 @@
       </ownedElement>
       <ownedElement xsi:type="relational:TdTable" xmi:id="_xHuUQKk6EeeYD8F7pf8Xmw" name="necesidad_proceso_externo" id="_xHttMKk6EeeYD8F7pf8Xmw" comment="Tabla de rompimiento encargada de relacionar una necesidad con su correspondiente proceso externo teniendo en cuenta que tipo de necesidad es (Si es una necesidad de contratación no se necesita guardar un registro en esta tabla)" label="necesidad_proceso_externo" tableType="TABLE">
         <taggedValue xmi:id="_xHuUQak6EeeYD8F7pf8Xmw" tag="Comment" value="Tabla de rompimiento encargada de relacionar una necesidad con su correspondiente proceso externo teniendo en cuenta que tipo de necesidad es (Si es una necesidad de contratación no se necesita guardar un registro en esta tabla)"/>
-        <taggedValue xmi:id="_xHuUQqk6EeeYD8F7pf8Xmw" tag="Comment" value="Tabla de rompimiento encargada de relacionar una necesidad con su correspondiente proceso externo teniendo en cuenta que tipo de necesidad es (Si es una necesidad de contratación no se necesita guardar un registro en esta tabla)"/>
         <feature xsi:type="relational:TdColumn" xmi:id="_xHuUQ6k6EeeYD8F7pf8Xmw" name="id" comment="Identificador del registro de la tabla de rompimiento necesidad_proceso_externo" label="id" length="10" sourceType="SERIAL" talendType="id_Integer" key="true" nullable="false">
           <taggedValue xmi:id="_xHuURKk6EeeYD8F7pf8Xmw" tag="Comment" value="Identificador del registro de la tabla de rompimiento necesidad_proceso_externo"/>
           <initialValue xsi:type="relational:TdExpression" xmi:id="_xHuURak6EeeYD8F7pf8Xmw" body="nextval('administrativa.necesidad_proceso_externo_id_seq'::regclass)" language="COLUMN_DEF"/>
@@ -1127,7 +1180,6 @@
       </ownedElement>
       <ownedElement xsi:type="relational:TdTable" xmi:id="_xIl28Kk6EeeYD8F7pf8Xmw" name="estado_rol_pension" id="_xIlP4Kk6EeeYD8F7pf8Xmw" comment="Tabla parametrica que indica el estado de la pension recibida. Por ejemplo, si esta activa para ser paga, o ya se encuentra inactiva" label="estado_rol_pension" tableType="TABLE">
         <taggedValue xmi:id="_xIl28ak6EeeYD8F7pf8Xmw" tag="Comment" value="Tabla parametrica que indica el estado de la pension recibida. Por ejemplo, si esta activa para ser paga, o ya se encuentra inactiva"/>
-        <taggedValue xmi:id="_xIl28qk6EeeYD8F7pf8Xmw" tag="Comment" value="Tabla parametrica que indica el estado de la pension recibida. Por ejemplo, si esta activa para ser paga, o ya se encuentra inactiva"/>
         <feature xsi:type="relational:TdColumn" xmi:id="_xIl286k6EeeYD8F7pf8Xmw" name="id" label="id" length="10" sourceType="SERIAL" talendType="id_Integer" key="true" nullable="false">
           <taggedValue xmi:id="_xIl29Kk6EeeYD8F7pf8Xmw" tag="Comment" value=""/>
           <initialValue xsi:type="relational:TdExpression" xmi:id="_xIl29ak6EeeYD8F7pf8Xmw" body="nextval('administrativa.estado_rol_pension_id_seq'::regclass)" language="COLUMN_DEF"/>
@@ -1179,7 +1231,6 @@
       </ownedElement>
       <ownedElement xsi:type="relational:TdTable" xmi:id="_xJo_0Kk6EeeYD8F7pf8Xmw" name="estado_preliquidacion" id="_xJoYwKk6EeeYD8F7pf8Xmw" comment="Tabla que parametriza los diferentes estados que tiene una preliquidacion. Ejemplo: Si está abierta, está cerrada o en solicitud de necesidad" label="estado_preliquidacion" tableType="TABLE">
         <taggedValue xmi:id="_xJo_0ak6EeeYD8F7pf8Xmw" tag="Comment" value="Tabla que parametriza los diferentes estados que tiene una preliquidacion. Ejemplo: Si está abierta, está cerrada o en solicitud de necesidad"/>
-        <taggedValue xmi:id="_xJo_0qk6EeeYD8F7pf8Xmw" tag="Comment" value="Tabla que parametriza los diferentes estados que tiene una preliquidacion. Ejemplo: Si está abierta, está cerrada o en solicitud de necesidad"/>
         <feature xsi:type="relational:TdColumn" xmi:id="_xJo_06k6EeeYD8F7pf8Xmw" name="id" label="id" length="10" sourceType="SERIAL" talendType="id_Integer" key="true" nullable="false">
           <taggedValue xmi:id="_xJo_1Kk6EeeYD8F7pf8Xmw" tag="Comment" value=""/>
           <initialValue xsi:type="relational:TdExpression" xmi:id="_xJo_1ak6EeeYD8F7pf8Xmw" body="nextval('administrativa.estado_preliquidacion_id_seq'::regclass)" language="COLUMN_DEF"/>
@@ -1246,7 +1297,6 @@
       </ownedElement>
       <ownedElement xsi:type="relational:TdTable" xmi:id="_xKQD0Kk6EeeYD8F7pf8Xmw" name="poliza_contrato" id="_xKPcwKk6EeeYD8F7pf8Xmw" comment="Tabla que almacena la relacion de los contratos con las polizas contractuales" label="poliza_contrato" tableType="TABLE">
         <taggedValue xmi:id="_xKQD0ak6EeeYD8F7pf8Xmw" tag="Comment" value="Tabla que almacena la relacion de los contratos con las polizas contractuales"/>
-        <taggedValue xmi:id="_xKQD0qk6EeeYD8F7pf8Xmw" tag="Comment" value="Tabla que almacena la relacion de los contratos con las polizas contractuales"/>
         <feature xsi:type="relational:TdColumn" xmi:id="_xKQD06k6EeeYD8F7pf8Xmw" name="id" comment="Identificador primario de la tabla poliza_contrato" label="id" length="10" sourceType="SERIAL" talendType="id_Integer" key="true" nullable="false">
           <taggedValue xmi:id="_xKQD1Kk6EeeYD8F7pf8Xmw" tag="Comment" value="Identificador primario de la tabla poliza_contrato"/>
           <initialValue xsi:type="relational:TdExpression" xmi:id="_xKQD1ak6EeeYD8F7pf8Xmw" body="nextval('administrativa.poliza_contrato_id_seq'::regclass)" language="COLUMN_DEF"/>
@@ -1300,7 +1350,6 @@
       </ownedElement>
       <ownedElement xsi:type="relational:TdTable" xmi:id="_xK49AKk6EeeYD8F7pf8Xmw" name="periodo_pago" id="_xK4V8Kk6EeeYD8F7pf8Xmw" comment="Tabla para el registro del año y mes al que hace referencia el calculo de descuentos" label="periodo_pago" tableType="TABLE">
         <taggedValue xmi:id="_xK49Aak6EeeYD8F7pf8Xmw" tag="Comment" value="Tabla para el registro del año y mes al que hace referencia el calculo de descuentos"/>
-        <taggedValue xmi:id="_xK49Aqk6EeeYD8F7pf8Xmw" tag="Comment" value="Tabla para el registro del año y mes al que hace referencia el calculo de descuentos"/>
         <feature xsi:type="relational:TdColumn" xmi:id="_xK49A6k6EeeYD8F7pf8Xmw" name="id" comment="PK de la tabla periodo_pago" label="id" length="10" sourceType="SERIAL" talendType="id_Integer" key="true" nullable="false">
           <taggedValue xmi:id="_xK49BKk6EeeYD8F7pf8Xmw" tag="Comment" value="PK de la tabla periodo_pago"/>
           <initialValue xsi:type="relational:TdExpression" xmi:id="_xK49Bak6EeeYD8F7pf8Xmw" body="nextval('administrativa.periodo_pago_id_seq'::regclass)" language="COLUMN_DEF"/>
@@ -1329,7 +1378,6 @@
       </ownedElement>
       <ownedElement xsi:type="relational:TdTable" xmi:id="_xLFKQak6EeeYD8F7pf8Xmw" name="naturaleza_concepto_nomina" id="_xLFKQKk6EeeYD8F7pf8Xmw" comment="Describe si el concepto es un devengo o un descuento, o si hace parte de seguridad social." label="naturaleza_concepto_nomina" tableType="TABLE">
         <taggedValue xmi:id="_xLFKQqk6EeeYD8F7pf8Xmw" tag="Comment" value="Describe si el concepto es un devengo o un descuento, o si hace parte de seguridad social."/>
-        <taggedValue xmi:id="_xLFKQ6k6EeeYD8F7pf8Xmw" tag="Comment" value="Describe si el concepto es un devengo o un descuento, o si hace parte de seguridad social."/>
         <feature xsi:type="relational:TdColumn" xmi:id="_xLFKRKk6EeeYD8F7pf8Xmw" name="id" label="id" length="10" sourceType="SERIAL" talendType="id_Integer" key="true" nullable="false">
           <taggedValue xmi:id="_xLFKRak6EeeYD8F7pf8Xmw" tag="Comment" value=""/>
           <initialValue xsi:type="relational:TdExpression" xmi:id="_xLFKRqk6EeeYD8F7pf8Xmw" body="nextval('administrativa.naturaleza_concepto_nomina_id_seq'::regclass)" language="COLUMN_DEF"/>
@@ -1460,7 +1508,6 @@
       </ownedElement>
       <ownedElement xsi:type="relational:TdTable" xmi:id="_xMJhQKk6EeeYD8F7pf8Xmw" name="pension" id="_xMI6MKk6EeeYD8F7pf8Xmw" comment="Entidad que consigna el valor de la pension y a que tipo corresponde" label="pension" tableType="TABLE">
         <taggedValue xmi:id="_xMJhQak6EeeYD8F7pf8Xmw" tag="Comment" value="Entidad que consigna el valor de la pension y a que tipo corresponde"/>
-        <taggedValue xmi:id="_xMJhQqk6EeeYD8F7pf8Xmw" tag="Comment" value="Entidad que consigna el valor de la pension y a que tipo corresponde"/>
         <feature xsi:type="relational:TdColumn" xmi:id="_xMJhQ6k6EeeYD8F7pf8Xmw" name="id" comment="Llave primaria de tabla pension" label="id" length="10" sourceType="SERIAL" talendType="id_Integer" key="true" nullable="false">
           <taggedValue xmi:id="_xMJhRKk6EeeYD8F7pf8Xmw" tag="Comment" value="Llave primaria de tabla pension"/>
           <initialValue xsi:type="relational:TdExpression" xmi:id="_xMJhRak6EeeYD8F7pf8Xmw" body="nextval('administrativa.pension_id_seq'::regclass)" language="COLUMN_DEF"/>
@@ -1484,7 +1531,6 @@
       </ownedElement>
       <ownedElement xsi:type="relational:TdTable" xmi:id="_xOZkAak6EeeYD8F7pf8Xmw" name="parametro_contraloria_contrato" id="_xOZkAKk6EeeYD8F7pf8Xmw" comment="tabla que relaciona el vinculo que tiene el contrato con los parametros de la contraloria" label="parametro_contraloria_contrato" tableType="TABLE">
         <taggedValue xmi:id="_xOZkAqk6EeeYD8F7pf8Xmw" tag="Comment" value="tabla que relaciona el vinculo que tiene el contrato con los parametros de la contraloria"/>
-        <taggedValue xmi:id="_xOZkA6k6EeeYD8F7pf8Xmw" tag="Comment" value="tabla que relaciona el vinculo que tiene el contrato con los parametros de la contraloria"/>
         <feature xsi:type="relational:TdColumn" xmi:id="_xOZkBKk6EeeYD8F7pf8Xmw" name="id" comment="Identificador primario de la tabla" label="id" length="10" sourceType="SERIAL" talendType="id_Integer" key="true" nullable="false">
           <taggedValue xmi:id="_xOZkBak6EeeYD8F7pf8Xmw" tag="Comment" value="Identificador primario de la tabla"/>
           <initialValue xsi:type="relational:TdExpression" xmi:id="_xOZkBqk6EeeYD8F7pf8Xmw" body="nextval('administrativa.parametro_contraloria_contrato_id_seq'::regclass)" language="COLUMN_DEF"/>
@@ -1541,7 +1587,6 @@
       </ownedElement>
       <ownedElement xsi:type="relational:TdTable" xmi:id="_xPCdMKk6EeeYD8F7pf8Xmw" name="pago" id="_xPB2IKk6EeeYD8F7pf8Xmw" comment="Tabla para registrar el detalle de los descuentos, donde se registran los valores desglosados de los descuentos" label="pago" tableType="TABLE">
         <taggedValue xmi:id="_xPCdMak6EeeYD8F7pf8Xmw" tag="Comment" value="Tabla para registrar el detalle de los descuentos, donde se registran los valores desglosados de los descuentos"/>
-        <taggedValue xmi:id="_xPCdMqk6EeeYD8F7pf8Xmw" tag="Comment" value="Tabla para registrar el detalle de los descuentos, donde se registran los valores desglosados de los descuentos"/>
         <feature xsi:type="relational:TdColumn" xmi:id="_xPCdM6k6EeeYD8F7pf8Xmw" name="id" comment="PK de la tabla pago" label="id" length="10" sourceType="SERIAL" talendType="id_Integer" key="true" nullable="false">
           <taggedValue xmi:id="_xPCdNKk6EeeYD8F7pf8Xmw" tag="Comment" value="PK de la tabla pago"/>
           <initialValue xsi:type="relational:TdExpression" xmi:id="_xPCdNak6EeeYD8F7pf8Xmw" body="nextval('administrativa.pago_id_seq'::regclass)" language="COLUMN_DEF"/>
@@ -1575,7 +1620,6 @@
       </ownedElement>
       <ownedElement xsi:type="relational:TdTable" xmi:id="_xPUKAKk6EeeYD8F7pf8Xmw" name="nomina" id="_xPTi8Kk6EeeYD8F7pf8Xmw" comment="Tabla que contiene las diferentes nominas presentes de la Universidad Distrital y sobre las cuales se realizaran calculos de preliquidacion" label="nomina" tableType="TABLE">
         <taggedValue xmi:id="_xPUKAak6EeeYD8F7pf8Xmw" tag="Comment" value="Tabla que contiene las diferentes nominas presentes de la Universidad Distrital y sobre las cuales se realizaran calculos de preliquidacion"/>
-        <taggedValue xmi:id="_xPUKAqk6EeeYD8F7pf8Xmw" tag="Comment" value="Tabla que contiene las diferentes nominas presentes de la Universidad Distrital y sobre las cuales se realizaran calculos de preliquidacion"/>
         <feature xsi:type="relational:TdColumn" xmi:id="_xPUKA6k6EeeYD8F7pf8Xmw" name="id" label="id" length="10" sourceType="SERIAL" talendType="id_Integer" key="true" nullable="false">
           <taggedValue xmi:id="_xPUKBKk6EeeYD8F7pf8Xmw" tag="Comment" value=""/>
           <initialValue xsi:type="relational:TdExpression" xmi:id="_xPUKBak6EeeYD8F7pf8Xmw" body="nextval('administrativa.nomina_id_seq'::regclass)" language="COLUMN_DEF"/>
@@ -1599,7 +1643,6 @@
       </ownedElement>
       <ownedElement xsi:type="relational:TdTable" xmi:id="_xRWKUKk6EeeYD8F7pf8Xmw" name="preliquidacion" id="_xRVjQKk6EeeYD8F7pf8Xmw" comment="Tabla que detalla el mes y el año para el cual se realizaran calculos de pagos a las personas vinculadas contractualmente a la Universidad Distrital" label="preliquidacion" tableType="TABLE">
         <taggedValue xmi:id="_xRWKUak6EeeYD8F7pf8Xmw" tag="Comment" value="Tabla que detalla el mes y el año para el cual se realizaran calculos de pagos a las personas vinculadas contractualmente a la Universidad Distrital"/>
-        <taggedValue xmi:id="_xRWKUqk6EeeYD8F7pf8Xmw" tag="Comment" value="Tabla que detalla el mes y el año para el cual se realizaran calculos de pagos a las personas vinculadas contractualmente a la Universidad Distrital"/>
         <feature xsi:type="relational:TdColumn" xmi:id="_xRWKU6k6EeeYD8F7pf8Xmw" name="id" label="id" length="10" sourceType="SERIAL" talendType="id_Integer" key="true" nullable="false">
           <taggedValue xmi:id="_xRWKVKk6EeeYD8F7pf8Xmw" tag="Comment" value=""/>
           <initialValue xsi:type="relational:TdExpression" xmi:id="_xRWKVak6EeeYD8F7pf8Xmw" body="nextval('administrativa.preliquidacion_id_seq'::regclass)" language="COLUMN_DEF"/>
@@ -1638,7 +1681,6 @@
       </ownedElement>
       <ownedElement xsi:type="relational:TdTable" xmi:id="_xRmpAKk6EeeYD8F7pf8Xmw" name="relacion_poliza_amparo" id="_xRmB8Kk6EeeYD8F7pf8Xmw" comment="Tabla que relaciona la poliza con los amparos" label="relacion_poliza_amparo" tableType="TABLE">
         <taggedValue xmi:id="_xRmpAak6EeeYD8F7pf8Xmw" tag="Comment" value="Tabla que relaciona la poliza con los amparos"/>
-        <taggedValue xmi:id="_xRmpAqk6EeeYD8F7pf8Xmw" tag="Comment" value="Tabla que relaciona la poliza con los amparos"/>
         <feature xsi:type="relational:TdColumn" xmi:id="_xRmpA6k6EeeYD8F7pf8Xmw" name="id" comment="Identificador primario de la tabla" label="id" length="10" sourceType="SERIAL" talendType="id_Integer" key="true" nullable="false">
           <taggedValue xmi:id="_xRmpBKk6EeeYD8F7pf8Xmw" tag="Comment" value="Identificador primario de la tabla"/>
           <initialValue xsi:type="relational:TdExpression" xmi:id="_xRmpBak6EeeYD8F7pf8Xmw" body="nextval('administrativa.relacion_poliza_amparo_id_seq'::regclass)" language="COLUMN_DEF"/>
@@ -1682,7 +1724,6 @@
       </ownedElement>
       <ownedElement xsi:type="relational:TdTable" xmi:id="_xR0rcak6EeeYD8F7pf8Xmw" name="relacion_parametro_contraloria" id="_xR0rcKk6EeeYD8F7pf8Xmw" comment="Tabla que almacena los registros que agrupan los parametros" label="relacion_parametro_contraloria" tableType="TABLE">
         <taggedValue xmi:id="_xR0rcqk6EeeYD8F7pf8Xmw" tag="Comment" value="Tabla que almacena los registros que agrupan los parametros"/>
-        <taggedValue xmi:id="_xR0rc6k6EeeYD8F7pf8Xmw" tag="Comment" value="Tabla que almacena los registros que agrupan los parametros"/>
         <feature xsi:type="relational:TdColumn" xmi:id="_xR0rdKk6EeeYD8F7pf8Xmw" name="id" comment="identificador unico del registro del registro de agrupacion" label="id" length="10" sourceType="SERIAL" talendType="id_Integer" key="true" nullable="false">
           <taggedValue xmi:id="_xR0rdak6EeeYD8F7pf8Xmw" tag="Comment" value="identificador unico del registro del registro de agrupacion"/>
           <initialValue xsi:type="relational:TdExpression" xmi:id="_xR0rdqk6EeeYD8F7pf8Xmw" body="nextval('administrativa.relacion_parametro_contraloria_id_seq'::regclass)" language="COLUMN_DEF"/>
@@ -1716,7 +1757,6 @@
       </ownedElement>
       <ownedElement xsi:type="relational:TdTable" xmi:id="_xSFKIKk6EeeYD8F7pf8Xmw" name="relacion_contrato_estado" id="_xSEjEKk6EeeYD8F7pf8Xmw" comment="Tabla encargada de alamcenar la relacion entre los contratos y los estados." label="relacion_contrato_estado" tableType="TABLE">
         <taggedValue xmi:id="_xSFKIak6EeeYD8F7pf8Xmw" tag="Comment" value="Tabla encargada de alamcenar la relacion entre los contratos y los estados."/>
-        <taggedValue xmi:id="_xSFKIqk6EeeYD8F7pf8Xmw" tag="Comment" value="Tabla encargada de alamcenar la relacion entre los contratos y los estados."/>
         <feature xsi:type="relational:TdColumn" xmi:id="_xSFKI6k6EeeYD8F7pf8Xmw" name="id" comment="Identidicador primario de la tabla e idependiente del modelo de negocio." label="id" length="10" sourceType="SERIAL" talendType="id_Integer" key="true" nullable="false">
           <taggedValue xmi:id="_xSFKJKk6EeeYD8F7pf8Xmw" tag="Comment" value="Identidicador primario de la tabla e idependiente del modelo de negocio."/>
           <initialValue xsi:type="relational:TdExpression" xmi:id="_xSFKJak6EeeYD8F7pf8Xmw" body="nextval('administrativa.relacion_contrato_estado_id_seq'::regclass)" language="COLUMN_DEF"/>
@@ -1745,7 +1785,6 @@
       </ownedElement>
       <ownedElement xsi:type="relational:TdTable" xmi:id="_xSQJQak6EeeYD8F7pf8Xmw" name="rango_edad_upc" id="_xSQJQKk6EeeYD8F7pf8Xmw" comment="Tabla para registrar los rangos de edades de las upc" label="rango_edad_upc" tableType="TABLE">
         <taggedValue xmi:id="_xSQwUKk6EeeYD8F7pf8Xmw" tag="Comment" value="Tabla para registrar los rangos de edades de las upc"/>
-        <taggedValue xmi:id="_xSQwUak6EeeYD8F7pf8Xmw" tag="Comment" value="Tabla para registrar los rangos de edades de las upc"/>
         <feature xsi:type="relational:TdColumn" xmi:id="_xSQwUqk6EeeYD8F7pf8Xmw" name="id" comment="PK de la tabla edad_upc." label="id" length="10" sourceType="SERIAL" talendType="id_Integer" key="true" nullable="false">
           <taggedValue xmi:id="_xSQwU6k6EeeYD8F7pf8Xmw" tag="Comment" value="PK de la tabla edad_upc."/>
           <initialValue xsi:type="relational:TdExpression" xmi:id="_xSQwVKk6EeeYD8F7pf8Xmw" body="nextval('administrativa.rango_edad_upc_id_seq'::regclass)" language="COLUMN_DEF"/>
@@ -1843,59 +1882,6 @@
           <sqlDataType xmi:id="_xWgXKqk6EeeYD8F7pf8Xmw" name="VARCHAR" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
         </feature>
       </ownedElement>
-      <ownedElement xsi:type="relational:TdTable" xmi:id="_Q17Z0T8sEeeDkv0nwW2QiA" name="solicitud_rp" id="_Q17Z0D8sEeeDkv0nwW2QiA" label="solicitud_rp" tableType="TABLE">
-        <taggedValue xmi:id="_Q17Z0j8sEeeDkv0nwW2QiA" tag="Comment" value=""/>
-        <feature xsi:type="relational:TdColumn" xmi:id="_Q17Z0z8sEeeDkv0nwW2QiA" name="vigencia" label="vigencia" length="10" sourceType="INT4" talendType="id_Integer" nullable="false">
-          <taggedValue xmi:id="_Q17Z1D8sEeeDkv0nwW2QiA" tag="Comment" value=""/>
-          <initialValue xsi:type="relational:TdExpression" xmi:id="_Q17Z1T8sEeeDkv0nwW2QiA" language="COLUMN_DEF"/>
-          <sqlDataType xmi:id="_Q17Z1j8sEeeDkv0nwW2QiA" name="INT4" numericPrecisionRadix="10" javaDataType="4"/>
-        </feature>
-        <feature xsi:type="relational:TdColumn" xmi:id="_Q17Z1z8sEeeDkv0nwW2QiA" name="fecha_solicitud" label="fecha_solicitud" length="13" sourceType="DATE" talendType="id_Date" pattern="&quot;dd-MM-yyyy&quot;">
-          <taggedValue xmi:id="_Q17Z2D8sEeeDkv0nwW2QiA" tag="Comment" value=""/>
-          <initialValue xsi:type="relational:TdExpression" xmi:id="_Q17Z2T8sEeeDkv0nwW2QiA" language="COLUMN_DEF"/>
-          <sqlDataType xmi:id="_Q17Z2j8sEeeDkv0nwW2QiA" name="DATE" numericPrecisionRadix="10" javaDataType="91" nullable="columnNullable"/>
-        </feature>
-        <feature xsi:type="relational:TdColumn" xmi:id="_Q17Z2z8sEeeDkv0nwW2QiA" name="cdp" label="cdp" length="10" sourceType="INT4" talendType="id_Integer" nullable="false">
-          <taggedValue xmi:id="_Q17Z3D8sEeeDkv0nwW2QiA" tag="Comment" value=""/>
-          <initialValue xsi:type="relational:TdExpression" xmi:id="_Q17Z3T8sEeeDkv0nwW2QiA" language="COLUMN_DEF"/>
-          <sqlDataType xmi:id="_Q17Z3j8sEeeDkv0nwW2QiA" name="INT4" numericPrecisionRadix="10" javaDataType="4"/>
-        </feature>
-        <feature xsi:type="relational:TdColumn" xmi:id="_Q17Z3z8sEeeDkv0nwW2QiA" name="expedida" label="expedida" length="1" sourceType="BOOL" talendType="id_Boolean">
-          <taggedValue xmi:id="_Q17Z4D8sEeeDkv0nwW2QiA" tag="Comment" value=""/>
-          <initialValue xsi:type="relational:TdExpression" xmi:id="_Q17Z4T8sEeeDkv0nwW2QiA" body="'false'" language="COLUMN_DEF"/>
-          <sqlDataType xmi:id="_Q17Z4j8sEeeDkv0nwW2QiA" name="BOOL" numericPrecisionRadix="10" javaDataType="-7" nullable="columnNullable"/>
-        </feature>
-        <feature xsi:type="relational:TdColumn" xmi:id="_Q17Z4z8sEeeDkv0nwW2QiA" name="numero_contrato" label="numero_contrato" length="2147483647" sourceType="VARCHAR" talendType="id_String" nullable="false">
-          <taggedValue xmi:id="_Q17Z5D8sEeeDkv0nwW2QiA" tag="Comment" value=""/>
-          <initialValue xsi:type="relational:TdExpression" xmi:id="_Q17Z5T8sEeeDkv0nwW2QiA" language="COLUMN_DEF"/>
-          <sqlDataType xmi:id="_Q17Z5j8sEeeDkv0nwW2QiA" name="VARCHAR" numericPrecisionRadix="10" javaDataType="12"/>
-        </feature>
-        <feature xsi:type="relational:TdColumn" xmi:id="_Q17Z5z8sEeeDkv0nwW2QiA" name="vigencia_contrato" label="vigencia_contrato" length="10" sourceType="INT4" talendType="id_Integer">
-          <taggedValue xmi:id="_Q17Z6D8sEeeDkv0nwW2QiA" tag="Comment" value=""/>
-          <initialValue xsi:type="relational:TdExpression" xmi:id="_Q17Z6T8sEeeDkv0nwW2QiA" language="COLUMN_DEF"/>
-          <sqlDataType xmi:id="_Q17Z6j8sEeeDkv0nwW2QiA" name="INT4" numericPrecisionRadix="10" javaDataType="4" nullable="columnNullable"/>
-        </feature>
-        <feature xsi:type="relational:TdColumn" xmi:id="_Q17Z6z8sEeeDkv0nwW2QiA" name="id" label="id" length="10" sourceType="SERIAL" talendType="id_Integer" key="true" nullable="false">
-          <taggedValue xmi:id="_Q17Z7D8sEeeDkv0nwW2QiA" tag="Comment" value=""/>
-          <initialValue xsi:type="relational:TdExpression" xmi:id="_Q17Z7T8sEeeDkv0nwW2QiA" body="nextval('administrativa.solicitud_rp_id_seq'::regclass)" language="COLUMN_DEF"/>
-          <sqlDataType xmi:id="_Q17Z7j8sEeeDkv0nwW2QiA" name="SERIAL" numericPrecisionRadix="10" javaDataType="4"/>
-        </feature>
-        <feature xsi:type="relational:TdColumn" xmi:id="_Q17Z7z8sEeeDkv0nwW2QiA" name="compromiso" label="compromiso" length="10" sourceType="INT4" talendType="id_Integer">
-          <taggedValue xmi:id="_Q17Z8D8sEeeDkv0nwW2QiA" tag="Comment" value=""/>
-          <initialValue xsi:type="relational:TdExpression" xmi:id="_Q17Z8T8sEeeDkv0nwW2QiA" language="COLUMN_DEF"/>
-          <sqlDataType xmi:id="_Q17Z8j8sEeeDkv0nwW2QiA" name="INT4" numericPrecisionRadix="10" javaDataType="4" nullable="columnNullable"/>
-        </feature>
-        <feature xsi:type="relational:TdColumn" xmi:id="_xWvn06k6EeeYD8F7pf8Xmw" name="justificacion_rechazo" comment="Justificación de rechazo de la solicitud de disponibilidad, si la solicitud es aprobada se debe dejar este campo nulo." label="justificacion_rechazo" length="250" sourceType="VARCHAR" talendType="id_String">
-          <taggedValue xmi:id="_xWvn1Kk6EeeYD8F7pf8Xmw" tag="Comment" value="Justificación de rechazo de la solicitud de disponibilidad, si la solicitud es aprobada se debe dejar este campo nulo."/>
-          <initialValue xsi:type="relational:TdExpression" xmi:id="_xWvn1ak6EeeYD8F7pf8Xmw" language="COLUMN_DEF"/>
-          <sqlDataType xmi:id="_xWvn1qk6EeeYD8F7pf8Xmw" name="VARCHAR" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
-        </feature>
-        <feature xsi:type="relational:TdColumn" xmi:id="_xWvn16k6EeeYD8F7pf8Xmw" name="masivo" label="masivo" length="1" sourceType="BOOL" talendType="id_Boolean">
-          <taggedValue xmi:id="_xWvn2Kk6EeeYD8F7pf8Xmw" tag="Comment" value=""/>
-          <initialValue xsi:type="relational:TdExpression" xmi:id="_xWvn2ak6EeeYD8F7pf8Xmw" language="COLUMN_DEF"/>
-          <sqlDataType xmi:id="_xWvn2qk6EeeYD8F7pf8Xmw" name="BOOL" numericPrecisionRadix="10" javaDataType="-7" nullable="columnNullable"/>
-        </feature>
-      </ownedElement>
       <ownedElement xsi:type="relational:TdTable" xmi:id="_Q1t-cD8sEeeDkv0nwW2QiA" name="solicitud_disponibilidad" id="_Q1tXYD8sEeeDkv0nwW2QiA" comment="Tabla encargada de gestionar la solicitud de la disponibilidad" label="solicitud_disponibilidad" tableType="TABLE">
         <taggedValue xmi:id="_Q1t-cT8sEeeDkv0nwW2QiA" tag="Comment" value="Tabla encargada de gestionar la solicitud de la disponibilidad"/>
         <feature xsi:type="relational:TdColumn" xmi:id="_Q1t-cz8sEeeDkv0nwW2QiA" name="id" comment="Identificador del registro de la solicitud de disponibilidad" label="id" length="10" sourceType="SERIAL" talendType="id_Integer" key="true" nullable="false">
@@ -1987,7 +1973,6 @@
       </ownedElement>
       <ownedElement xsi:type="relational:TdTable" xmi:id="_xXnxcak6EeeYD8F7pf8Xmw" name="tipo_necesidad" id="_xXnxcKk6EeeYD8F7pf8Xmw" comment="Tabla encargada de gestionar los tipos de necesidad" label="tipo_necesidad" tableType="TABLE">
         <taggedValue xmi:id="_xXnxcqk6EeeYD8F7pf8Xmw" tag="Comment" value="Tabla encargada de gestionar los tipos de necesidad"/>
-        <taggedValue xmi:id="_xXnxc6k6EeeYD8F7pf8Xmw" tag="Comment" value="Tabla encargada de gestionar los tipos de necesidad"/>
         <feature xsi:type="relational:TdColumn" xmi:id="_xXnxdKk6EeeYD8F7pf8Xmw" name="id" comment="Identificador del registro del tipo de necesidad" label="id" length="10" sourceType="SERIAL" talendType="id_Integer" key="true" nullable="false">
           <taggedValue xmi:id="_xXnxdak6EeeYD8F7pf8Xmw" tag="Comment" value="Identificador del registro del tipo de necesidad"/>
           <initialValue xsi:type="relational:TdExpression" xmi:id="_xXnxdqk6EeeYD8F7pf8Xmw" body="nextval('administrativa.tipo_necesidad_id_seq'::regclass)" language="COLUMN_DEF"/>
@@ -2021,7 +2006,6 @@
       </ownedElement>
       <ownedElement xsi:type="relational:TdTable" xmi:id="_xX43MKk6EeeYD8F7pf8Xmw" name="tipo_financiacion_necesidad" id="_xX4QIKk6EeeYD8F7pf8Xmw" comment="Tabla encargada de gestionar los tipos de financiacion para una necesidad" label="tipo_financiacion_necesidad" tableType="TABLE">
         <taggedValue xmi:id="_xX43Mak6EeeYD8F7pf8Xmw" tag="Comment" value="Tabla encargada de gestionar los tipos de financiacion para una necesidad"/>
-        <taggedValue xmi:id="_xX43Mqk6EeeYD8F7pf8Xmw" tag="Comment" value="Tabla encargada de gestionar los tipos de financiacion para una necesidad"/>
         <feature xsi:type="relational:TdColumn" xmi:id="_xX43M6k6EeeYD8F7pf8Xmw" name="id" comment="Identificador del registro del tipo de financiacion de una necesidad" label="id" length="10" sourceType="SERIAL" talendType="id_Integer" key="true" nullable="false">
           <taggedValue xmi:id="_xX43NKk6EeeYD8F7pf8Xmw" tag="Comment" value="Identificador del registro del tipo de financiacion de una necesidad"/>
           <initialValue xsi:type="relational:TdExpression" xmi:id="_xX43Nak6EeeYD8F7pf8Xmw" body="nextval('argo.tipo_contratacion_id_seq'::regclass)" language="COLUMN_DEF"/>
@@ -2055,7 +2039,6 @@
       </ownedElement>
       <ownedElement xsi:type="relational:TdTable" xmi:id="_xYEdYak6EeeYD8F7pf8Xmw" name="tipo_contrato_necesidad" id="_xYEdYKk6EeeYD8F7pf8Xmw" comment="Tabla encargada de gestionar los tipos de contrato de la necesidad" label="tipo_contrato_necesidad" tableType="TABLE">
         <taggedValue xmi:id="_xYEdYqk6EeeYD8F7pf8Xmw" tag="Comment" value="Tabla encargada de gestionar los tipos de contrato de la necesidad"/>
-        <taggedValue xmi:id="_xYEdY6k6EeeYD8F7pf8Xmw" tag="Comment" value="Tabla encargada de gestionar los tipos de contrato de la necesidad"/>
         <feature xsi:type="relational:TdColumn" xmi:id="_xYEdZKk6EeeYD8F7pf8Xmw" name="id" comment="Identificador del registro del servicio de la solicitud de necesidad" label="id" length="10" sourceType="SERIAL" talendType="id_Integer" key="true" nullable="false">
           <taggedValue xmi:id="_xYEdZak6EeeYD8F7pf8Xmw" tag="Comment" value="Identificador del registro del servicio de la solicitud de necesidad"/>
           <initialValue xsi:type="relational:TdExpression" xmi:id="_xYEdZqk6EeeYD8F7pf8Xmw" body="nextval('administrativa.servicio_id_seq'::regclass)" language="COLUMN_DEF"/>
@@ -2089,7 +2072,6 @@
       </ownedElement>
       <ownedElement xsi:type="relational:TdTable" xmi:id="_xYU8EKk6EeeYD8F7pf8Xmw" name="tipo_concepto_nomina" id="_xYUVAKk6EeeYD8F7pf8Xmw" comment="Describe si el concepto a la hora de ser calculado corresponde a un valor fijo o porcentual." label="tipo_concepto_nomina" tableType="TABLE">
         <taggedValue xmi:id="_xYU8Eak6EeeYD8F7pf8Xmw" tag="Comment" value="Describe si el concepto a la hora de ser calculado corresponde a un valor fijo o porcentual."/>
-        <taggedValue xmi:id="_xYU8Eqk6EeeYD8F7pf8Xmw" tag="Comment" value="Describe si el concepto a la hora de ser calculado corresponde a un valor fijo o porcentual."/>
         <feature xsi:type="relational:TdColumn" xmi:id="_xYU8E6k6EeeYD8F7pf8Xmw" name="id" label="id" length="10" sourceType="SERIAL" talendType="id_Integer" key="true" nullable="false">
           <taggedValue xmi:id="_xYU8FKk6EeeYD8F7pf8Xmw" tag="Comment" value=""/>
           <initialValue xsi:type="relational:TdExpression" xmi:id="_xYU8Fak6EeeYD8F7pf8Xmw" body="nextval('administrativa.tipo_concepto_nomina_id_seq'::regclass)" language="COLUMN_DEF"/>
@@ -2123,7 +2105,6 @@
       </ownedElement>
       <ownedElement xsi:type="relational:TdTable" xmi:id="_xcYVoKk6EeeYD8F7pf8Xmw" name="tipo_nomina" id="_xcXukKk6EeeYD8F7pf8Xmw" comment="Tabla parametrica que lista los tipos de nomina dentro de la Universidad Distrital. Ejemplo: Funcionarios de planta, docentes de planta o de HC" label="tipo_nomina" tableType="TABLE">
         <taggedValue xmi:id="_xcYVoak6EeeYD8F7pf8Xmw" tag="Comment" value="Tabla parametrica que lista los tipos de nomina dentro de la Universidad Distrital. Ejemplo: Funcionarios de planta, docentes de planta o de HC"/>
-        <taggedValue xmi:id="_xcYVoqk6EeeYD8F7pf8Xmw" tag="Comment" value="Tabla parametrica que lista los tipos de nomina dentro de la Universidad Distrital. Ejemplo: Funcionarios de planta, docentes de planta o de HC"/>
         <feature xsi:type="relational:TdColumn" xmi:id="_xcYVo6k6EeeYD8F7pf8Xmw" name="id" label="id" length="10" sourceType="SERIAL" talendType="id_Integer" key="true" nullable="false">
           <taggedValue xmi:id="_xcYVpKk6EeeYD8F7pf8Xmw" tag="Comment" value=""/>
           <initialValue xsi:type="relational:TdExpression" xmi:id="_xcYVpak6EeeYD8F7pf8Xmw" body="nextval('administrativa.tipo_nomina_id_seq'::regclass)" language="COLUMN_DEF"/>
@@ -2190,7 +2171,6 @@
       </ownedElement>
       <ownedElement xsi:type="relational:TdTable" xmi:id="_xg0wwKk6EeeYD8F7pf8Xmw" name="tipo_pension" id="_xg0JsKk6EeeYD8F7pf8Xmw" comment="Tabla parametrica que indica el motivo de la pension asignada. Ejemplo: Por jubilación, por invalidez" label="tipo_pension" tableType="TABLE">
         <taggedValue xmi:id="_xg0wwak6EeeYD8F7pf8Xmw" tag="Comment" value="Tabla parametrica que indica el motivo de la pension asignada. Ejemplo: Por jubilación, por invalidez"/>
-        <taggedValue xmi:id="_xg0wwqk6EeeYD8F7pf8Xmw" tag="Comment" value="Tabla parametrica que indica el motivo de la pension asignada. Ejemplo: Por jubilación, por invalidez"/>
         <feature xsi:type="relational:TdColumn" xmi:id="_xg0ww6k6EeeYD8F7pf8Xmw" name="id" label="id" length="10" sourceType="SERIAL" talendType="id_Integer" key="true" nullable="false">
           <taggedValue xmi:id="_xg0wxKk6EeeYD8F7pf8Xmw" tag="Comment" value=""/>
           <initialValue xsi:type="relational:TdExpression" xmi:id="_xg0wxak6EeeYD8F7pf8Xmw" body="nextval('administrativa.tipo_pension_id_seq'::regclass)" language="COLUMN_DEF"/>
@@ -2224,7 +2204,6 @@
       </ownedElement>
       <ownedElement xsi:type="relational:TdTable" xmi:id="_xhA-Aak6EeeYD8F7pf8Xmw" name="tipo_preliquidacion" id="_xhA-AKk6EeeYD8F7pf8Xmw" comment="Corresponde al periodo a liquidar.&#xA;0 es la primera quincena, 1 la segunda quincena, 2 el mes completo, 3 junio y 4 diciembre" label="tipo_preliquidacion" tableType="TABLE">
         <taggedValue xmi:id="_xhA-Aqk6EeeYD8F7pf8Xmw" tag="Comment" value="Corresponde al periodo a liquidar.&#xA;0 es la primera quincena, 1 la segunda quincena, 2 el mes completo, 3 junio y 4 diciembre"/>
-        <taggedValue xmi:id="_xhA-A6k6EeeYD8F7pf8Xmw" tag="Comment" value="Corresponde al periodo a liquidar.&#xA;0 es la primera quincena, 1 la segunda quincena, 2 el mes completo, 3 junio y 4 diciembre"/>
         <feature xsi:type="relational:TdColumn" xmi:id="_xhA-BKk6EeeYD8F7pf8Xmw" name="id" label="id" length="10" sourceType="SERIAL" talendType="id_Integer" key="true" nullable="false">
           <taggedValue xmi:id="_xhA-Bak6EeeYD8F7pf8Xmw" tag="Comment" value=""/>
           <initialValue xsi:type="relational:TdExpression" xmi:id="_xhA-Bqk6EeeYD8F7pf8Xmw" body="nextval('administrativa.tipo_preliquidacion_id_seq'::regclass)" language="COLUMN_DEF"/>
@@ -2334,7 +2313,6 @@
       </ownedElement>
       <ownedElement xsi:type="relational:TdTable" xmi:id="_xloYQak6EeeYD8F7pf8Xmw" name="tipo_valor_amparo" id="_xloYQKk6EeeYD8F7pf8Xmw" comment="Almacena los tipos de valores que puede tener un amparo que son por el momento porcentaje y numero de SMLMV" label="tipo_valor_amparo" tableType="TABLE">
         <taggedValue xmi:id="_xloYQqk6EeeYD8F7pf8Xmw" tag="Comment" value="Almacena los tipos de valores que puede tener un amparo que son por el momento porcentaje y numero de SMLMV"/>
-        <taggedValue xmi:id="_xloYQ6k6EeeYD8F7pf8Xmw" tag="Comment" value="Almacena los tipos de valores que puede tener un amparo que son por el momento porcentaje y numero de SMLMV"/>
         <feature xsi:type="relational:TdColumn" xmi:id="_xloYRKk6EeeYD8F7pf8Xmw" name="id" comment="identificador unico del estado del contrato" label="id" length="10" sourceType="SERIAL" talendType="id_Integer" key="true" nullable="false">
           <taggedValue xmi:id="_xloYRak6EeeYD8F7pf8Xmw" tag="Comment" value="identificador unico del estado del contrato"/>
           <initialValue xsi:type="relational:TdExpression" xmi:id="_xloYRqk6EeeYD8F7pf8Xmw" body="nextval('administrativa.tipo_valor_amparo_id_seq'::regclass)" language="COLUMN_DEF"/>
@@ -2469,7 +2447,6 @@
       </ownedElement>
       <ownedElement xsi:type="relational:TdTable" xmi:id="_xok-kak6EeeYD8F7pf8Xmw" name="zona_upc" id="_xok-kKk6EeeYD8F7pf8Xmw" comment="Tabla para registrar los tipos de zonas en las que estan distribuidas las upc" label="zona_upc" tableType="TABLE">
         <taggedValue xmi:id="_xok-kqk6EeeYD8F7pf8Xmw" tag="Comment" value="Tabla para registrar los tipos de zonas en las que estan distribuidas las upc"/>
-        <taggedValue xmi:id="_xok-k6k6EeeYD8F7pf8Xmw" tag="Comment" value="Tabla para registrar los tipos de zonas en las que estan distribuidas las upc"/>
         <feature xsi:type="relational:TdColumn" xmi:id="_xok-lKk6EeeYD8F7pf8Xmw" name="id" comment="PK de la tabla tipo_zona_upc" label="id" length="10" sourceType="SERIAL" talendType="id_Integer" key="true" nullable="false">
           <taggedValue xmi:id="_xok-lak6EeeYD8F7pf8Xmw" tag="Comment" value="PK de la tabla tipo_zona_upc"/>
           <initialValue xsi:type="relational:TdExpression" xmi:id="_xok-lqk6EeeYD8F7pf8Xmw" body="nextval('administrativa.zona_upc_id_seq'::regclass)" language="COLUMN_DEF"/>

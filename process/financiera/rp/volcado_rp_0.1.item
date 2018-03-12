@@ -390,14 +390,17 @@
       <column key="false" length="10" name="numero_registro_presupuestal" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="refrencia al compromiso del RP" key="false" length="10" name="compromiso" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value="refrencia al compromiso del RP"/>
-      </column>
       <column comment="referencia el id del beneficiario del rp (id_proveedor)" key="false" length="10" name="beneficiario" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value="referencia el id del beneficiario del rp (id_proveedor)"/>
       </column>
       <column comment="referencia a la solicitud del rp " key="false" length="10" name="solicitud" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value="referencia a la solicitud del rp "/>
+      </column>
+      <column comment="" key="false" length="10" name="tipo_compromiso" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="referencia al numero del documento fisico que genera la solicitud de CRP" key="false" length="10" name="numero_compromiso" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value="referencia al numero del documento fisico que genera la solicitud de CRP"/>
       </column>
       <additionalProperties key="Comment" value=""/>
     </metadata>
@@ -420,16 +423,15 @@
       <column comment="" key="false" length="2147483647" name="numero_contrato" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="10" name="compromiso" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
       <column comment="" key="false" length="1" name="masivo" nullable="true" pattern="" precision="0" sourceType="BOOL" type="id_Boolean" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
+      <column comment="" key="false" length="-1" name="tipo_compromiso" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="numero_compromiso" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <additionalProperties key="Comment" value=""/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="salida_registro">
         <mapperTableEntries name="vigencia" expression="salida_registro_presupuestal.vigencia " type="id_Integer"/>
@@ -437,9 +439,10 @@
         <mapperTableEntries name="responsable" expression="salida_registro_presupuestal.responsable " type="id_Integer"/>
         <mapperTableEntries name="estado" expression="1" type="id_Short"/>
         <mapperTableEntries name="numero_registro_presupuestal" expression="salida_registro_presupuestal.numero_registro_presupuestal " type="id_Integer"/>
-        <mapperTableEntries name="compromiso" expression="salida_registro_presupuestal.compromiso " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="beneficiario" expression="salida_registro_presupuestal.beneficiario " type="id_Integer"/>
         <mapperTableEntries name="solicitud" expression="salida_registro_presupuestal.id_solicitud " type="id_Integer"/>
+        <mapperTableEntries name="tipo_compromiso" expression="salida_registro_presupuestal.compromiso " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="numero_compromiso" expression="salida_registro_presupuestal.compromiso " type="id_Integer" nullable="true"/>
       </outputTables>
       <outputTables sizeState="INTERMEDIATE" name="salida_solicitud_administrativa">
         <mapperTableEntries name="id" expression="salida_registro_presupuestal.id_solicitud " type="id_Integer"/>
@@ -448,8 +451,9 @@
         <mapperTableEntries name="cdp" expression="salida_registro_presupuestal.cdp " type="id_Integer"/>
         <mapperTableEntries name="expedida" expression="true" type="id_Boolean" nullable="true"/>
         <mapperTableEntries name="numero_contrato" expression="&quot;1&quot;" type="id_String"/>
-        <mapperTableEntries name="compromiso" expression="salida_registro_presupuestal.compromiso " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="masivo" expression="false" type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="tipo_compromiso" expression="salida_registro_presupuestal.compromiso " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="numero_compromiso" expression="salida_registro_presupuestal.compromiso " type="id_Integer" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="salida_registro_presupuestal" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="id_solicitud" type="id_Integer"/>
@@ -496,6 +500,16 @@
     <elementParameter field="TABLE" name="ADD_COLS"/>
     <elementParameter field="CHECK" name="USE_FIELD_OPTIONS" value="false"/>
     <elementParameter field="TABLE" name="FIELD_OPTIONS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="tipo_compromiso"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="numero_compromiso"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="vigencia"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
@@ -521,11 +535,6 @@
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="compromiso"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="beneficiario"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
@@ -544,6 +553,12 @@
     <elementParameter field="TEXT" name="LABEL" value="udistrital_postgres_financiera"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="registro_presupuestal" name="tPostgresqlOutput_1">
+      <column comment="" key="false" length="10" name="tipo_compromiso" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="referencia al numero del documento fisico que genera la solicitud de CRP" key="false" length="10" name="numero_compromiso" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value="referencia al numero del documento fisico que genera la solicitud de CRP"/>
+      </column>
       <column comment="vigencia del registro presupuestal" key="false" length="4" name="vigencia" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value="vigencia del registro presupuestal"/>
       </column>
@@ -558,9 +573,6 @@
       </column>
       <column key="false" length="10" name="numero_registro_presupuestal" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="refrencia al compromiso del RP" key="false" length="10" name="compromiso" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value="refrencia al compromiso del RP"/>
       </column>
       <column comment="referencia el id del beneficiario del rp (id_proveedor)" key="false" length="10" name="beneficiario" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value="referencia el id del beneficiario del rp (id_proveedor)"/>
@@ -571,6 +583,12 @@
       <additionalProperties key="Comment" value=""/>
     </metadata>
     <metadata connector="REJECT" label="registro_presupuestal" name="REJECT">
+      <column comment="" key="false" length="10" name="tipo_compromiso" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="referencia al numero del documento fisico que genera la solicitud de CRP" key="false" length="10" name="numero_compromiso" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value="referencia al numero del documento fisico que genera la solicitud de CRP"/>
+      </column>
       <column comment="vigencia del registro presupuestal" key="false" length="4" name="vigencia" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value="vigencia del registro presupuestal"/>
       </column>
@@ -585,9 +603,6 @@
       </column>
       <column key="false" length="10" name="numero_registro_presupuestal" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="refrencia al compromiso del RP" key="false" length="10" name="compromiso" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value="refrencia al compromiso del RP"/>
       </column>
       <column comment="referencia el id del beneficiario del rp (id_proveedor)" key="false" length="10" name="beneficiario" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value="referencia el id del beneficiario del rp (id_proveedor)"/>
@@ -632,6 +647,11 @@
     <elementParameter field="TABLE" name="ADD_COLS"/>
     <elementParameter field="CHECK" name="USE_FIELD_OPTIONS" value="false"/>
     <elementParameter field="TABLE" name="FIELD_OPTIONS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="id"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="vigencia"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
@@ -657,17 +677,17 @@
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="id"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="compromiso"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="masivo"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="tipo_compromiso"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="numero_compromiso"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
@@ -680,6 +700,9 @@
     <elementParameter field="TEXT" name="LABEL" value="udistrital_postgres_administrativa"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="solicitud_rp" name="tPostgresqlOutput_2">
+      <column comment="" defaultValue="nextval('administrativa.solicitud_rp_id_seq'::regclass)" key="true" length="10" name="id" nullable="false" pattern="" precision="0" sourceType="SERIAL" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
       <column comment="" key="false" length="10" name="vigencia" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
@@ -695,18 +718,17 @@
       <column comment="" key="false" length="2147483647" name="numero_contrato" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" defaultValue="nextval('administrativa.solicitud_rp_id_seq'::regclass)" key="true" length="10" name="id" nullable="false" pattern="" precision="0" sourceType="SERIAL" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="10" name="compromiso" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
       <column comment="" key="false" length="1" name="masivo" nullable="true" pattern="" precision="0" sourceType="BOOL" type="id_Boolean" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
+      <column comment="" key="false" length="-1" name="tipo_compromiso" nullable="true" pattern="" precision="-1" sourceType="INT4" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="numero_compromiso" nullable="true" pattern="" precision="-1" sourceType="INT4" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <additionalProperties key="Comment" value=""/>
     </metadata>
     <metadata connector="REJECT" label="solicitud_rp" name="REJECT">
+      <column comment="" defaultValue="nextval('administrativa.solicitud_rp_id_seq'::regclass)" key="true" length="10" name="id" nullable="false" pattern="" precision="0" sourceType="SERIAL" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
       <column comment="" key="false" length="10" name="vigencia" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
@@ -722,15 +744,11 @@
       <column comment="" key="false" length="2147483647" name="numero_contrato" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" defaultValue="nextval('administrativa.solicitud_rp_id_seq'::regclass)" key="true" length="10" name="id" nullable="false" pattern="" precision="0" sourceType="SERIAL" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="10" name="compromiso" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
       <column comment="" key="false" length="1" name="masivo" nullable="true" pattern="" precision="0" sourceType="BOOL" type="id_Boolean" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
+      <column comment="" key="false" length="-1" name="tipo_compromiso" nullable="true" pattern="" precision="-1" sourceType="INT4" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="numero_compromiso" nullable="true" pattern="" precision="-1" sourceType="INT4" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <additionalProperties key="Comment" value=""/>
@@ -1075,10 +1093,26 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="salida_registro_presupuestal" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="salida_registro" lineStyle="0" metaname="salida_registro" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_2" target="tPostgresqlOutput_1">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="tipo_compromiso"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="numero_compromiso"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="salida_registro" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="salida_solicitud_administrativa" lineStyle="0" metaname="salida_solicitud_administrativa" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_2" target="tPostgresqlOutput_2">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="tipo_compromiso"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="numero_compromiso"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="salida_solicitud_administrativa" show="false"/>
   </connection>
