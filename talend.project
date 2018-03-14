@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendProperties="http://www.talend.org/properties">
-  <TalendProperties:Project xmi:id="_ZZZKMWAFEeatGJv7WGjxOg" label="migraciones" description="" language="java" technicalLabel="MIGRACIONES" local="true" author="_Zan5QGAFEeatGJv7WGjxOg" productVersion="Talend Open Studio for Big Data-6.5.1.20180116_1512" itemsRelationVersion="1.3">
+  <TalendProperties:Project xmi:id="_ZZZKMWAFEeatGJv7WGjxOg" label="migracionesOas" description="" language="java" technicalLabel="MIGRACIONESOAS" local="true" author="_Zan5QGAFEeatGJv7WGjxOg" productVersion="Talend Open Studio for Big Data-6.5.1.20180116_1512" itemsRelationVersion="1.3">
     <technicalStatus xmi:id="_ZcqgoGAFEeatGJv7WGjxOg" label="development" code="DEV"/>
     <technicalStatus xmi:id="_ZcqgoWAFEeatGJv7WGjxOg" label="testing" code="TEST"/>
     <technicalStatus xmi:id="_ZcqgomAFEeatGJv7WGjxOg" label="production" code="PROD"/>
