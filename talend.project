@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendProperties="http://www.talend.org/properties">
-  <TalendProperties:Project xmi:id="_ZZZKMWAFEeatGJv7WGjxOg" label="migraciones" description="" language="java" technicalLabel="MIGRACIONES" local="true" author="_Zan5QGAFEeatGJv7WGjxOg" productVersion="Talend Open Studio for Big Data-6.5.1.20180116_1512" itemsRelationVersion="1.3">
+  <TalendProperties:Project xmi:id="_ZZZKMWAFEeatGJv7WGjxOg" label="MIGRACIONOAS" description="" language="java" technicalLabel="MIGRACIONOAS" local="true" author="_Zan5QGAFEeatGJv7WGjxOg" productVersion="Talend Open Studio for Big Data-6.5.1.20180116_1512" itemsRelationVersion="1.3">
     <technicalStatus xmi:id="_ZcqgoGAFEeatGJv7WGjxOg" label="development" code="DEV"/>
     <technicalStatus xmi:id="_ZcqgoWAFEeatGJv7WGjxOg" label="testing" code="TEST"/>
     <technicalStatus xmi:id="_ZcqgomAFEeatGJv7WGjxOg" label="production" code="PROD"/>
@@ -106,7 +106,6 @@
       <relatedItems xmi:id="_NmfytCOoEeiNXelZPRM7zw" id="_SaqBAGAGEeatGJv7WGjxOg" version="Latest" type="property"/>
       <relatedItems xmi:id="_NmfytSOoEeiNXelZPRM7zw" id="_bk9fEGCjEeatGJv7WGjxOg" version="Latest" type="property"/>
       <relatedItems xmi:id="_NmfytiOoEeiNXelZPRM7zw" id="_SaqBAGAGEeatGJv7WGjxOg - rp_sicapital" version="Latest" type="query"/>
-      <relatedItems xmi:id="_NmfytyOoEeiNXelZPRM7zw" id="_SaqBAGAGEeatGJv7WGjxOg - compromisos_sicapital" version="Latest" type="query"/>
       <relatedItems xmi:id="_NmfyuCOoEeiNXelZPRM7zw" id="Numeric" version="Latest" type="routine"/>
       <relatedItems xmi:id="_NmfyuSOoEeiNXelZPRM7zw" id="TalendString" version="Latest" type="routine"/>
       <relatedItems xmi:id="_NmfyuiOoEeiNXelZPRM7zw" id="DataOperation" version="Latest" type="routine"/>
@@ -117,6 +116,7 @@
       <relatedItems xmi:id="_NmfyvyOoEeiNXelZPRM7zw" id="Relational" version="Latest" type="routine"/>
       <relatedItems xmi:id="_NmfywCOoEeiNXelZPRM7zw" id="TalendStringUtil" version="Latest" type="routine"/>
       <relatedItems xmi:id="_NmfywSOoEeiNXelZPRM7zw" id="_bk9fEGCjEeatGJv7WGjxOg - disponibilidad" version="Latest" type="schema"/>
+      <relatedItems xmi:id="_VRzPoCjFEeih063WpZAr0g" id="_SaqBAGAGEeatGJv7WGjxOg - compromisos_sicapital" version="Latest" type="query"/>
     </ItemsRelations>
     <ItemsRelations xmi:id="_NmfywiOoEeiNXelZPRM7zw">
       <baseItem xmi:id="_NmfywyOoEeiNXelZPRM7zw" id="_HHvxMEGFEeeDkv0nwW2QiA" version="0.1" type="job"/>
@@ -182,7 +182,6 @@
       <baseItem xmi:id="_Nmfy-iOoEeiNXelZPRM7zw" id="_1Yb9UK3hEee2I8fVwbIt8Q" version="0.1" type="job"/>
       <relatedItems xmi:id="_Nmfy-yOoEeiNXelZPRM7zw" id="_SaqBAGAGEeatGJv7WGjxOg" version="Latest" type="property"/>
       <relatedItems xmi:id="_Nmfy_COoEeiNXelZPRM7zw" id="_bk9fEGCjEeatGJv7WGjxOg" version="Latest" type="property"/>
-      <relatedItems xmi:id="_Nmfy_SOoEeiNXelZPRM7zw" id="_SaqBAGAGEeatGJv7WGjxOg - compromisos_sicapital" version="Latest" type="query"/>
       <relatedItems xmi:id="_Nmfy_iOoEeiNXelZPRM7zw" id="Numeric" version="Latest" type="routine"/>
       <relatedItems xmi:id="_Nmfy_yOoEeiNXelZPRM7zw" id="TalendString" version="Latest" type="routine"/>
       <relatedItems xmi:id="_NmfzACOoEeiNXelZPRM7zw" id="DataOperation" version="Latest" type="routine"/>
@@ -192,7 +191,7 @@
       <relatedItems xmi:id="_NmfzBCOoEeiNXelZPRM7zw" id="Mathematical" version="Latest" type="routine"/>
       <relatedItems xmi:id="_NmfzBSOoEeiNXelZPRM7zw" id="Relational" version="Latest" type="routine"/>
       <relatedItems xmi:id="_NmfzBiOoEeiNXelZPRM7zw" id="TalendStringUtil" version="Latest" type="routine"/>
-      <relatedItems xmi:id="_NmfzByOoEeiNXelZPRM7zw" id="_bk9fEGCjEeatGJv7WGjxOg - compromiso_financiero" version="Latest" type="schema"/>
+      <relatedItems xmi:id="_KcUDsCiMEeis6fRzUIirFA" id="_SaqBAGAGEeatGJv7WGjxOg - compromisos_sicapital" version="Latest" type="query"/>
     </ItemsRelations>
     <ItemsRelations xmi:id="_NmfzCCOoEeiNXelZPRM7zw">
       <baseItem xmi:id="_NmfzCSOoEeiNXelZPRM7zw" id="_3wxgYKiAEeeIG9S70570pw" version="0.1" type="job"/>

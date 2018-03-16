@@ -2,7 +2,7 @@
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
   <context confirmationNeeded="false" name="Default"/>
   <parameters>
-    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="32" show="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="64" show="false"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0" show="false"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" value="" show="false"/>
     <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" value="" show="false"/>
@@ -128,7 +128,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="_SaqBAGAGEeatGJv7WGjxOg - rp_sicapital" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="REPOSITORY"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT * &#xA; FROM PR.PR_REGISTRO_PRESUPUESTAL WHERE VIGENCIA = 2017 AND CODIGO_UNIDAD_EJECUTORA = '01' AND &#xA; NUMERO_REGISTRO IN (5574,&#xA;5575,&#xA;5576,&#xA;5577,&#xA;5578,&#xA;5579,&#xA;5580,&#xA;5581,&#xA;5582,&#xA;5583,&#xA;5584,&#xA;5585,&#xA;5451,&#xA;5586,&#xA;5587,&#xA;5588,&#xA;5589,&#xA;5590,&#xA;5591,&#xA;5592,&#xA;5593,&#xA;5594,&#xA;5595,&#xA;5596,&#xA;5597,&#xA;5598,&#xA;5599,&#xA;5600,&#xA;5601,&#xA;5602,&#xA;5603,&#xA;5604,&#xA;5605,&#xA;5606,&#xA;5607,&#xA;5608,&#xA;5609,&#xA;6396,&#xA;5612,&#xA;5613,&#xA;6335,&#xA;6336,&#xA;6337,&#xA;6338,&#xA;6793,&#xA;6794,&#xA;6795,&#xA;6796,&#xA;6797,&#xA;7292,&#xA;7293,&#xA;7302,&#xA;7294,&#xA;7295,&#xA;7448,&#xA;6339,&#xA;6340,&#xA;6341,&#xA;6342,&#xA;6343,&#xA;6344,&#xA;6345,&#xA;6346,&#xA;6347,&#xA;6348,&#xA;6791,&#xA;6798,&#xA;6799,&#xA;6800,&#xA;6801,&#xA;6802,&#xA;6803,&#xA;7492,&#xA;6804,&#xA;6805,&#xA;6806,&#xA;6874,&#xA;6911,&#xA;6809,&#xA;6810,&#xA;6811,&#xA;6812,&#xA;6813,&#xA;6814,&#xA;6815,&#xA;6816,&#xA;6351,&#xA;6352,&#xA;6353,&#xA;6354,&#xA;6355,&#xA;6356,&#xA;6357,&#xA;6358,&#xA;6359,&#xA;6360,&#xA;6361,&#xA;6792,&#xA;6363,&#xA;6364,&#xA;6365,&#xA;6818,&#xA;6819,&#xA;6366,&#xA;6367,&#xA;6368,&#xA;6820,&#xA;7296,&#xA;6369,&#xA;6370,&#xA;6371,&#xA;6372,&#xA;6373,&#xA;6374,&#xA;6375,&#xA;6376,&#xA;6377,&#xA;6378,&#xA;6379,&#xA;6380,&#xA;6381,&#xA;6382,&#xA;6827,&#xA;6383,&#xA;6384,&#xA;6385,&#xA;6386,&#xA;6821,&#xA;6388,&#xA;6389,&#xA;6390,&#xA;6391,&#xA;6822,&#xA;6823,&#xA;6824,&#xA;6349,&#xA;6350,&#xA;6817,&#xA;6392,&#xA;6393,&#xA;6394,&#xA;6395,&#xA;6825,&#xA;6826,&#xA;6917,&#xA;5417,&#xA;5418,&#xA;5435,&#xA;6397,&#xA;5436,&#xA;5437,&#xA;5438,&#xA;5439,&#xA;5440,&#xA;5441,&#xA;5442,&#xA;5443,&#xA;5444,&#xA;5445,&#xA;5446,&#xA;5447,&#xA;5448,&#xA;5449,&#xA;5450,&#xA;5452,&#xA;5453,&#xA;5454,&#xA;5455,&#xA;5456,&#xA;5457,&#xA;5458,&#xA;5459,&#xA;5460,&#xA;6398,&#xA;5461,&#xA;6477,&#xA;5462,&#xA;5463,&#xA;5464,&#xA;5465,&#xA;5466,&#xA;5467,&#xA;5468,&#xA;6399,&#xA;6476,&#xA;6400,&#xA;6830,&#xA;7218,&#xA;7245,&#xA;7246,&#xA;7422,&#xA;7367,&#xA;5419,&#xA;5420,&#xA;5421,&#xA;5422,&#xA;5423,&#xA;5469,&#xA;5470,&#xA;5471,&#xA;5472,&#xA;5473,&#xA;5474,&#xA;5475,&#xA;5476,&#xA;5477,&#xA;5478,&#xA;5479,&#xA;5480,&#xA;5481,&#xA;5482,&#xA;5483,&#xA;5484,&#xA;5424,&#xA;5425,&#xA;5426,&#xA;5485,&#xA;5486,&#xA;7217,&#xA;5487,&#xA;5488,&#xA;5489,&#xA;6478,&#xA;5490,&#xA;5491,&#xA;5492,&#xA;5493,&#xA;5494,&#xA;5495,&#xA;5496,&#xA;5497,&#xA;5498,&#xA;5499,&#xA;5500,&#xA;5501,&#xA;5502,&#xA;5503,&#xA;5504,&#xA;5505,&#xA;5506,&#xA;5507,&#xA;5508,&#xA;5509,&#xA;5510,&#xA;5511,&#xA;5512,&#xA;5513,&#xA;5514,&#xA;5515,&#xA;5516,&#xA;5517,&#xA;6491,&#xA;5538,&#xA;7410,&#xA;5427,&#xA;5428,&#xA;5429,&#xA;5430,&#xA;5518,&#xA;5519,&#xA;5520,&#xA;5521,&#xA;5522,&#xA;5523,&#xA;5524,&#xA;5525,&#xA;5526,&#xA;5527,&#xA;5528,&#xA;5529,&#xA;5530,&#xA;5531,&#xA;5532,&#xA;5533,&#xA;5534,&#xA;5535,&#xA;5536,&#xA;5537,&#xA;5431,&#xA;5432,&#xA;5433,&#xA;5434,&#xA;5539,&#xA;5540,&#xA;5541,&#xA;5542,&#xA;5543,&#xA;5544,&#xA;5545,&#xA;5546,&#xA;5547,&#xA;5548,&#xA;5549,&#xA;5550,&#xA;5551,&#xA;5552,&#xA;5553,&#xA;6828,&#xA;5554,&#xA;5555,&#xA;5556,&#xA;5557,&#xA;5558,&#xA;5559,&#xA;5560,&#xA;5561,&#xA;5562,&#xA;5563,&#xA;5564,&#xA;7366,&#xA;5565,&#xA;5566,&#xA;5567,&#xA;5568,&#xA;5569,&#xA;5570,&#xA;5571,&#xA;5572,&#xA;5573,&#xA;7280,&#xA;6311,&#xA;6312,&#xA;6313,&#xA;6314,&#xA;6315,&#xA;6316,&#xA;6317,&#xA;6318,&#xA;6319,&#xA;6320,&#xA;6321,&#xA;6479,&#xA;6480,&#xA;6481,&#xA;7457,&#xA;6482,&#xA;6483,&#xA;6490,&#xA;6484,&#xA;6861,&#xA;6862,&#xA;6864,&#xA;6865,&#xA;7425,&#xA;6322,&#xA;6323,&#xA;6324,&#xA;6326,&#xA;6327,&#xA;7289,&#xA;6328,&#xA;6485,&#xA;6486,&#xA;7290,&#xA;6308,&#xA;6309,&#xA;6310,&#xA;6860,&#xA;7282,&#xA;7283,&#xA;7284,&#xA;7285,&#xA;7287,&#xA;7288,&#xA;7455,&#xA;7456,&#xA;7451,&#xA;7452,&#xA;7453,&#xA;6329,&#xA;6330,&#xA;6331,&#xA;6332,&#xA;6333,&#xA;6334,&#xA;6866,&#xA;6325)&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT * &#xA; FROM PR.PR_REGISTRO_PRESUPUESTAL WHERE CODIGO_UNIDAD_EJECUTORA = '01' AND VIGENCIA >= 2009&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -288,10 +288,11 @@
         <additionalField key="Comment" value="referencia el id del beneficiario del rp (id_proveedor)"/>
       </column>
       <column comment="" key="false" length="-1" name="cdp" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="numero_compromiso" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <additionalProperties key="Comment" value=""/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="salida_registro_presupuestal">
         <mapperTableEntries name="id_solicitud" expression="Numeric.sequence(&quot;1&quot;,1,1) " type="id_Integer"/>
@@ -300,9 +301,10 @@
         <mapperTableEntries name="responsable" expression="1" type="id_Integer"/>
         <mapperTableEntries name="estado" expression="1" type="id_Short"/>
         <mapperTableEntries name="numero_registro_presupuestal" expression="row1.NUMERO_REGISTRO " type="id_Integer"/>
-        <mapperTableEntries name="compromiso" expression="(10000*row1.NUMERO_COMPROMISO)+  row1.NUMERO_REGISTRO " type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="beneficiario" expression="row3.NUMERO_DOCUMENTO " type="id_Integer"/>
+        <mapperTableEntries name="compromiso" expression="" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="beneficiario" expression="1" type="id_Integer"/>
         <mapperTableEntries name="cdp" expression="row6.id " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="numero_compromiso" expression="row1.NUMERO_COMPROMISO " type="id_Integer" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row1" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="VIGENCIA" type="id_Integer"/>
@@ -324,32 +326,12 @@
         <mapperTableEntries name="MOD_SEL" type="id_String" nullable="true"/>
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="row3" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
-        <mapperTableEntries name="VIGENCIA" expression="row1.VIGENCIA " type="id_Integer" operator="="/>
-        <mapperTableEntries name="CODIGO_COMPANIA" expression="row1.CODIGO_COMPANIA " type="id_Integer" operator="="/>
-        <mapperTableEntries name="CODIGO_UNIDAD_EJECUTORA" expression="row1.CODIGO_UNIDAD_EJECUTORA " type="id_Integer" operator="="/>
-        <mapperTableEntries name="NUMERO_REGISTRO" expression="row1.NUMERO_REGISTRO " type="id_Integer" operator="="/>
-        <mapperTableEntries name="NUMERO_COMPROMISO" expression="row1.NUMERO_COMPROMISO " type="id_Integer" operator="="/>
-        <mapperTableEntries name="TIPO_COMPROMISO" type="id_String"/>
-        <mapperTableEntries name="NUMERO_DOCUMENTO" expression="" type="id_Integer"/>
-        <mapperTableEntries name="TIPO_DOCUMENTO" type="id_String"/>
-        <mapperTableEntries name="ORIGEN" type="id_BigDecimal"/>
-        <mapperTableEntries name="OBJETO" type="id_String"/>
-        <mapperTableEntries name="FECHA_REGISTRO" type="id_Date"/>
-        <mapperTableEntries name="FECHA_INICIAL" type="id_Date"/>
-        <mapperTableEntries name="FECHA_FINAL" type="id_Date"/>
-        <mapperTableEntries name="PLAZO" type="id_BigDecimal"/>
-        <mapperTableEntries name="ESTADO" type="id_BigDecimal"/>
-        <mapperTableEntries name="FORMA_PAGO" type="id_String" nullable="true"/>
-        <mapperTableEntries name="REGISTRO_SIPD" type="id_BigDecimal" nullable="true"/>
-        <mapperTableEntries name="DIGITO_VERIFICACION" type="id_BigDecimal" nullable="true"/>
-        <mapperTableEntries name="ID_INTERNO" type="id_BigDecimal" nullable="true"/>
-        <mapperTableEntries name="UEL" type="id_String" nullable="true"/>
-        <mapperTableEntries name="CODIGO_ENTIDAD" type="id_BigDecimal" nullable="true"/>
-        <mapperTableEntries name="VALOR_CONTRATO" type="id_BigDecimal"/>
-        <mapperTableEntries name="USUARIO_ELABORO" type="id_String" nullable="true"/>
-        <mapperTableEntries name="CONVENIO" type="id_String" nullable="true"/>
-        <mapperTableEntries name="MOD_SEL" type="id_String" nullable="true"/>
-        <mapperTableEntries name="ID_SOL_RP" type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="vigencia" expression="row1.VIGENCIA " type="id_Integer" operator="="/>
+        <mapperTableEntries name="codigo_unidad_ejecutora" type="id_Integer"/>
+        <mapperTableEntries name="tipo_compromiso" expression="row1.TIPO_COMPROMISO " type="id_String" operator="="/>
+        <mapperTableEntries name="objeto" type="id_String"/>
+        <mapperTableEntries name="numero_compromiso" expression="row1.NUMERO_COMPROMISO " type="id_Integer" operator="="/>
+        <mapperTableEntries name="numero_documento" type="id_String"/>
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="row6" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="id" type="id_Integer"/>
@@ -431,7 +413,7 @@
       <additionalProperties key="Comment" value=""/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="salida_registro">
         <mapperTableEntries name="vigencia" expression="salida_registro_presupuestal.vigencia " type="id_Integer"/>
@@ -442,7 +424,7 @@
         <mapperTableEntries name="beneficiario" expression="salida_registro_presupuestal.beneficiario " type="id_Integer"/>
         <mapperTableEntries name="solicitud" expression="salida_registro_presupuestal.id_solicitud " type="id_Integer"/>
         <mapperTableEntries name="tipo_compromiso" expression="salida_registro_presupuestal.compromiso " type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="numero_compromiso" expression="salida_registro_presupuestal.compromiso " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="numero_compromiso" expression="salida_registro_presupuestal.numero_compromiso " type="id_Integer" nullable="true"/>
       </outputTables>
       <outputTables sizeState="INTERMEDIATE" name="salida_solicitud_administrativa">
         <mapperTableEntries name="id" expression="salida_registro_presupuestal.id_solicitud " type="id_Integer"/>
@@ -453,7 +435,7 @@
         <mapperTableEntries name="numero_contrato" expression="&quot;1&quot;" type="id_String"/>
         <mapperTableEntries name="masivo" expression="false" type="id_Boolean" nullable="true"/>
         <mapperTableEntries name="tipo_compromiso" expression="salida_registro_presupuestal.compromiso " type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="numero_compromiso" expression="salida_registro_presupuestal.compromiso " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="numero_compromiso" expression="salida_registro_presupuestal.numero_compromiso " type="id_Integer" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="salida_registro_presupuestal" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="id_solicitud" type="id_Integer"/>
@@ -465,6 +447,7 @@
         <mapperTableEntries name="compromiso" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="beneficiario" type="id_Integer"/>
         <mapperTableEntries name="cdp" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="numero_compromiso" type="id_Integer" nullable="true"/>
       </inputTables>
     </nodeData>
   </node>
@@ -762,60 +745,20 @@
     <elementParameter field="CHECK" name="DIEONERROR" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tConvertType_2">
-      <column comment="" defaultValue="" key="false" length="4" name="VIGENCIA" nullable="false" pattern="" precision="0" sourceType="DEC" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="3" name="CODIGO_COMPANIA" nullable="false" pattern="" precision="0" sourceType="VARCHAR2" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="2" name="CODIGO_UNIDAD_EJECUTORA" nullable="false" pattern="" precision="0" sourceType="VARCHAR2" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="6" name="NUMERO_REGISTRO" nullable="false" pattern="" precision="0" sourceType="DEC" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="16" name="NUMERO_COMPROMISO" nullable="false" pattern="" precision="0" sourceType="DEC" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="30" name="TIPO_COMPROMISO" nullable="false" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="20" name="NUMERO_DOCUMENTO" nullable="false" pattern="" precision="0" sourceType="VARCHAR2" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="30" name="TIPO_DOCUMENTO" nullable="false" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="1" name="ORIGEN" nullable="false" pattern="" precision="0" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="2000" name="OBJETO" nullable="false" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="FECHA_REGISTRO" nullable="false" pattern="" precision="0" sourceType="DATE" type="id_Date" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="FECHA_INICIAL" nullable="false" pattern="" precision="0" sourceType="DATE" type="id_Date" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="FECHA_FINAL" nullable="false" pattern="" precision="0" sourceType="DATE" type="id_Date" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="4" name="PLAZO" nullable="false" pattern="" precision="0" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="1" name="ESTADO" nullable="false" pattern="" precision="0" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="30" name="FORMA_PAGO" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="10" name="REGISTRO_SIPD" nullable="true" pattern="" precision="0" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="1" name="DIGITO_VERIFICACION" nullable="true" pattern="" precision="0" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="20" name="ID_INTERNO" nullable="true" pattern="" precision="0" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="2" name="UEL" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="10" name="CODIGO_ENTIDAD" nullable="true" pattern="" precision="0" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="16" name="VALOR_CONTRATO" nullable="false" pattern="" precision="2" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="30" name="USUARIO_ELABORO" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="20" name="CONVENIO" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="30" name="MOD_SEL" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="0" name="ID_SOL_RP" nullable="true" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="vigencia" nullable="false" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="codigo_unidad_ejecutora" nullable="false" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="tipo_compromiso" nullable="false" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="objeto" nullable="false" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="numero_compromiso" nullable="false" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="numero_documento" nullable="false" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
-      <column comment="" defaultValue="" key="false" length="4" name="VIGENCIA" nullable="false" pattern="" precision="0" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="3" name="CODIGO_COMPANIA" nullable="false" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="2" name="CODIGO_UNIDAD_EJECUTORA" nullable="false" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="6" name="NUMERO_REGISTRO" nullable="false" pattern="" precision="0" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="16" name="NUMERO_COMPROMISO" nullable="false" pattern="" precision="0" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="30" name="TIPO_COMPROMISO" nullable="false" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="20" name="NUMERO_DOCUMENTO" nullable="false" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="30" name="TIPO_DOCUMENTO" nullable="false" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="1" name="ORIGEN" nullable="false" pattern="" precision="0" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="2000" name="OBJETO" nullable="false" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="FECHA_REGISTRO" nullable="false" pattern="" precision="0" sourceType="DATE" type="id_Date" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="FECHA_INICIAL" nullable="false" pattern="" precision="0" sourceType="DATE" type="id_Date" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="FECHA_FINAL" nullable="false" pattern="" precision="0" sourceType="DATE" type="id_Date" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="4" name="PLAZO" nullable="false" pattern="" precision="0" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="1" name="ESTADO" nullable="false" pattern="" precision="0" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="30" name="FORMA_PAGO" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="10" name="REGISTRO_SIPD" nullable="true" pattern="" precision="0" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="1" name="DIGITO_VERIFICACION" nullable="true" pattern="" precision="0" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="20" name="ID_INTERNO" nullable="true" pattern="" precision="0" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="2" name="UEL" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="10" name="CODIGO_ENTIDAD" nullable="true" pattern="" precision="0" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="16" name="VALOR_CONTRATO" nullable="false" pattern="" precision="2" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="30" name="USUARIO_ELABORO" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="20" name="CONVENIO" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="30" name="MOD_SEL" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="0" name="ID_SOL_RP" nullable="true" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="vigencia" nullable="false" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="codigo_unidad_ejecutora" nullable="false" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="tipo_compromiso" nullable="false" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="objeto" nullable="false" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="numero_compromiso" nullable="false" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="numero_documento" nullable="false" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
@@ -828,12 +771,12 @@
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
     <elementParameter field="CLOSED_LIST" name="CONNECTION_TYPE" value="ORACLE_SID"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_10"/>
-    <elementParameter field="TEXT" name="RAC_URL" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="RAC_URL" value="&quot;10.20.0.7&quot;" show="false"/>
     <elementParameter field="TEXT" name="HOST" value="&quot;10.20.0.7&quot;"/>
     <elementParameter field="TEXT" name="TYPE" value="ORACLE_SID" show="false"/>
     <elementParameter field="TEXT" name="PORT" value="&quot;1521&quot;"/>
     <elementParameter field="TEXT" name="DBNAME" value="&quot;UD&quot;"/>
-    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" value="&quot;UD&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" value="&quot;SICGEFAD&quot;"/>
     <elementParameter field="PASSWORD" name="PASS" value="hzX07rpSU0pb8j0Xn6Tkccuky9JOpePS"/>
@@ -843,7 +786,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="_SaqBAGAGEeatGJv7WGjxOg - compromisos_sicapital" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="REPOSITORY"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT * &#xA; FROM PR.PR_COMPROMISOS WHERE VIGENCIA=2017 AND CODIGO_UNIDAD_EJECUTORA = '01' AND NUMERO_COMPROMISO &#xA; IN (156,&#xA;157,&#xA;158,&#xA;159,&#xA;160,&#xA;170,&#xA;172,&#xA;173,&#xA;178,&#xA;190,&#xA;191,&#xA;192,&#xA;193,&#xA;194,&#xA;196,&#xA;204,&#xA;208,&#xA;209,&#xA;210,&#xA;212,&#xA;213,&#xA;217,&#xA;220,&#xA;221,&#xA;222,&#xA;223,&#xA;2688)&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT VIGENCIA, objeto, fecha_inicial, fecha_final, codigo_unidad_ejecutora,&#xA;  ROW_NUMBER() OVER(ORDER BY vigencia ASC) AS id&#xA; FROM PR.PR_COMPROMISOS&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -858,89 +801,29 @@
     <elementParameter field="TEXT" name="CURSOR_SIZE" value="1000" show="false"/>
     <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
     <elementParameter field="TABLE" name="TRIM_COLUMN">
-      <elementValue elementRef="SCHEMA_COLUMN" value="VIGENCIA"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="vigencia"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="CODIGO_COMPANIA"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="codigo_unidad_ejecutora"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="CODIGO_UNIDAD_EJECUTORA"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="tipo_compromiso"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="NUMERO_REGISTRO"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="numero_compromiso"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="NUMERO_COMPROMISO"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="numero_documento"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="TIPO_COMPROMISO"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="NUMERO_DOCUMENTO"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="TIPO_DOCUMENTO"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ORIGEN"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="OBJETO"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="FECHA_REGISTRO"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="FECHA_INICIAL"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="FECHA_FINAL"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PLAZO"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ESTADO"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="FORMA_PAGO"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="REGISTRO_SIPD"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="DIGITO_VERIFICACION"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ID_INTERNO"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="UEL"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="CODIGO_ENTIDAD"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="VALOR_CONTRATO"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="USUARIO_ELABORO"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="CONVENIO"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="MOD_SEL"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ID_SOL_RP"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="objeto"/>
       <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="CHECK" name="NO_NULL_VALUES" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="compromisos_sicapital"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tOracleInput_2">
-      <column comment="" defaultValue="" key="false" length="4" name="VIGENCIA" nullable="false" pattern="" precision="0" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="3" name="CODIGO_COMPANIA" nullable="false" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="2" name="CODIGO_UNIDAD_EJECUTORA" nullable="false" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="6" name="NUMERO_REGISTRO" nullable="false" pattern="" precision="0" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="16" name="NUMERO_COMPROMISO" nullable="false" pattern="" precision="0" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="30" name="TIPO_COMPROMISO" nullable="false" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="20" name="NUMERO_DOCUMENTO" nullable="false" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="30" name="TIPO_DOCUMENTO" nullable="false" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="1" name="ORIGEN" nullable="false" pattern="" precision="0" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="2000" name="OBJETO" nullable="false" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="FECHA_REGISTRO" nullable="false" pattern="" precision="0" sourceType="DATE" type="id_Date" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="FECHA_INICIAL" nullable="false" pattern="" precision="0" sourceType="DATE" type="id_Date" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="FECHA_FINAL" nullable="false" pattern="" precision="0" sourceType="DATE" type="id_Date" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="4" name="PLAZO" nullable="false" pattern="" precision="0" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="1" name="ESTADO" nullable="false" pattern="" precision="0" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="30" name="FORMA_PAGO" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="10" name="REGISTRO_SIPD" nullable="true" pattern="" precision="0" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="1" name="DIGITO_VERIFICACION" nullable="true" pattern="" precision="0" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="20" name="ID_INTERNO" nullable="true" pattern="" precision="0" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="2" name="UEL" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="10" name="CODIGO_ENTIDAD" nullable="true" pattern="" precision="0" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="16" name="VALOR_CONTRATO" nullable="false" pattern="" precision="2" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="30" name="USUARIO_ELABORO" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="20" name="CONVENIO" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="30" name="MOD_SEL" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="0" name="ID_SOL_RP" nullable="true" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="vigencia" nullable="false" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="codigo_unidad_ejecutora" nullable="false" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="tipo_compromiso" nullable="false" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="numero_compromiso" nullable="false" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="numero_documento" nullable="false" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="objeto" nullable="false" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="320">
@@ -1088,6 +971,9 @@
       <elementValue elementRef="TRACE_COLUMN" value="cdp"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="numero_compromiso"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="salida_registro_presupuestal" show="false"/>
@@ -1117,10 +1003,68 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="salida_solicitud_administrativa" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="row3" lineStyle="8" metaname="tConvertType_2" offsetLabelX="0" offsetLabelY="0" source="tConvertType_2" target="tMap_1">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="vigencia"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="codigo_unidad_ejecutora"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="fecha_final"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="fecha_inicial"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="id"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="numero_compromiso"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="tipo_compromiso"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="numero_documento"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="objeto"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row3" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="tOracleInput_2" offsetLabelX="0" offsetLabelY="0" source="tOracleInput_2" target="tConvertType_2">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="vigencia"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="codigo_unidad_ejecutora"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="fecha_final"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="fecha_inicial"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="id"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="numero_compromiso"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="tipo_compromiso"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="numero_documento"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="objeto"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row4" show="false"/>
   </connection>
