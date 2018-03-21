@@ -185,24 +185,24 @@
     <elementParameter field="CHECK" name="DIEONERROR" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tConvertType_1">
-      <column comment="" defaultValue="" key="false" length="4" name="VIGENCIA" nullable="false" pattern="" precision="0" sourceType="DEC" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="4" name="VIGENCIA" nullable="false" pattern="" precision="0" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="3" name="CODIGO_COMPANIA" nullable="false" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="2" name="CODIGO_UNIDAD_EJECUTORA" nullable="false" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="10" name="RUBRO_INTERNO" nullable="false" pattern="" precision="0" sourceType="DEC" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="6" name="NUMERO_REGISTRO" nullable="false" pattern="" precision="0" sourceType="DEC" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="6" name="NUMERO_DISPONIBILIDAD" nullable="false" pattern="" precision="0" sourceType="DEC" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="16" name="VALOR" nullable="false" pattern="" precision="2" sourceType="DEC" type="id_Double" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="RUBRO_INTERNO" nullable="false" pattern="" precision="0" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="6" name="NUMERO_REGISTRO" nullable="false" pattern="" precision="0" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="6" name="NUMERO_DISPONIBILIDAD" nullable="false" pattern="" precision="0" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="16" name="VALOR" nullable="false" pattern="" precision="2" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="2" name="NUMERO_IMPRESIONES" nullable="false" pattern="" precision="0" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="0" name="ID_LIMAY" nullable="true" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
-      <column comment="" defaultValue="" key="false" length="4" name="VIGENCIA" nullable="false" pattern="" precision="0" sourceType="DEC" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="4" name="VIGENCIA" nullable="false" pattern="" precision="0" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="3" name="CODIGO_COMPANIA" nullable="false" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="2" name="CODIGO_UNIDAD_EJECUTORA" nullable="false" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="10" name="RUBRO_INTERNO" nullable="false" pattern="" precision="0" sourceType="DEC" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="6" name="NUMERO_REGISTRO" nullable="false" pattern="" precision="0" sourceType="DEC" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="6" name="NUMERO_DISPONIBILIDAD" nullable="false" pattern="" precision="0" sourceType="DEC" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="16" name="VALOR" nullable="false" pattern="" precision="2" sourceType="DEC" type="id_Double" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="RUBRO_INTERNO" nullable="false" pattern="" precision="0" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="6" name="NUMERO_REGISTRO" nullable="false" pattern="" precision="0" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="6" name="NUMERO_DISPONIBILIDAD" nullable="false" pattern="" precision="0" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="16" name="VALOR" nullable="false" pattern="" precision="2" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="2" name="NUMERO_IMPRESIONES" nullable="false" pattern="" precision="0" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="0" name="ID_LIMAY" nullable="true" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -228,7 +228,7 @@
       <column comment="referencia al dinero reservado por el cdp para un rubro" key="false" length="19" name="disponibilidad_apropiacion" nullable="true" pattern="" precision="0" sourceType="INT8" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value="referencia al dinero reservado por el cdp para un rubro"/>
       </column>
-      <column comment="valor a tomar de la apropiacion del CDP objetivo" key="false" length="20" name="valor" nullable="true" pattern="" precision="5" sourceType="FLOAT8" type="id_Double" usefulColumn="true">
+      <column comment="valor a tomar de la apropiacion del CDP objetivo" key="false" length="20" name="valor" nullable="true" pattern="" precision="5" sourceType="FLOAT8" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="Comment" value="valor a tomar de la apropiacion del CDP objetivo"/>
       </column>
       <additionalProperties key="Comment" value=""/>
@@ -240,41 +240,41 @@
       <column comment="" key="false" length="10" name="solicitud_rp" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="131089" name="monto" nullable="false" pattern="" precision="0" sourceType="NUMERIC" type="id_Double" usefulColumn="true">
+      <column comment="" key="false" length="131089" name="monto" nullable="false" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <additionalProperties key="Comment" value=""/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="salida_financiera">
         <mapperTableEntries name="registro_presupuestal" expression="row7.id " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="disponibilidad_apropiacion" expression="row10.id " type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="valor" expression="row6.VALOR " type="id_Double" nullable="true"/>
+        <mapperTableEntries name="valor" expression="row6.VALOR " type="id_BigDecimal" nullable="true"/>
       </outputTables>
       <outputTables sizeState="INTERMEDIATE" name="salida_administrativa">
         <mapperTableEntries name="disponibilidad_apropiacion" expression="row10.id " type="id_Integer"/>
         <mapperTableEntries name="solicitud_rp" expression="row7.solicitud " type="id_Integer"/>
-        <mapperTableEntries name="monto" expression="row6.VALOR " type="id_Double"/>
+        <mapperTableEntries name="monto" expression="row6.VALOR " type="id_BigDecimal"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row6" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
-        <mapperTableEntries name="VIGENCIA" type="id_Integer"/>
+        <mapperTableEntries name="VIGENCIA" type="id_BigDecimal"/>
         <mapperTableEntries name="CODIGO_COMPANIA" type="id_String"/>
         <mapperTableEntries name="CODIGO_UNIDAD_EJECUTORA" type="id_String"/>
-        <mapperTableEntries name="RUBRO_INTERNO" type="id_Integer"/>
-        <mapperTableEntries name="NUMERO_REGISTRO" type="id_Integer"/>
-        <mapperTableEntries name="NUMERO_DISPONIBILIDAD" type="id_Integer"/>
-        <mapperTableEntries name="VALOR" type="id_Double"/>
+        <mapperTableEntries name="RUBRO_INTERNO" type="id_BigDecimal"/>
+        <mapperTableEntries name="NUMERO_REGISTRO" type="id_BigDecimal"/>
+        <mapperTableEntries name="NUMERO_DISPONIBILIDAD" type="id_BigDecimal"/>
+        <mapperTableEntries name="VALOR" type="id_BigDecimal"/>
         <mapperTableEntries name="NUMERO_IMPRESIONES" type="id_BigDecimal"/>
         <mapperTableEntries name="ID_LIMAY" type="id_BigDecimal" nullable="true"/>
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="row8" matchingMode="FIRST_MATCH" lookupMode="LOAD_ONCE">
-        <mapperTableEntries name="id" type="id_BigDecimal" nullable="true"/>
-        <mapperTableEntries name="INTERNO_RUBRO" expression="row6.RUBRO_INTERNO " type="id_Integer" operator="="/>
+        <mapperTableEntries name="id" expression="" type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="INTERNO_RUBRO" expression="row6.RUBRO_INTERNO " type="id_BigDecimal" operator="="/>
         <mapperTableEntries name="entidad" type="id_BigDecimal" nullable="true"/>
         <mapperTableEntries name="codigo" expression="" type="id_String" nullable="true"/>
-        <mapperTableEntries name="vigencia" type="id_Integer"/>
+        <mapperTableEntries name="vigencia" type="id_BigDecimal"/>
         <mapperTableEntries name="descripcion" type="id_String" nullable="true"/>
         <mapperTableEntries name="tipo_plan" type="id_BigDecimal" nullable="true"/>
         <mapperTableEntries name="administracion" type="id_String" nullable="true"/>
@@ -290,15 +290,15 @@
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="row14" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="id" expression="" type="id_Integer"/>
-        <mapperTableEntries name="vigencia" expression="row6.VIGENCIA " type="id_Integer" operator="="/>
+        <mapperTableEntries name="vigencia" expression="row6.VIGENCIA " type="id_BigDecimal" operator="="/>
         <mapperTableEntries name="rubro" expression="row12.id " type="id_Integer"/>
         <mapperTableEntries name="valor" type="id_BigDecimal"/>
         <mapperTableEntries name="estado" type="id_Integer"/>
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="row9" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="id" expression="" type="id_Integer"/>
-        <mapperTableEntries name="vigencia" expression="row6.VIGENCIA " type="id_Integer" operator="="/>
-        <mapperTableEntries name="numero_disponibilidad" expression="row6.NUMERO_DISPONIBILIDAD " type="id_Integer" operator="="/>
+        <mapperTableEntries name="vigencia" expression="row6.VIGENCIA " type="id_BigDecimal" operator="="/>
+        <mapperTableEntries name="numero_disponibilidad" expression="row6.NUMERO_DISPONIBILIDAD " type="id_BigDecimal" operator="="/>
         <mapperTableEntries name="responsable" type="id_Integer"/>
         <mapperTableEntries name="fecha_registro" type="id_Date"/>
         <mapperTableEntries name="estado" type="id_Short"/>
@@ -306,20 +306,21 @@
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="row7" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE" innerJoin="true">
         <mapperTableEntries name="id" expression="" type="id_Integer"/>
-        <mapperTableEntries name="vigencia" expression="row6.VIGENCIA " type="id_Integer" operator="="/>
+        <mapperTableEntries name="vigencia" expression="row6.VIGENCIA " type="id_BigDecimal" operator="="/>
         <mapperTableEntries name="fecha_registro" type="id_Date"/>
         <mapperTableEntries name="responsable" type="id_Integer"/>
         <mapperTableEntries name="estado" type="id_Short"/>
-        <mapperTableEntries name="numero_registro_presupuestal" expression="row6.NUMERO_REGISTRO " type="id_Integer" operator="="/>
-        <mapperTableEntries name="compromiso" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="numero_registro_presupuestal" expression="row6.NUMERO_REGISTRO " type="id_BigDecimal" operator="="/>
+        <mapperTableEntries name="tipo_compromiso" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="beneficiario" type="id_Integer"/>
         <mapperTableEntries name="solicitud" type="id_Integer"/>
+        <mapperTableEntries name="numero_compromiso" type="id_Integer" nullable="true"/>
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="row10" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="id" expression="" type="id_Integer"/>
         <mapperTableEntries name="disponibilidad" expression="row9.id " type="id_Integer" operator="="/>
         <mapperTableEntries name="apropiacion" expression="row14.id " type="id_Integer" operator="="/>
-        <mapperTableEntries name="valor" type="id_Double"/>
+        <mapperTableEntries name="valor" type="id_BigDecimal"/>
         <mapperTableEntries name="fuente_financiamiento" type="id_Integer"/>
       </inputTables>
     </nodeData>
@@ -366,11 +367,13 @@
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="numero_registro_presupuestal"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="compromiso"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="tipo_compromiso"/>
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="beneficiario"/>
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="solicitud"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="numero_compromiso"/>
       <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="TEXT" name="LABEL" value="registro_presupuestal"/>
@@ -382,9 +385,10 @@
       <column comment="" defaultValue="" key="false" length="10" name="responsable" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="5" name="estado" nullable="false" pattern="" precision="0" sourceType="INT2" type="id_Short" originalLength="-1" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="numero_registro_presupuestal" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="10" name="compromiso" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="tipo_compromiso" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="beneficiario" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="solicitud" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="numero_compromiso" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tConvertType" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="384" posY="160">
@@ -396,25 +400,27 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tConvertType_2">
       <column comment="" defaultValue="" key="false" length="10" name="id" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="4" name="vigencia" nullable="false" pattern="" precision="0" sourceType="NUMERIC" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="4" name="vigencia" nullable="false" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="13" name="fecha_registro" nullable="false" pattern="" precision="0" sourceType="TIMESTAMP" type="id_Date" originalLength="-1" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="responsable" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="5" name="estado" nullable="false" pattern="" precision="0" sourceType="INT2" type="id_Short" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="10" name="numero_registro_presupuestal" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="10" name="compromiso" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="numero_registro_presupuestal" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="tipo_compromiso" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="beneficiario" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="solicitud" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="numero_compromiso" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
       <column comment="" defaultValue="" key="false" length="10" name="id" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="4" name="vigencia" nullable="false" pattern="" precision="0" sourceType="NUMERIC" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="4" name="vigencia" nullable="false" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="13" name="fecha_registro" nullable="false" pattern="" precision="0" sourceType="TIMESTAMP" type="id_Date" originalLength="-1" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="responsable" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="5" name="estado" nullable="false" pattern="" precision="0" sourceType="INT2" type="id_Short" originalLength="-1" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="numero_registro_presupuestal" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="10" name="compromiso" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="tipo_compromiso" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="beneficiario" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="solicitud" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="numero_compromiso" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
@@ -500,10 +506,10 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tConvertType_3">
       <column comment="" defaultValue="" key="false" length="0" name="id" nullable="true" pattern="" precision="0" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="10" name="INTERNO_RUBRO" nullable="false" pattern="" precision="0" sourceType="DEC" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="INTERNO_RUBRO" nullable="false" pattern="" precision="0" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="0" name="entidad" nullable="true" pattern="" precision="0" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="87" name="codigo" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="4" name="vigencia" nullable="false" pattern="" precision="0" sourceType="DEC" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="4" name="vigencia" nullable="false" pattern="" precision="0" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="250" name="descripcion" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="0" name="tipo_plan" nullable="true" pattern="" precision="0" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="1" name="administracion" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -511,10 +517,10 @@
     </metadata>
     <metadata connector="REJECT" name="REJECT">
       <column comment="" defaultValue="" key="false" length="0" name="id" nullable="true" pattern="" precision="0" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="10" name="INTERNO_RUBRO" nullable="false" pattern="" precision="0" sourceType="DEC" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="INTERNO_RUBRO" nullable="false" pattern="" precision="0" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="0" name="entidad" nullable="true" pattern="" precision="0" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="87" name="codigo" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="4" name="vigencia" nullable="false" pattern="" precision="0" sourceType="DEC" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="4" name="vigencia" nullable="false" pattern="" precision="0" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="250" name="descripcion" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="0" name="tipo_plan" nullable="true" pattern="" precision="0" sourceType="DEC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="1" name="administracion" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -589,8 +595,8 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tConvertType_4">
       <column comment="" defaultValue="" key="false" length="10" name="id" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="4" name="vigencia" nullable="false" pattern="" precision="0" sourceType="NUMERIC" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="6" name="numero_disponibilidad" nullable="false" pattern="" precision="0" sourceType="NUMERIC" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="4" name="vigencia" nullable="false" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="6" name="numero_disponibilidad" nullable="false" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="responsable" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="13" name="fecha_registro" nullable="false" pattern="" precision="0" sourceType="TIMESTAMP" type="id_Date" originalLength="-1" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="5" name="estado" nullable="false" pattern="" precision="0" sourceType="INT2" type="id_Short" originalLength="-1" usefulColumn="true"/>
@@ -598,8 +604,8 @@
     </metadata>
     <metadata connector="REJECT" name="REJECT">
       <column comment="" defaultValue="" key="false" length="10" name="id" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="4" name="vigencia" nullable="false" pattern="" precision="0" sourceType="NUMERIC" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="6" name="numero_disponibilidad" nullable="false" pattern="" precision="0" sourceType="NUMERIC" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="4" name="vigencia" nullable="false" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="6" name="numero_disponibilidad" nullable="false" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="responsable" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="13" name="fecha_registro" nullable="false" pattern="" precision="0" sourceType="TIMESTAMP" type="id_Date" originalLength="-1" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="5" name="estado" nullable="false" pattern="" precision="0" sourceType="INT2" type="id_Short" originalLength="-1" usefulColumn="true"/>
@@ -670,14 +676,14 @@
       <column comment="" defaultValue="" key="false" length="10" name="id" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="19" name="disponibilidad" nullable="false" pattern="" precision="0" sourceType="INT8" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="19" name="apropiacion" nullable="false" pattern="" precision="0" sourceType="INT8" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="30" name="valor" nullable="false" pattern="" precision="5" sourceType="NUMERIC" type="id_Double" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="30" name="valor" nullable="false" pattern="" precision="5" sourceType="NUMERIC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="fuente_financiamiento" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
       <column comment="" defaultValue="" key="false" length="10" name="id" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="19" name="disponibilidad" nullable="false" pattern="" precision="0" sourceType="INT8" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="19" name="apropiacion" nullable="false" pattern="" precision="0" sourceType="INT8" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="30" name="valor" nullable="false" pattern="" precision="5" sourceType="NUMERIC" type="id_Double" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="19" name="disponibilidad" nullable="false" pattern="" precision="0" sourceType="INT8" type="id_Long" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="19" name="apropiacion" nullable="false" pattern="" precision="0" sourceType="INT8" type="id_Long" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="30" name="valor" nullable="false" pattern="" precision="5" sourceType="NUMERIC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="fuente_financiamiento" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -824,7 +830,7 @@
       <column comment="referencia al dinero reservado por el cdp para un rubro" key="false" length="19" name="disponibilidad_apropiacion" nullable="true" pattern="" precision="0" sourceType="INT8" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value="referencia al dinero reservado por el cdp para un rubro"/>
       </column>
-      <column comment="valor a tomar de la apropiacion del CDP objetivo" key="false" length="20" name="valor" nullable="true" pattern="" precision="5" sourceType="FLOAT8" type="id_Double" usefulColumn="true">
+      <column comment="valor a tomar de la apropiacion del CDP objetivo" key="false" length="20" name="valor" nullable="true" pattern="" precision="5" sourceType="FLOAT8" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="Comment" value="valor a tomar de la apropiacion del CDP objetivo"/>
       </column>
       <additionalProperties key="Comment" value=""/>
@@ -836,7 +842,7 @@
       <column comment="referencia al dinero reservado por el cdp para un rubro" key="false" length="19" name="disponibilidad_apropiacion" nullable="true" pattern="" precision="0" sourceType="INT8" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value="referencia al dinero reservado por el cdp para un rubro"/>
       </column>
-      <column comment="valor a tomar de la apropiacion del CDP objetivo" key="false" length="20" name="valor" nullable="true" pattern="" precision="5" sourceType="FLOAT8" type="id_Double" usefulColumn="true">
+      <column comment="valor a tomar de la apropiacion del CDP objetivo" key="false" length="20" name="valor" nullable="true" pattern="" precision="5" sourceType="FLOAT8" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="Comment" value="valor a tomar de la apropiacion del CDP objetivo"/>
       </column>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -905,7 +911,7 @@
       <column comment="" key="false" length="10" name="solicitud_rp" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="131089" name="monto" nullable="false" pattern="" precision="0" sourceType="NUMERIC" type="id_Double" usefulColumn="true">
+      <column comment="" key="false" length="131089" name="monto" nullable="false" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <additionalProperties key="Comment" value=""/>
@@ -917,7 +923,7 @@
       <column comment="" key="false" length="10" name="solicitud_rp" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="131089" name="monto" nullable="false" pattern="" precision="0" sourceType="NUMERIC" type="id_Double" usefulColumn="true">
+      <column comment="" key="false" length="131089" name="monto" nullable="false" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -985,14 +991,14 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tConvertType_7">
       <column comment="" defaultValue="" key="false" length="10" name="id" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="4" name="vigencia" nullable="false" pattern="" precision="0" sourceType="NUMERIC" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="4" name="vigencia" nullable="false" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="rubro" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="30" name="valor" nullable="false" pattern="" precision="5" sourceType="NUMERIC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="estado" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
       <column comment="" defaultValue="" key="false" length="10" name="id" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="4" name="vigencia" nullable="false" pattern="" precision="0" sourceType="NUMERIC" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="4" name="vigencia" nullable="false" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="rubro" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="30" name="valor" nullable="false" pattern="" precision="5" sourceType="NUMERIC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="estado" nullable="false" pattern="" precision="0" sourceType="INT4" type="id_Integer" originalLength="-1" usefulColumn="true"/>
