@@ -1,12 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TalendMetadata:DatabaseConnection xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmi:id="_C866IK6fEee2I8fVwbIt8Q" name="udistrital_cloud_postgres_agora" id="_mikZYK6eEee2I8fVwbIt8Q" label="udistrital_cloud_postgres_agora" DatabaseType="PostgreSQL" DriverClass="org.postgresql.Driver" URL="jdbc:postgresql://pruebaspostgres.c8an9arwoaua.us-east-1.rds.amazonaws.com:5432/" dbVersionString="V9_X" Port="5432" Username=" agora_admin" Password="ugffjTPJpQSLI9zEGsVHk6IQNCXIVf2C" ServerName="pruebaspostgres.c8an9arwoaua.us-east-1.rds.amazonaws.com" DatasourceName="" FileFieldName="" SID="" SqlSynthax="SQL Syntax" DbmsId="postgres_id" ProductId="POSTGRESQL" AdditionalParams="" StandardSQL="true" SQLMode="false" UiSchema="">
-  <taggedValue xmi:id="_C87hMK6fEee2I8fVwbIt8Q" tag="Is Conn Need Reload" value="false"/>
-  <taggedValue xmi:id="_C9QRUK6fEee2I8fVwbIt8Q" tag="package filter" value=""/>
-  <taggedValue xmi:id="_C9UiwK6fEee2I8fVwbIt8Q" tag="Status" value=""/>
-  <taggedValue xmi:id="_C9Uiwa6fEee2I8fVwbIt8Q" tag="Version" value="0.1"/>
-  <taggedValue xmi:id="_C9Uiwq6fEee2I8fVwbIt8Q" tag="Purpose" value=""/>
-  <taggedValue xmi:id="_C9Uiw66fEee2I8fVwbIt8Q" tag="Description" value=""/>
-  <taggedValue xmi:id="_C9UixK6fEee2I8fVwbIt8Q" tag="Author" value=""/>
-  <taggedValue xmi:id="_C9Uixa6fEee2I8fVwbIt8Q" tag="otherParameter"/>
-  <parameters xmi:id="_C87hMa6fEee2I8fVwbIt8Q" key="CONN_PARA_KEY_USERNAME" value=" agora_admin"/>
-</TalendMetadata:DatabaseConnection>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.relational="http:///orgomg/cwm/resource/relational.ecore">
+  <TalendMetadata:DatabaseConnection xmi:id="_C866IK6fEee2I8fVwbIt8Q" name="udistrital_cloud_postgres_agora" id="_mikZYK6eEee2I8fVwbIt8Q" label="udistrital_cloud_postgres_agora" dataPackage="_SRt-kC6_EeiOht6-kGJqXw" DatabaseType="PostgreSQL" DriverClass="org.postgresql.Driver" URL="jdbc:postgresql://localhost:5433/udistrital_core_db" dbVersionString="V9_X" Port="5433" Username="crud_user" Password="1QY6ZyNqCD4BAhKeqSkILQ==" ServerName="localhost" DatasourceName="" FileFieldName="" SID="udistrital_core_db" SqlSynthax="SQL Syntax" DbmsId="postgres_id" ProductId="POSTGRESQL" AdditionalParams="" StandardSQL="true" SQLMode="false" UiSchema="">
+    <taggedValue xmi:id="_C87hMK6fEee2I8fVwbIt8Q" tag="Is Conn Need Reload" value="true"/>
+    <taggedValue xmi:id="_C9QRUK6fEee2I8fVwbIt8Q" tag="package filter" value=""/>
+    <taggedValue xmi:id="_C9UiwK6fEee2I8fVwbIt8Q" tag="Status" value=""/>
+    <taggedValue xmi:id="_C9Uiwa6fEee2I8fVwbIt8Q" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_C9Uiwq6fEee2I8fVwbIt8Q" tag="Purpose" value=""/>
+    <taggedValue xmi:id="_C9Uiw66fEee2I8fVwbIt8Q" tag="Description" value=""/>
+    <taggedValue xmi:id="_C9UixK6fEee2I8fVwbIt8Q" tag="Author" value=""/>
+    <taggedValue xmi:id="_C9Uixa6fEee2I8fVwbIt8Q" tag="otherParameter"/>
+    <taggedValue xmi:id="_SRf8IC6_EeiOht6-kGJqXw" tag="DB ProductName" value="PostgreSQL"/>
+    <taggedValue xmi:id="_SRf8IS6_EeiOht6-kGJqXw" tag="DB ProductVersion" value="9.5.12"/>
+    <taggedValue xmi:id="_SRf8Ii6_EeiOht6-kGJqXw" tag="DB IdentifierQuoteString" value="&quot;"/>
+    <parameters xmi:id="_C87hMa6fEee2I8fVwbIt8Q" key="CONN_PARA_KEY_USERNAME" value="crud_user"/>
+    <parameters xmi:id="_LDL7UC6_EeiOht6-kGJqXw" key="CONN_PARA_KEY_MAPRDB_TABLE_NS_MAPPING" value=""/>
+  </TalendMetadata:DatabaseConnection>
+  <orgomg.cwm.resource.relational:Catalog xmi:id="_SRt-kC6_EeiOht6-kGJqXw" name="udistrital_core_db" dataManager="_C866IK6fEee2I8fVwbIt8Q">
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_SRt-kS6_EeiOht6-kGJqXw" name="administrativa"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_SRt-ki6_EeiOht6-kGJqXw" name="agora"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_SRt-ky6_EeiOht6-kGJqXw" name="financiera"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_SRt-lC6_EeiOht6-kGJqXw" name="information_schema"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_SRt-lS6_EeiOht6-kGJqXw" name="pg_catalog"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_SRt-li6_EeiOht6-kGJqXw" name="public"/>
+  </orgomg.cwm.resource.relational:Catalog>
+</xmi:XMI>

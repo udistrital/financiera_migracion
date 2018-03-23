@@ -116,6 +116,7 @@
       <relatedItems xmi:id="_NmfywCOoEeiNXelZPRM7zw" id="TalendStringUtil" version="Latest" type="routine"/>
       <relatedItems xmi:id="_NmfywSOoEeiNXelZPRM7zw" id="_bk9fEGCjEeatGJv7WGjxOg - disponibilidad" version="Latest" type="schema"/>
       <relatedItems xmi:id="_VRzPoCjFEeih063WpZAr0g" id="_SaqBAGAGEeatGJv7WGjxOg - compromisos_sicapital" version="Latest" type="query"/>
+      <relatedItems xmi:id="_rwwkwC6_EeiOht6-kGJqXw" id="_mikZYK6eEee2I8fVwbIt8Q" version="Latest" type="property"/>
     </ItemsRelations>
     <ItemsRelations xmi:id="_NmfywiOoEeiNXelZPRM7zw">
       <baseItem xmi:id="_NmfywyOoEeiNXelZPRM7zw" id="_HHvxMEGFEeeDkv0nwW2QiA" version="0.1" type="job"/>
