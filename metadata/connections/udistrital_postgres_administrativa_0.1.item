@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.relational="http:///orgomg/cwm/resource/relational.ecore" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
-  <TalendMetadata:DatabaseConnection xmi:id="_inih8KkyEeeYD8F7pf8Xmw" name="udistrital_postgres_administrativa" id="_ili94KkyEeeYD8F7pf8Xmw" label="udistrital_postgres_administrativa" dataPackage="_jwuW8CYKEeibELI8SSYiXg __4DjcD8rEeeDkv0nwW2QiA" DatabaseType="PostgreSQL" DriverClass="org.postgresql.Driver" URL="jdbc:postgresql://localhost:5433/udistrital_core_db" dbVersionString="V9_X" Port="5433" Username="crud_user" Password="1QY6ZyNqCD4BAhKeqSkILQ==" ServerName="localhost" DatasourceName="" FileFieldName="" SID="udistrital_core_db" SqlSynthax="SQL Syntax" StringQuote="'" DbmsId="postgres_id" ProductId="POSTGRESQL" AdditionalParams="" StandardSQL="true" SQLMode="false" UiSchema="administrativa">
+  <TalendMetadata:DatabaseConnection xmi:id="_inih8KkyEeeYD8F7pf8Xmw" name="udistrital_postgres_administrativa" id="_ili94KkyEeeYD8F7pf8Xmw" label="udistrital_postgres_administrativa" dataPackage="__4DjcD8rEeeDkv0nwW2QiA _jwuW8CYKEeibELI8SSYiXg" DatabaseType="PostgreSQL" DriverClass="org.postgresql.Driver" URL="jdbc:postgresql://10.20.0.159:5432/udistrital_core_db" dbVersionString="V9_X" Port="5432" Username="crud_user" Password="1QY6ZyNqCD4BAhKeqSkILQ==" ServerName="10.20.0.159" DatasourceName="" FileFieldName="" SID="udistrital_core_db" SqlSynthax="SQL Syntax" StringQuote="'" DbmsId="postgres_id" ProductId="POSTGRESQL" AdditionalParams="" StandardSQL="true" SQLMode="false" UiSchema="administrativa">
     <taggedValue xmi:id="_kkdwsWCjEeatGJv7WGjxOg" tag="Is Conn Need Reload" value="true"/>
     <taggedValue xmi:id="_knzYkGCjEeatGJv7WGjxOg" tag="package filter" value=""/>
     <taggedValue xmi:id="_kn-XsGCjEeatGJv7WGjxOg" tag="Status" value=""/>
@@ -10,77 +10,11 @@
     <taggedValue xmi:id="_kn-XtGCjEeatGJv7WGjxOg" tag="Author" value=""/>
     <taggedValue xmi:id="_kn-XtWCjEeatGJv7WGjxOg" tag="otherParameter"/>
     <taggedValue xmi:id="_koU9AGCjEeatGJv7WGjxOg" tag="DB ProductName" value="PostgreSQL"/>
-    <taggedValue xmi:id="_koU9AWCjEeatGJv7WGjxOg" tag="DB ProductVersion" value="9.5.12"/>
+    <taggedValue xmi:id="_koU9AWCjEeatGJv7WGjxOg" tag="DB ProductVersion" value="9.5.6"/>
     <taggedValue xmi:id="_koU9AmCjEeatGJv7WGjxOg" tag="DB IdentifierQuoteString" value="&quot;"/>
     <parameters xmi:id="_kkdwsmCjEeatGJv7WGjxOg" key="CONN_PARA_KEY_USERNAME" value="crud_user"/>
     <parameters xmi:id="_PEYe4KiDEeeIG9S70570pw" key="CONN_PARA_KEY_MAPRDB_TABLE_NS_MAPPING" value=""/>
   </TalendMetadata:DatabaseConnection>
-  <orgomg.cwm.resource.relational:Catalog xmi:id="_jwuW8CYKEeibELI8SSYiXg" name="udistrital_core_db" dataManager="_inih8KkyEeeYD8F7pf8Xmw">
-    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_jwuW8SYKEeibELI8SSYiXg" name="administrativa">
-      <ownedElement xsi:type="relational:TdTable" xmi:id="_nxxxkCYKEeibELI8SSYiXg" name="solicitud_rp" id="_nxwjcCYKEeibELI8SSYiXg" label="solicitud_rp" tableType="TABLE">
-        <feature xsi:type="relational:TdColumn" xmi:id="_nxxxkSYKEeibELI8SSYiXg" name="vigencia" label="vigencia" length="10" sourceType="INT4" talendType="id_Integer" nullable="false">
-          <taggedValue xmi:id="_nxxxkiYKEeibELI8SSYiXg" tag="Comment" value=""/>
-          <initialValue xsi:type="relational:TdExpression" xmi:id="_nxxxkyYKEeibELI8SSYiXg" language="COLUMN_DEF"/>
-          <sqlDataType xmi:id="_nxxxlCYKEeibELI8SSYiXg" name="INT4" numericPrecisionRadix="10" javaDataType="4"/>
-        </feature>
-        <feature xsi:type="relational:TdColumn" xmi:id="_nxxxlSYKEeibELI8SSYiXg" name="fecha_solicitud" label="fecha_solicitud" length="13" sourceType="DATE" talendType="id_Date" pattern="&quot;dd-MM-yyyy&quot;">
-          <taggedValue xmi:id="_nxxxliYKEeibELI8SSYiXg" tag="Comment" value=""/>
-          <initialValue xsi:type="relational:TdExpression" xmi:id="_nxxxlyYKEeibELI8SSYiXg" language="COLUMN_DEF"/>
-          <sqlDataType xmi:id="_nxxxmCYKEeibELI8SSYiXg" name="DATE" numericPrecisionRadix="10" javaDataType="91" nullable="columnNullable"/>
-        </feature>
-        <feature xsi:type="relational:TdColumn" xmi:id="_nxxxmSYKEeibELI8SSYiXg" name="cdp" label="cdp" length="10" sourceType="INT4" talendType="id_Integer" nullable="false">
-          <taggedValue xmi:id="_nxxxmiYKEeibELI8SSYiXg" tag="Comment" value=""/>
-          <initialValue xsi:type="relational:TdExpression" xmi:id="_nxxxmyYKEeibELI8SSYiXg" language="COLUMN_DEF"/>
-          <sqlDataType xmi:id="_nxxxnCYKEeibELI8SSYiXg" name="INT4" numericPrecisionRadix="10" javaDataType="4"/>
-        </feature>
-        <feature xsi:type="relational:TdColumn" xmi:id="_nxxxnSYKEeibELI8SSYiXg" name="expedida" label="expedida" length="1" sourceType="BOOL" talendType="id_Boolean">
-          <taggedValue xmi:id="_nxxxniYKEeibELI8SSYiXg" tag="Comment" value=""/>
-          <initialValue xsi:type="relational:TdExpression" xmi:id="_nxxxnyYKEeibELI8SSYiXg" body="'false'" language="COLUMN_DEF"/>
-          <sqlDataType xmi:id="_nxxxoCYKEeibELI8SSYiXg" name="BOOL" numericPrecisionRadix="10" javaDataType="-7" nullable="columnNullable"/>
-        </feature>
-        <feature xsi:type="relational:TdColumn" xmi:id="_nxxxoSYKEeibELI8SSYiXg" name="numero_contrato" label="numero_contrato" length="2147483647" sourceType="VARCHAR" talendType="id_String">
-          <taggedValue xmi:id="_nxxxoiYKEeibELI8SSYiXg" tag="Comment" value=""/>
-          <initialValue xsi:type="relational:TdExpression" xmi:id="_nxxxoyYKEeibELI8SSYiXg" language="COLUMN_DEF"/>
-          <sqlDataType xmi:id="_nxxxpCYKEeibELI8SSYiXg" name="VARCHAR" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
-        </feature>
-        <feature xsi:type="relational:TdColumn" xmi:id="_nxxxpSYKEeibELI8SSYiXg" name="vigencia_contrato" label="vigencia_contrato" length="10" sourceType="INT4" talendType="id_Integer">
-          <taggedValue xmi:id="_nxxxpiYKEeibELI8SSYiXg" tag="Comment" value=""/>
-          <initialValue xsi:type="relational:TdExpression" xmi:id="_nxxxpyYKEeibELI8SSYiXg" language="COLUMN_DEF"/>
-          <sqlDataType xmi:id="_nxxxqCYKEeibELI8SSYiXg" name="INT4" numericPrecisionRadix="10" javaDataType="4" nullable="columnNullable"/>
-        </feature>
-        <feature xsi:type="relational:TdColumn" xmi:id="_nxxxqSYKEeibELI8SSYiXg" name="id" label="id" length="10" sourceType="SERIAL" talendType="id_Integer" key="true" nullable="false">
-          <taggedValue xmi:id="_nxxxqiYKEeibELI8SSYiXg" tag="Comment" value=""/>
-          <initialValue xsi:type="relational:TdExpression" xmi:id="_nxxxqyYKEeibELI8SSYiXg" body="nextval('administrativa.solicitud_rp_id_seq'::regclass)" language="COLUMN_DEF"/>
-          <sqlDataType xmi:id="_nxxxrCYKEeibELI8SSYiXg" name="SERIAL" numericPrecisionRadix="10" javaDataType="4"/>
-        </feature>
-        <feature xsi:type="relational:TdColumn" xmi:id="_nxxxrSYKEeibELI8SSYiXg" name="tipo_compromiso" label="tipo_compromiso" length="10" sourceType="INT4" talendType="id_Integer">
-          <taggedValue xmi:id="_nxxxriYKEeibELI8SSYiXg" tag="Comment" value=""/>
-          <initialValue xsi:type="relational:TdExpression" xmi:id="_nxxxryYKEeibELI8SSYiXg" language="COLUMN_DEF"/>
-          <sqlDataType xmi:id="_nxxxsCYKEeibELI8SSYiXg" name="INT4" numericPrecisionRadix="10" javaDataType="4" nullable="columnNullable"/>
-        </feature>
-        <feature xsi:type="relational:TdColumn" xmi:id="_nxxxsSYKEeibELI8SSYiXg" name="justificacion_rechazo" comment="Justificación de rechazo de la solicitud de disponibilidad, si la solicitud es aprobada se debe dejar este campo nulo." label="justificacion_rechazo" length="250" sourceType="VARCHAR" talendType="id_String">
-          <taggedValue xmi:id="_nxxxsiYKEeibELI8SSYiXg" tag="Comment" value="Justificación de rechazo de la solicitud de disponibilidad, si la solicitud es aprobada se debe dejar este campo nulo."/>
-          <initialValue xsi:type="relational:TdExpression" xmi:id="_nxxxsyYKEeibELI8SSYiXg" language="COLUMN_DEF"/>
-          <sqlDataType xmi:id="_nxxxtCYKEeibELI8SSYiXg" name="VARCHAR" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
-        </feature>
-        <feature xsi:type="relational:TdColumn" xmi:id="_nxxxtSYKEeibELI8SSYiXg" name="masivo" label="masivo" length="1" sourceType="BOOL" talendType="id_Boolean">
-          <taggedValue xmi:id="_nxxxtiYKEeibELI8SSYiXg" tag="Comment" value=""/>
-          <initialValue xsi:type="relational:TdExpression" xmi:id="_nxxxtyYKEeibELI8SSYiXg" language="COLUMN_DEF"/>
-          <sqlDataType xmi:id="_nxxxuCYKEeibELI8SSYiXg" name="BOOL" numericPrecisionRadix="10" javaDataType="-7" nullable="columnNullable"/>
-        </feature>
-        <feature xsi:type="relational:TdColumn" xmi:id="_nxxxuSYKEeibELI8SSYiXg" name="id_proveedor" comment="referencia al proveedor objetivo de la solicitud de crp" label="id_proveedor" length="10" sourceType="INT4" talendType="id_Integer">
-          <taggedValue xmi:id="_nxxxuiYKEeibELI8SSYiXg" tag="Comment" value="referencia al proveedor objetivo de la solicitud de crp"/>
-          <initialValue xsi:type="relational:TdExpression" xmi:id="_nxxxuyYKEeibELI8SSYiXg" language="COLUMN_DEF"/>
-          <sqlDataType xmi:id="_nxxxvCYKEeibELI8SSYiXg" name="INT4" numericPrecisionRadix="10" javaDataType="4" nullable="columnNullable"/>
-        </feature>
-        <feature xsi:type="relational:TdColumn" xmi:id="_nxxxvSYKEeibELI8SSYiXg" name="numero_compromiso" comment="referencia al numero del documento fisico que genera la solicitud de CRP" label="numero_compromiso" length="10" sourceType="INT4" talendType="id_Integer">
-          <taggedValue xmi:id="_nxxxviYKEeibELI8SSYiXg" tag="Comment" value="referencia al numero del documento fisico que genera la solicitud de CRP"/>
-          <initialValue xsi:type="relational:TdExpression" xmi:id="_nxxxvyYKEeibELI8SSYiXg" language="COLUMN_DEF"/>
-          <sqlDataType xmi:id="_nxxxwCYKEeibELI8SSYiXg" name="INT4" numericPrecisionRadix="10" javaDataType="4" nullable="columnNullable"/>
-        </feature>
-      </ownedElement>
-    </ownedElement>
-  </orgomg.cwm.resource.relational:Catalog>
   <orgomg.cwm.resource.relational:Catalog xmi:id="__4DjcD8rEeeDkv0nwW2QiA" name="test" dataManager="_inih8KkyEeeYD8F7pf8Xmw">
     <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="__4DjcT8rEeeDkv0nwW2QiA" name="administrativa">
       <ownedElement xsi:type="relational:TdTable" xmi:id="_Q1THsD8sEeeDkv0nwW2QiA" name="servicio" id="_Q1SgoD8sEeeDkv0nwW2QiA" comment="Tabla encargada de gestionar los servicios posibles para una solicitud de la necesidad" label="servicio" tableType="TABLE">
@@ -10488,6 +10422,72 @@
           <taggedValue xmi:id="_dCcaAz8sEeeDkv0nwW2QiA" tag="Comment" value=""/>
           <initialValue xsi:type="relational:TdExpression" xmi:id="_dCcaBD8sEeeDkv0nwW2QiA" language="COLUMN_DEF"/>
           <sqlDataType xmi:id="_dCcaBT8sEeeDkv0nwW2QiA" name="VARCHAR" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
+        </feature>
+      </ownedElement>
+    </ownedElement>
+  </orgomg.cwm.resource.relational:Catalog>
+  <orgomg.cwm.resource.relational:Catalog xmi:id="_jwuW8CYKEeibELI8SSYiXg" name="udistrital_core_db" dataManager="_inih8KkyEeeYD8F7pf8Xmw">
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_jwuW8SYKEeibELI8SSYiXg" name="administrativa">
+      <ownedElement xsi:type="relational:TdTable" xmi:id="_nxxxkCYKEeibELI8SSYiXg" name="solicitud_rp" id="_nxwjcCYKEeibELI8SSYiXg" label="solicitud_rp" tableType="TABLE">
+        <feature xsi:type="relational:TdColumn" xmi:id="_nxxxkSYKEeibELI8SSYiXg" name="vigencia" label="vigencia" length="10" sourceType="INT4" talendType="id_Integer" nullable="false">
+          <taggedValue xmi:id="_nxxxkiYKEeibELI8SSYiXg" tag="Comment" value=""/>
+          <initialValue xsi:type="relational:TdExpression" xmi:id="_nxxxkyYKEeibELI8SSYiXg" language="COLUMN_DEF"/>
+          <sqlDataType xmi:id="_nxxxlCYKEeibELI8SSYiXg" name="INT4" numericPrecisionRadix="10" javaDataType="4"/>
+        </feature>
+        <feature xsi:type="relational:TdColumn" xmi:id="_nxxxlSYKEeibELI8SSYiXg" name="fecha_solicitud" label="fecha_solicitud" length="13" sourceType="DATE" talendType="id_Date" pattern="&quot;dd-MM-yyyy&quot;">
+          <taggedValue xmi:id="_nxxxliYKEeibELI8SSYiXg" tag="Comment" value=""/>
+          <initialValue xsi:type="relational:TdExpression" xmi:id="_nxxxlyYKEeibELI8SSYiXg" language="COLUMN_DEF"/>
+          <sqlDataType xmi:id="_nxxxmCYKEeibELI8SSYiXg" name="DATE" numericPrecisionRadix="10" javaDataType="91" nullable="columnNullable"/>
+        </feature>
+        <feature xsi:type="relational:TdColumn" xmi:id="_nxxxmSYKEeibELI8SSYiXg" name="cdp" label="cdp" length="10" sourceType="INT4" talendType="id_Integer" nullable="false">
+          <taggedValue xmi:id="_nxxxmiYKEeibELI8SSYiXg" tag="Comment" value=""/>
+          <initialValue xsi:type="relational:TdExpression" xmi:id="_nxxxmyYKEeibELI8SSYiXg" language="COLUMN_DEF"/>
+          <sqlDataType xmi:id="_nxxxnCYKEeibELI8SSYiXg" name="INT4" numericPrecisionRadix="10" javaDataType="4"/>
+        </feature>
+        <feature xsi:type="relational:TdColumn" xmi:id="_nxxxnSYKEeibELI8SSYiXg" name="expedida" label="expedida" length="1" sourceType="BOOL" talendType="id_Boolean">
+          <taggedValue xmi:id="_nxxxniYKEeibELI8SSYiXg" tag="Comment" value=""/>
+          <initialValue xsi:type="relational:TdExpression" xmi:id="_nxxxnyYKEeibELI8SSYiXg" body="'false'" language="COLUMN_DEF"/>
+          <sqlDataType xmi:id="_nxxxoCYKEeibELI8SSYiXg" name="BOOL" numericPrecisionRadix="10" javaDataType="-7" nullable="columnNullable"/>
+        </feature>
+        <feature xsi:type="relational:TdColumn" xmi:id="_nxxxoSYKEeibELI8SSYiXg" name="numero_contrato" label="numero_contrato" length="2147483647" sourceType="VARCHAR" talendType="id_String">
+          <taggedValue xmi:id="_nxxxoiYKEeibELI8SSYiXg" tag="Comment" value=""/>
+          <initialValue xsi:type="relational:TdExpression" xmi:id="_nxxxoyYKEeibELI8SSYiXg" language="COLUMN_DEF"/>
+          <sqlDataType xmi:id="_nxxxpCYKEeibELI8SSYiXg" name="VARCHAR" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
+        </feature>
+        <feature xsi:type="relational:TdColumn" xmi:id="_nxxxpSYKEeibELI8SSYiXg" name="vigencia_contrato" label="vigencia_contrato" length="10" sourceType="INT4" talendType="id_Integer">
+          <taggedValue xmi:id="_nxxxpiYKEeibELI8SSYiXg" tag="Comment" value=""/>
+          <initialValue xsi:type="relational:TdExpression" xmi:id="_nxxxpyYKEeibELI8SSYiXg" language="COLUMN_DEF"/>
+          <sqlDataType xmi:id="_nxxxqCYKEeibELI8SSYiXg" name="INT4" numericPrecisionRadix="10" javaDataType="4" nullable="columnNullable"/>
+        </feature>
+        <feature xsi:type="relational:TdColumn" xmi:id="_nxxxqSYKEeibELI8SSYiXg" name="id" label="id" length="10" sourceType="SERIAL" talendType="id_Integer" key="true" nullable="false">
+          <taggedValue xmi:id="_nxxxqiYKEeibELI8SSYiXg" tag="Comment" value=""/>
+          <initialValue xsi:type="relational:TdExpression" xmi:id="_nxxxqyYKEeibELI8SSYiXg" body="nextval('administrativa.solicitud_rp_id_seq'::regclass)" language="COLUMN_DEF"/>
+          <sqlDataType xmi:id="_nxxxrCYKEeibELI8SSYiXg" name="SERIAL" numericPrecisionRadix="10" javaDataType="4"/>
+        </feature>
+        <feature xsi:type="relational:TdColumn" xmi:id="_nxxxrSYKEeibELI8SSYiXg" name="tipo_compromiso" label="tipo_compromiso" length="10" sourceType="INT4" talendType="id_Integer">
+          <taggedValue xmi:id="_nxxxriYKEeibELI8SSYiXg" tag="Comment" value=""/>
+          <initialValue xsi:type="relational:TdExpression" xmi:id="_nxxxryYKEeibELI8SSYiXg" language="COLUMN_DEF"/>
+          <sqlDataType xmi:id="_nxxxsCYKEeibELI8SSYiXg" name="INT4" numericPrecisionRadix="10" javaDataType="4" nullable="columnNullable"/>
+        </feature>
+        <feature xsi:type="relational:TdColumn" xmi:id="_nxxxsSYKEeibELI8SSYiXg" name="justificacion_rechazo" comment="Justificación de rechazo de la solicitud de disponibilidad, si la solicitud es aprobada se debe dejar este campo nulo." label="justificacion_rechazo" length="250" sourceType="VARCHAR" talendType="id_String">
+          <taggedValue xmi:id="_nxxxsiYKEeibELI8SSYiXg" tag="Comment" value="Justificación de rechazo de la solicitud de disponibilidad, si la solicitud es aprobada se debe dejar este campo nulo."/>
+          <initialValue xsi:type="relational:TdExpression" xmi:id="_nxxxsyYKEeibELI8SSYiXg" language="COLUMN_DEF"/>
+          <sqlDataType xmi:id="_nxxxtCYKEeibELI8SSYiXg" name="VARCHAR" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
+        </feature>
+        <feature xsi:type="relational:TdColumn" xmi:id="_nxxxtSYKEeibELI8SSYiXg" name="masivo" label="masivo" length="1" sourceType="BOOL" talendType="id_Boolean">
+          <taggedValue xmi:id="_nxxxtiYKEeibELI8SSYiXg" tag="Comment" value=""/>
+          <initialValue xsi:type="relational:TdExpression" xmi:id="_nxxxtyYKEeibELI8SSYiXg" language="COLUMN_DEF"/>
+          <sqlDataType xmi:id="_nxxxuCYKEeibELI8SSYiXg" name="BOOL" numericPrecisionRadix="10" javaDataType="-7" nullable="columnNullable"/>
+        </feature>
+        <feature xsi:type="relational:TdColumn" xmi:id="_nxxxuSYKEeibELI8SSYiXg" name="id_proveedor" comment="referencia al proveedor objetivo de la solicitud de crp" label="id_proveedor" length="10" sourceType="INT4" talendType="id_Integer">
+          <taggedValue xmi:id="_nxxxuiYKEeibELI8SSYiXg" tag="Comment" value="referencia al proveedor objetivo de la solicitud de crp"/>
+          <initialValue xsi:type="relational:TdExpression" xmi:id="_nxxxuyYKEeibELI8SSYiXg" language="COLUMN_DEF"/>
+          <sqlDataType xmi:id="_nxxxvCYKEeibELI8SSYiXg" name="INT4" numericPrecisionRadix="10" javaDataType="4" nullable="columnNullable"/>
+        </feature>
+        <feature xsi:type="relational:TdColumn" xmi:id="_nxxxvSYKEeibELI8SSYiXg" name="numero_compromiso" comment="referencia al numero del documento fisico que genera la solicitud de CRP" label="numero_compromiso" length="10" sourceType="INT4" talendType="id_Integer">
+          <taggedValue xmi:id="_nxxxviYKEeibELI8SSYiXg" tag="Comment" value="referencia al numero del documento fisico que genera la solicitud de CRP"/>
+          <initialValue xsi:type="relational:TdExpression" xmi:id="_nxxxvyYKEeibELI8SSYiXg" language="COLUMN_DEF"/>
+          <sqlDataType xmi:id="_nxxxwCYKEeibELI8SSYiXg" name="INT4" numericPrecisionRadix="10" javaDataType="4" nullable="columnNullable"/>
         </feature>
       </ownedElement>
     </ownedElement>

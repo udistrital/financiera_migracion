@@ -299,7 +299,6 @@
       <relatedItems xmi:id="_7603zCPLEeiNXelZPRM7zw" id="_ili94KkyEeeYD8F7pf8Xmw - necesidad" version="Latest" type="schema"/>
       <relatedItems xmi:id="_fUy2ACPMEeiNXelZPRM7zw" id="_bk9fEGCjEeatGJv7WGjxOg" version="Latest" type="property"/>
       <relatedItems xmi:id="_fUy2ASPMEeiNXelZPRM7zw" id="_ili94KkyEeeYD8F7pf8Xmw - solicitud_disponibilidad" version="Latest" type="schema"/>
-      <relatedItems xmi:id="_dQxd4CPOEeiNXelZPRM7zw" id="_bk9fEGCjEeatGJv7WGjxOg - disponibilidad_proceso_externo" version="Latest" type="schema"/>
     </ItemsRelations>
     <migrationTask xmi:id="_ZbkUcGAFEeatGJv7WGjxOg" id="org.talend.designer.core.ui.preferences.migration.ChangeMysqlVersionForProjectSetting" breaks="5.2.0" version="5.1.3" status="ok"/>
     <migrationTask xmi:id="_ZbkUcWAFEeatGJv7WGjxOg" id="org.talend.designer.core.ui.preferences.migration.ChangeOracleVersionForProjectSetting" breaks="5.2.0" version="5.2.1" status="ok"/>

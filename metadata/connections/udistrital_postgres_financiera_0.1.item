@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.relational="http:///orgomg/cwm/resource/relational.ecore" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
-  <TalendMetadata:DatabaseConnection xmi:id="_kkdwsGCjEeatGJv7WGjxOg" name="udistrital_postgres_financiera" id="_bk9fEGCjEeatGJv7WGjxOg" label="udistrital_postgres_financiera" dataPackage="_2ox54CPMEeiNXelZPRM7zw __4DjcD8rEeeDkv0nwW2QiA" DatabaseType="PostgreSQL" DriverClass="org.postgresql.Driver" URL="jdbc:postgresql://localhost:5433/udistrital_core_db" dbVersionString="V9_X" Port="5433" Username="crud_user" Password="1QY6ZyNqCD4BAhKeqSkILQ==" ServerName="localhost" DatasourceName="" FileFieldName="" SID="udistrital_core_db" SqlSynthax="SQL Syntax" StringQuote="'" DbmsId="postgres_id" ProductId="POSTGRESQL" AdditionalParams="" StandardSQL="true" SQLMode="false" UiSchema="financiera">
+  <TalendMetadata:DatabaseConnection xmi:id="_kkdwsGCjEeatGJv7WGjxOg" name="udistrital_postgres_financiera" id="_bk9fEGCjEeatGJv7WGjxOg" label="udistrital_postgres_financiera" dataPackage="__4DjcD8rEeeDkv0nwW2QiA _2ox54CPMEeiNXelZPRM7zw" DatabaseType="PostgreSQL" DriverClass="org.postgresql.Driver" URL="jdbc:postgresql://10.20.0.159:5432/udistrital_core_db" dbVersionString="V9_X" Port="5432" Username="crud_user" Password="1QY6ZyNqCD4BAhKeqSkILQ==" ServerName="10.20.0.159" DatasourceName="" FileFieldName="" SID="udistrital_core_db" SqlSynthax="SQL Syntax" StringQuote="'" DbmsId="postgres_id" ProductId="POSTGRESQL" AdditionalParams="" StandardSQL="true" SQLMode="false" UiSchema="financiera">
     <taggedValue xmi:id="_kkdwsWCjEeatGJv7WGjxOg" tag="Is Conn Need Reload" value="true"/>
     <taggedValue xmi:id="_knzYkGCjEeatGJv7WGjxOg" tag="package filter" value=""/>
     <taggedValue xmi:id="_kn-XsGCjEeatGJv7WGjxOg" tag="Status" value=""/>
@@ -10,68 +10,11 @@
     <taggedValue xmi:id="_kn-XtGCjEeatGJv7WGjxOg" tag="Author" value=""/>
     <taggedValue xmi:id="_kn-XtWCjEeatGJv7WGjxOg" tag="otherParameter"/>
     <taggedValue xmi:id="_koU9AGCjEeatGJv7WGjxOg" tag="DB ProductName" value="PostgreSQL"/>
-    <taggedValue xmi:id="_koU9AWCjEeatGJv7WGjxOg" tag="DB ProductVersion" value="9.5.12"/>
+    <taggedValue xmi:id="_koU9AWCjEeatGJv7WGjxOg" tag="DB ProductVersion" value="9.5.6"/>
     <taggedValue xmi:id="_koU9AmCjEeatGJv7WGjxOg" tag="DB IdentifierQuoteString" value="&quot;"/>
     <parameters xmi:id="_kkdwsmCjEeatGJv7WGjxOg" key="CONN_PARA_KEY_USERNAME" value="crud_user"/>
     <parameters xmi:id="_PEYe4KiDEeeIG9S70570pw" key="CONN_PARA_KEY_MAPRDB_TABLE_NS_MAPPING" value=""/>
   </TalendMetadata:DatabaseConnection>
-  <orgomg.cwm.resource.relational:Catalog xmi:id="_2ox54CPMEeiNXelZPRM7zw" name="udistrital_core_db" dataManager="_kkdwsGCjEeatGJv7WGjxOg">
-    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_2ox54SPMEeiNXelZPRM7zw" name="financiera">
-      <ownedElement xsi:type="relational:TdTable" xmi:id="_fPHFkSYNEeibELI8SSYiXg" name="registro_presupuestal" id="_fPHFkCYNEeibELI8SSYiXg" comment="tabla donde se guarda la informacion general de los CRP" label="registro_presupuestal" tableType="TABLE">
-        <taggedValue xmi:id="_fPHFkiYNEeibELI8SSYiXg" tag="Comment" value="tabla donde se guarda la informacion general de los CRP"/>
-        <feature xsi:type="relational:TdColumn" xmi:id="_fPHFkyYNEeibELI8SSYiXg" name="id" comment="identificador del registro" label="id" length="10" sourceType="SERIAL" talendType="id_Integer" key="true" nullable="false">
-          <taggedValue xmi:id="_fPHFlCYNEeibELI8SSYiXg" tag="Comment" value="identificador del registro"/>
-          <initialValue xsi:type="relational:TdExpression" xmi:id="_fPHFlSYNEeibELI8SSYiXg" body="nextval('financiera.registo_presupuestal_id_seq'::regclass)" language="COLUMN_DEF"/>
-          <sqlDataType xmi:id="_fPHFliYNEeibELI8SSYiXg" name="SERIAL" numericPrecisionRadix="10" javaDataType="4"/>
-        </feature>
-        <feature xsi:type="relational:TdColumn" xmi:id="_fPHFlyYNEeibELI8SSYiXg" name="vigencia" comment="vigencia del registro presupuestal" label="vigencia" length="4" sourceType="NUMERIC" talendType="id_BigDecimal" nullable="false">
-          <taggedValue xmi:id="_fPHFmCYNEeibELI8SSYiXg" tag="Comment" value="vigencia del registro presupuestal"/>
-          <initialValue xsi:type="relational:TdExpression" xmi:id="_fPHFmSYNEeibELI8SSYiXg" language="COLUMN_DEF"/>
-          <sqlDataType xmi:id="_fPHFmiYNEeibELI8SSYiXg" name="NUMERIC" numericPrecisionRadix="10" javaDataType="2"/>
-        </feature>
-        <feature xsi:type="relational:TdColumn" xmi:id="_fPHFmyYNEeibELI8SSYiXg" name="fecha_registro" comment="fecha de registro del CRP" label="fecha_registro" length="13" sourceType="DATE" talendType="id_Date" nullable="false" pattern="&quot;dd-MM-yyyy&quot;">
-          <taggedValue xmi:id="_fPHFnCYNEeibELI8SSYiXg" tag="Comment" value="fecha de registro del CRP"/>
-          <initialValue xsi:type="relational:TdExpression" xmi:id="_fPHFnSYNEeibELI8SSYiXg" language="COLUMN_DEF"/>
-          <sqlDataType xmi:id="_fPHFniYNEeibELI8SSYiXg" name="DATE" numericPrecisionRadix="10" javaDataType="91"/>
-        </feature>
-        <feature xsi:type="relational:TdColumn" xmi:id="_fPHFnyYNEeibELI8SSYiXg" name="responsable" comment="crear tabla de usuarios para asignar la responsabilidad" label="responsable" length="10" sourceType="INT4" talendType="id_Integer" nullable="false">
-          <taggedValue xmi:id="_fPHFoCYNEeibELI8SSYiXg" tag="Comment" value="crear tabla de usuarios para asignar la responsabilidad"/>
-          <initialValue xsi:type="relational:TdExpression" xmi:id="_fPHFoSYNEeibELI8SSYiXg" language="COLUMN_DEF"/>
-          <sqlDataType xmi:id="_fPHFoiYNEeibELI8SSYiXg" name="INT4" numericPrecisionRadix="10" javaDataType="4"/>
-        </feature>
-        <feature xsi:type="relational:TdColumn" xmi:id="_fPHFoyYNEeibELI8SSYiXg" name="estado" comment="estado del registros" label="estado" length="5" sourceType="INT2" talendType="id_Short" nullable="false">
-          <taggedValue xmi:id="_fPHFpCYNEeibELI8SSYiXg" tag="Comment" value="estado del registros"/>
-          <initialValue xsi:type="relational:TdExpression" xmi:id="_fPHFpSYNEeibELI8SSYiXg" language="COLUMN_DEF"/>
-          <sqlDataType xmi:id="_fPHFpiYNEeibELI8SSYiXg" name="INT2" numericPrecisionRadix="10" javaDataType="5"/>
-        </feature>
-        <feature xsi:type="relational:TdColumn" xmi:id="_fPHFpyYNEeibELI8SSYiXg" name="numero_registro_presupuestal" label="numero_registro_presupuestal" length="10" sourceType="INT4" talendType="id_Integer" nullable="false">
-          <taggedValue xmi:id="_fPHFqCYNEeibELI8SSYiXg" tag="Comment" value=""/>
-          <initialValue xsi:type="relational:TdExpression" xmi:id="_fPHFqSYNEeibELI8SSYiXg" language="COLUMN_DEF"/>
-          <sqlDataType xmi:id="_fPHFqiYNEeibELI8SSYiXg" name="INT4" numericPrecisionRadix="10" javaDataType="4"/>
-        </feature>
-        <feature xsi:type="relational:TdColumn" xmi:id="_fPHFqyYNEeibELI8SSYiXg" name="tipo_compromiso" comment="refrencia al compromiso del RP" label="tipo_compromiso" length="10" sourceType="INT4" talendType="id_Integer">
-          <taggedValue xmi:id="_fPHFrCYNEeibELI8SSYiXg" tag="Comment" value="refrencia al compromiso del RP"/>
-          <initialValue xsi:type="relational:TdExpression" xmi:id="_fPHFrSYNEeibELI8SSYiXg" language="COLUMN_DEF"/>
-          <sqlDataType xmi:id="_fPHFriYNEeibELI8SSYiXg" name="INT4" numericPrecisionRadix="10" javaDataType="4" nullable="columnNullable"/>
-        </feature>
-        <feature xsi:type="relational:TdColumn" xmi:id="_fPHFryYNEeibELI8SSYiXg" name="beneficiario" comment="referencia el id del beneficiario del rp (id_proveedor)" label="beneficiario" length="10" sourceType="INT4" talendType="id_Integer" nullable="false">
-          <taggedValue xmi:id="_fPHFsCYNEeibELI8SSYiXg" tag="Comment" value="referencia el id del beneficiario del rp (id_proveedor)"/>
-          <initialValue xsi:type="relational:TdExpression" xmi:id="_fPHFsSYNEeibELI8SSYiXg" language="COLUMN_DEF"/>
-          <sqlDataType xmi:id="_fPHFsiYNEeibELI8SSYiXg" name="INT4" numericPrecisionRadix="10" javaDataType="4"/>
-        </feature>
-        <feature xsi:type="relational:TdColumn" xmi:id="_fPHFsyYNEeibELI8SSYiXg" name="solicitud" comment="referencia a la solicitud del rp " label="solicitud" length="10" sourceType="INT4" talendType="id_Integer" nullable="false">
-          <taggedValue xmi:id="_fPHFtCYNEeibELI8SSYiXg" tag="Comment" value="referencia a la solicitud del rp "/>
-          <initialValue xsi:type="relational:TdExpression" xmi:id="_fPHFtSYNEeibELI8SSYiXg" language="COLUMN_DEF"/>
-          <sqlDataType xmi:id="_fPHFtiYNEeibELI8SSYiXg" name="INT4" numericPrecisionRadix="10" javaDataType="4"/>
-        </feature>
-        <feature xsi:type="relational:TdColumn" xmi:id="_fPHFtyYNEeibELI8SSYiXg" name="numero_compromiso" comment="referencia al numero del documento fisico que genera la solicitud de CRP" label="numero_compromiso" length="10" sourceType="INT4" talendType="id_Integer">
-          <taggedValue xmi:id="_fPHFuCYNEeibELI8SSYiXg" tag="Comment" value="referencia al numero del documento fisico que genera la solicitud de CRP"/>
-          <initialValue xsi:type="relational:TdExpression" xmi:id="_fPHFuSYNEeibELI8SSYiXg" language="COLUMN_DEF"/>
-          <sqlDataType xmi:id="_fPHFuiYNEeibELI8SSYiXg" name="INT4" numericPrecisionRadix="10" javaDataType="4" nullable="columnNullable"/>
-        </feature>
-      </ownedElement>
-    </ownedElement>
-  </orgomg.cwm.resource.relational:Catalog>
   <orgomg.cwm.resource.relational:Catalog xmi:id="__4DjcD8rEeeDkv0nwW2QiA" name="test" dataManager="_kkdwsGCjEeatGJv7WGjxOg">
     <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="__4DjcT8rEeeDkv0nwW2QiA" name="administrativa">
       <ownedElement xsi:type="relational:TdTable" xmi:id="_QyiuoD8sEeeDkv0nwW2QiA" name="actividad_economica_necesidad" id="_QygSYD8sEeeDkv0nwW2QiA" comment="Tabla de rompimiento entre la necesidad y las activiades económicas" label="actividad_economica_necesidad" tableType="TABLE">
@@ -9009,6 +8952,63 @@
           <taggedValue xmi:id="_dCcaAz8sEeeDkv0nwW2QiA" tag="Comment" value=""/>
           <initialValue xsi:type="relational:TdExpression" xmi:id="_dCcaBD8sEeeDkv0nwW2QiA" language="COLUMN_DEF"/>
           <sqlDataType xmi:id="_dCcaBT8sEeeDkv0nwW2QiA" name="VARCHAR" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
+        </feature>
+      </ownedElement>
+    </ownedElement>
+  </orgomg.cwm.resource.relational:Catalog>
+  <orgomg.cwm.resource.relational:Catalog xmi:id="_2ox54CPMEeiNXelZPRM7zw" name="udistrital_core_db" dataManager="_kkdwsGCjEeatGJv7WGjxOg">
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_2ox54SPMEeiNXelZPRM7zw" name="financiera">
+      <ownedElement xsi:type="relational:TdTable" xmi:id="_fPHFkSYNEeibELI8SSYiXg" name="registro_presupuestal" id="_fPHFkCYNEeibELI8SSYiXg" comment="tabla donde se guarda la informacion general de los CRP" label="registro_presupuestal" tableType="TABLE">
+        <taggedValue xmi:id="_fPHFkiYNEeibELI8SSYiXg" tag="Comment" value="tabla donde se guarda la informacion general de los CRP"/>
+        <feature xsi:type="relational:TdColumn" xmi:id="_fPHFkyYNEeibELI8SSYiXg" name="id" comment="identificador del registro" label="id" length="10" sourceType="SERIAL" talendType="id_Integer" key="true" nullable="false">
+          <taggedValue xmi:id="_fPHFlCYNEeibELI8SSYiXg" tag="Comment" value="identificador del registro"/>
+          <initialValue xsi:type="relational:TdExpression" xmi:id="_fPHFlSYNEeibELI8SSYiXg" body="nextval('financiera.registo_presupuestal_id_seq'::regclass)" language="COLUMN_DEF"/>
+          <sqlDataType xmi:id="_fPHFliYNEeibELI8SSYiXg" name="SERIAL" numericPrecisionRadix="10" javaDataType="4"/>
+        </feature>
+        <feature xsi:type="relational:TdColumn" xmi:id="_fPHFlyYNEeibELI8SSYiXg" name="vigencia" comment="vigencia del registro presupuestal" label="vigencia" length="4" sourceType="NUMERIC" talendType="id_BigDecimal" nullable="false">
+          <taggedValue xmi:id="_fPHFmCYNEeibELI8SSYiXg" tag="Comment" value="vigencia del registro presupuestal"/>
+          <initialValue xsi:type="relational:TdExpression" xmi:id="_fPHFmSYNEeibELI8SSYiXg" language="COLUMN_DEF"/>
+          <sqlDataType xmi:id="_fPHFmiYNEeibELI8SSYiXg" name="NUMERIC" numericPrecisionRadix="10" javaDataType="2"/>
+        </feature>
+        <feature xsi:type="relational:TdColumn" xmi:id="_fPHFmyYNEeibELI8SSYiXg" name="fecha_registro" comment="fecha de registro del CRP" label="fecha_registro" length="13" sourceType="DATE" talendType="id_Date" nullable="false" pattern="&quot;dd-MM-yyyy&quot;">
+          <taggedValue xmi:id="_fPHFnCYNEeibELI8SSYiXg" tag="Comment" value="fecha de registro del CRP"/>
+          <initialValue xsi:type="relational:TdExpression" xmi:id="_fPHFnSYNEeibELI8SSYiXg" language="COLUMN_DEF"/>
+          <sqlDataType xmi:id="_fPHFniYNEeibELI8SSYiXg" name="DATE" numericPrecisionRadix="10" javaDataType="91"/>
+        </feature>
+        <feature xsi:type="relational:TdColumn" xmi:id="_fPHFnyYNEeibELI8SSYiXg" name="responsable" comment="crear tabla de usuarios para asignar la responsabilidad" label="responsable" length="10" sourceType="INT4" talendType="id_Integer" nullable="false">
+          <taggedValue xmi:id="_fPHFoCYNEeibELI8SSYiXg" tag="Comment" value="crear tabla de usuarios para asignar la responsabilidad"/>
+          <initialValue xsi:type="relational:TdExpression" xmi:id="_fPHFoSYNEeibELI8SSYiXg" language="COLUMN_DEF"/>
+          <sqlDataType xmi:id="_fPHFoiYNEeibELI8SSYiXg" name="INT4" numericPrecisionRadix="10" javaDataType="4"/>
+        </feature>
+        <feature xsi:type="relational:TdColumn" xmi:id="_fPHFoyYNEeibELI8SSYiXg" name="estado" comment="estado del registros" label="estado" length="5" sourceType="INT2" talendType="id_Short" nullable="false">
+          <taggedValue xmi:id="_fPHFpCYNEeibELI8SSYiXg" tag="Comment" value="estado del registros"/>
+          <initialValue xsi:type="relational:TdExpression" xmi:id="_fPHFpSYNEeibELI8SSYiXg" language="COLUMN_DEF"/>
+          <sqlDataType xmi:id="_fPHFpiYNEeibELI8SSYiXg" name="INT2" numericPrecisionRadix="10" javaDataType="5"/>
+        </feature>
+        <feature xsi:type="relational:TdColumn" xmi:id="_fPHFpyYNEeibELI8SSYiXg" name="numero_registro_presupuestal" label="numero_registro_presupuestal" length="10" sourceType="INT4" talendType="id_Integer" nullable="false">
+          <taggedValue xmi:id="_fPHFqCYNEeibELI8SSYiXg" tag="Comment" value=""/>
+          <initialValue xsi:type="relational:TdExpression" xmi:id="_fPHFqSYNEeibELI8SSYiXg" language="COLUMN_DEF"/>
+          <sqlDataType xmi:id="_fPHFqiYNEeibELI8SSYiXg" name="INT4" numericPrecisionRadix="10" javaDataType="4"/>
+        </feature>
+        <feature xsi:type="relational:TdColumn" xmi:id="_fPHFqyYNEeibELI8SSYiXg" name="tipo_compromiso" comment="refrencia al compromiso del RP" label="tipo_compromiso" length="10" sourceType="INT4" talendType="id_Integer">
+          <taggedValue xmi:id="_fPHFrCYNEeibELI8SSYiXg" tag="Comment" value="refrencia al compromiso del RP"/>
+          <initialValue xsi:type="relational:TdExpression" xmi:id="_fPHFrSYNEeibELI8SSYiXg" language="COLUMN_DEF"/>
+          <sqlDataType xmi:id="_fPHFriYNEeibELI8SSYiXg" name="INT4" numericPrecisionRadix="10" javaDataType="4" nullable="columnNullable"/>
+        </feature>
+        <feature xsi:type="relational:TdColumn" xmi:id="_fPHFryYNEeibELI8SSYiXg" name="beneficiario" comment="referencia el id del beneficiario del rp (id_proveedor)" label="beneficiario" length="10" sourceType="INT4" talendType="id_Integer" nullable="false">
+          <taggedValue xmi:id="_fPHFsCYNEeibELI8SSYiXg" tag="Comment" value="referencia el id del beneficiario del rp (id_proveedor)"/>
+          <initialValue xsi:type="relational:TdExpression" xmi:id="_fPHFsSYNEeibELI8SSYiXg" language="COLUMN_DEF"/>
+          <sqlDataType xmi:id="_fPHFsiYNEeibELI8SSYiXg" name="INT4" numericPrecisionRadix="10" javaDataType="4"/>
+        </feature>
+        <feature xsi:type="relational:TdColumn" xmi:id="_fPHFsyYNEeibELI8SSYiXg" name="solicitud" comment="referencia a la solicitud del rp " label="solicitud" length="10" sourceType="INT4" talendType="id_Integer" nullable="false">
+          <taggedValue xmi:id="_fPHFtCYNEeibELI8SSYiXg" tag="Comment" value="referencia a la solicitud del rp "/>
+          <initialValue xsi:type="relational:TdExpression" xmi:id="_fPHFtSYNEeibELI8SSYiXg" language="COLUMN_DEF"/>
+          <sqlDataType xmi:id="_fPHFtiYNEeibELI8SSYiXg" name="INT4" numericPrecisionRadix="10" javaDataType="4"/>
+        </feature>
+        <feature xsi:type="relational:TdColumn" xmi:id="_fPHFtyYNEeibELI8SSYiXg" name="numero_compromiso" comment="referencia al numero del documento fisico que genera la solicitud de CRP" label="numero_compromiso" length="10" sourceType="INT4" talendType="id_Integer">
+          <taggedValue xmi:id="_fPHFuCYNEeibELI8SSYiXg" tag="Comment" value="referencia al numero del documento fisico que genera la solicitud de CRP"/>
+          <initialValue xsi:type="relational:TdExpression" xmi:id="_fPHFuSYNEeibELI8SSYiXg" language="COLUMN_DEF"/>
+          <sqlDataType xmi:id="_fPHFuiYNEeibELI8SSYiXg" name="INT4" numericPrecisionRadix="10" javaDataType="4" nullable="columnNullable"/>
         </feature>
       </ownedElement>
     </ownedElement>
