@@ -40,3 +40,25 @@
  * Task [ChangeTMatchGroupOutputConnectorTask] : Applied successfully
  * Task [AutoUpdateRelationsMigrationTask] : Applied successfully
  ---=== End of migration ===---
+ ---=== Start Migration of project financiera_migr ===---
+ * Task [UpdateToJava8VersionMigrationTask] : Applied successfully
+ * Task [UpdateGitIgnoreMigrationTask] : Nothing to do
+ * Task [ChangeDriverJarForProjectSetting] : Nothing to do
+ * Task [RepositoryProjectDate] : Applied successfully
+ * Task [Fix a problem of project resources linked to items] : Nothing to do
+ * Task [Configure the new INCLUDTRASHFILES property to 'true' in order to keep the same behavior as before] : Applied successfully
+ * Task [NewJDBCMigrationTask] : Nothing to do
+ * Task [NewMarkLogicMigrationTask] : Nothing to do
+ * Task [NewGoogleDriveMigrationTask] : Nothing to do
+ * Task [Dataprep701MigrationTask] : Applied successfully
+ * Task [NewJDBCConnectionMigrationTask] : Nothing to do
+ * Task [DriverJarMigration] : Nothing to do
+ * Task [AddSchemaDatePatternUseForImpalaTask] : Applied successfully
+ * Task [GenerateJobPomMigrationTask] : Applied successfully
+ * Task [TExtractJSONSplitListMigrationTask] : Applied successfully
+ * Task [RenameParamName4tS3XXServerEncryption] : Applied successfully
+ * Task [AddDefaultFTPSPortMigrationTask] : Applied successfully
+ * Task [WriteJSONQuoteAllValuesMigrationTask] : Applied successfully
+ * Task [FileInputPositionalByteLengthMigrationTask] : Applied successfully
+ * Task [AutoUpdateRelationsMigrationTask] : Applied successfully
+ ---=== End of migration ===---
