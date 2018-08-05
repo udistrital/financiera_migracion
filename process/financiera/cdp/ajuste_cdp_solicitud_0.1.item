@@ -128,7 +128,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select* from administrativa.necesidad where id = &quot;+context.curr_id"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select* from administrativa.necesidad where id = (select (COALESCE(SUM(id),0)) as id from financiera.disponibilidad order by id desc limit 1) &quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -485,7 +485,7 @@
     <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata comment="tabla de registro para los diferentes procesos que pueden generar una disponibilidad" label="disponibilidad_proceso_externo" name="salida_financiera_disponibilidad_proceso_externo" type="TABLE">
+    <metadata comment="tabla de registro para los diferentes procesos que pueden generar una disponibilidad" connector="FLOW" label="disponibilidad_proceso_externo" name="salida_financiera_disponibilidad_proceso_externo" type="TABLE">
       <column comment="identificador de la tabla" defaultValue="nextval('financiera.disponibilidad_proceso_externo_id_seq'::regclass)" key="true" length="10" name="id" nullable="false" pattern="" precision="0" sourceType="SERIAL" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value="identificador de la tabla"/>
       </column>
@@ -501,7 +501,7 @@
       <additionalProperties key="Comment" value="tabla de registro para los diferentes procesos que pueden generar una disponibilidad"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="salida_financiera_disponibilidad_proceso_externo" id="_bk9fEGCjEeatGJv7WGjxOg - disponibilidad_proceso_externo">
         <mapperTableEntries name="id" expression="row2.id" type="id_Integer"/>
@@ -640,9 +640,9 @@
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;disponibilidad&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
-    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="REPOSITORY"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select * from financiera.disponibilidad where id = &quot;+context.curr_id"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select * from financiera.disponibilidad where id = (select (COALESCE(SUM(id),0)) as id from financiera.disponibilidad order by id desc limit 1) &quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>

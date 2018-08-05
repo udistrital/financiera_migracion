@@ -418,6 +418,15 @@ private class TalendException extends Exception {
 					tPostgresqlInput_1_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
+			public void tDBInput_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+				
+				end_Hash.put(errorComponent, System.currentTimeMillis());
+				
+				status = "failure";
+				
+					tDBInput_1_onSubJobError(exception, errorComponent, globalMap);
+			}
+			
 			public void tAdvancedHash_salida_disponibilidad_financiera_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 				
 				end_Hash.put(errorComponent, System.currentTimeMillis());
@@ -454,6 +463,15 @@ private class TalendException extends Exception {
 					tPostgresqlInput_1_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
+			public void tAdvancedHash_row9_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+				
+				end_Hash.put(errorComponent, System.currentTimeMillis());
+				
+				status = "failure";
+				
+					tDBInput_1_onSubJobError(exception, errorComponent, globalMap);
+			}
+			
 			public void tOracleInput_2_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
@@ -475,6 +493,11 @@ resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThrea
 
 			}
 			public void tPostgresqlInput_1_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+
+resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
+
+			}
+			public void tDBInput_1_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
@@ -5525,6 +5548,459 @@ public static class row1Struct implements routines.system.IPersistableRow<row1St
 
 
 }
+
+public static class after_tOracleInput_1Struct implements routines.system.IPersistableRow<after_tOracleInput_1Struct> {
+    final static byte[] commonByteArrayLock_FINANCIERA_MIGR_volcado_cdp = new byte[0];
+    static byte[] commonByteArray_FINANCIERA_MIGR_volcado_cdp = new byte[0];
+
+	
+			    public BigDecimal VIGENCIA;
+
+				public BigDecimal getVIGENCIA () {
+					return this.VIGENCIA;
+				}
+				
+			    public String CODIGO_COMPANIA;
+
+				public String getCODIGO_COMPANIA () {
+					return this.CODIGO_COMPANIA;
+				}
+				
+			    public String CODIGO_UNIDAD_EJECUTORA;
+
+				public String getCODIGO_UNIDAD_EJECUTORA () {
+					return this.CODIGO_UNIDAD_EJECUTORA;
+				}
+				
+			    public BigDecimal NUMERO_DISPONIBILIDAD;
+
+				public BigDecimal getNUMERO_DISPONIBILIDAD () {
+					return this.NUMERO_DISPONIBILIDAD;
+				}
+				
+			    public BigDecimal ID_RESPONSABLE_PRESUPUESTO;
+
+				public BigDecimal getID_RESPONSABLE_PRESUPUESTO () {
+					return this.ID_RESPONSABLE_PRESUPUESTO;
+				}
+				
+			    public BigDecimal ID_SOLICITANTE;
+
+				public BigDecimal getID_SOLICITANTE () {
+					return this.ID_SOLICITANTE;
+				}
+				
+			    public java.util.Date FECHA_REGISTRO;
+
+				public java.util.Date getFECHA_REGISTRO () {
+					return this.FECHA_REGISTRO;
+				}
+				
+			    public BigDecimal NUMERO_IMPRESIONES;
+
+				public BigDecimal getNUMERO_IMPRESIONES () {
+					return this.NUMERO_IMPRESIONES;
+				}
+				
+			    public BigDecimal MODALIDAD_GIRO;
+
+				public BigDecimal getMODALIDAD_GIRO () {
+					return this.MODALIDAD_GIRO;
+				}
+				
+			    public BigDecimal PARA_MODIFICACION;
+
+				public BigDecimal getPARA_MODIFICACION () {
+					return this.PARA_MODIFICACION;
+				}
+				
+			    public BigDecimal PARA_SUSPENSION;
+
+				public BigDecimal getPARA_SUSPENSION () {
+					return this.PARA_SUSPENSION;
+				}
+				
+			    public BigDecimal APLICA_SUSPENSION;
+
+				public BigDecimal getAPLICA_SUSPENSION () {
+					return this.APLICA_SUSPENSION;
+				}
+				
+			    public BigDecimal VIG_FUTURA;
+
+				public BigDecimal getVIG_FUTURA () {
+					return this.VIG_FUTURA;
+				}
+				
+			    public String ESTADO;
+
+				public String getESTADO () {
+					return this.ESTADO;
+				}
+				
+			    public java.util.Date FECHA_EXPEDICION;
+
+				public java.util.Date getFECHA_EXPEDICION () {
+					return this.FECHA_EXPEDICION;
+				}
+				
+			    public String OBJETO;
+
+				public String getOBJETO () {
+					return this.OBJETO;
+				}
+				
+			    public java.util.Date FECHA_EXPIRACION;
+
+				public java.util.Date getFECHA_EXPIRACION () {
+					return this.FECHA_EXPIRACION;
+				}
+				
+			    public String NUMERO_OFICIO;
+
+				public String getNUMERO_OFICIO () {
+					return this.NUMERO_OFICIO;
+				}
+				
+			    public java.util.Date FECHA_OFICIO;
+
+				public java.util.Date getFECHA_OFICIO () {
+					return this.FECHA_OFICIO;
+				}
+				
+			    public String REGISTRO_SIPD;
+
+				public String getREGISTRO_SIPD () {
+					return this.REGISTRO_SIPD;
+				}
+				
+			    public BigDecimal ID_LIMAY;
+
+				public BigDecimal getID_LIMAY () {
+					return this.ID_LIMAY;
+				}
+				
+			    public String USUARIO_ELABORO;
+
+				public String getUSUARIO_ELABORO () {
+					return this.USUARIO_ELABORO;
+				}
+				
+			    public String CONVENIO;
+
+				public String getCONVENIO () {
+					return this.CONVENIO;
+				}
+				
+			    public BigDecimal NUM_SOL_ADQ;
+
+				public BigDecimal getNUM_SOL_ADQ () {
+					return this.NUM_SOL_ADQ;
+				}
+				
+
+
+
+	private String readString(ObjectInputStream dis) throws IOException{
+		String strReturn = null;
+		int length = 0;
+        length = dis.readInt();
+		if (length == -1) {
+			strReturn = null;
+		} else {
+			if(length > commonByteArray_FINANCIERA_MIGR_volcado_cdp.length) {
+				if(length < 1024 && commonByteArray_FINANCIERA_MIGR_volcado_cdp.length == 0) {
+   					commonByteArray_FINANCIERA_MIGR_volcado_cdp = new byte[1024];
+				} else {
+   					commonByteArray_FINANCIERA_MIGR_volcado_cdp = new byte[2 * length];
+   				}
+			}
+			dis.readFully(commonByteArray_FINANCIERA_MIGR_volcado_cdp, 0, length);
+			strReturn = new String(commonByteArray_FINANCIERA_MIGR_volcado_cdp, 0, length, utf8Charset);
+		}
+		return strReturn;
+	}
+
+    private void writeString(String str, ObjectOutputStream dos) throws IOException{
+		if(str == null) {
+            dos.writeInt(-1);
+		} else {
+            byte[] byteArray = str.getBytes(utf8Charset);
+	    	dos.writeInt(byteArray.length);
+			dos.write(byteArray);
+    	}
+    }
+
+	private java.util.Date readDate(ObjectInputStream dis) throws IOException{
+		java.util.Date dateReturn = null;
+        int length = 0;
+        length = dis.readByte();
+		if (length == -1) {
+			dateReturn = null;
+		} else {
+	    	dateReturn = new Date(dis.readLong());
+		}
+		return dateReturn;
+	}
+
+    private void writeDate(java.util.Date date1, ObjectOutputStream dos) throws IOException{
+		if(date1 == null) {
+            dos.writeByte(-1);
+		} else {
+			dos.writeByte(0);
+	    	dos.writeLong(date1.getTime());
+    	}
+    }
+
+    public void readData(ObjectInputStream dis) {
+
+		synchronized(commonByteArrayLock_FINANCIERA_MIGR_volcado_cdp) {
+
+        	try {
+
+        		int length = 0;
+		
+						this.VIGENCIA = (BigDecimal) dis.readObject();
+					
+					this.CODIGO_COMPANIA = readString(dis);
+					
+					this.CODIGO_UNIDAD_EJECUTORA = readString(dis);
+					
+						this.NUMERO_DISPONIBILIDAD = (BigDecimal) dis.readObject();
+					
+						this.ID_RESPONSABLE_PRESUPUESTO = (BigDecimal) dis.readObject();
+					
+						this.ID_SOLICITANTE = (BigDecimal) dis.readObject();
+					
+					this.FECHA_REGISTRO = readDate(dis);
+					
+						this.NUMERO_IMPRESIONES = (BigDecimal) dis.readObject();
+					
+						this.MODALIDAD_GIRO = (BigDecimal) dis.readObject();
+					
+						this.PARA_MODIFICACION = (BigDecimal) dis.readObject();
+					
+						this.PARA_SUSPENSION = (BigDecimal) dis.readObject();
+					
+						this.APLICA_SUSPENSION = (BigDecimal) dis.readObject();
+					
+						this.VIG_FUTURA = (BigDecimal) dis.readObject();
+					
+					this.ESTADO = readString(dis);
+					
+					this.FECHA_EXPEDICION = readDate(dis);
+					
+					this.OBJETO = readString(dis);
+					
+					this.FECHA_EXPIRACION = readDate(dis);
+					
+					this.NUMERO_OFICIO = readString(dis);
+					
+					this.FECHA_OFICIO = readDate(dis);
+					
+					this.REGISTRO_SIPD = readString(dis);
+					
+						this.ID_LIMAY = (BigDecimal) dis.readObject();
+					
+					this.USUARIO_ELABORO = readString(dis);
+					
+					this.CONVENIO = readString(dis);
+					
+						this.NUM_SOL_ADQ = (BigDecimal) dis.readObject();
+					
+        	} catch (IOException e) {
+	            throw new RuntimeException(e);
+
+		
+			} catch(ClassNotFoundException eCNFE) {
+				 throw new RuntimeException(eCNFE);
+		
+
+        }
+
+		
+
+      }
+
+
+    }
+
+    public void writeData(ObjectOutputStream dos) {
+        try {
+
+		
+					// BigDecimal
+				
+       			    	dos.writeObject(this.VIGENCIA);
+					
+					// String
+				
+						writeString(this.CODIGO_COMPANIA,dos);
+					
+					// String
+				
+						writeString(this.CODIGO_UNIDAD_EJECUTORA,dos);
+					
+					// BigDecimal
+				
+       			    	dos.writeObject(this.NUMERO_DISPONIBILIDAD);
+					
+					// BigDecimal
+				
+       			    	dos.writeObject(this.ID_RESPONSABLE_PRESUPUESTO);
+					
+					// BigDecimal
+				
+       			    	dos.writeObject(this.ID_SOLICITANTE);
+					
+					// java.util.Date
+				
+						writeDate(this.FECHA_REGISTRO,dos);
+					
+					// BigDecimal
+				
+       			    	dos.writeObject(this.NUMERO_IMPRESIONES);
+					
+					// BigDecimal
+				
+       			    	dos.writeObject(this.MODALIDAD_GIRO);
+					
+					// BigDecimal
+				
+       			    	dos.writeObject(this.PARA_MODIFICACION);
+					
+					// BigDecimal
+				
+       			    	dos.writeObject(this.PARA_SUSPENSION);
+					
+					// BigDecimal
+				
+       			    	dos.writeObject(this.APLICA_SUSPENSION);
+					
+					// BigDecimal
+				
+       			    	dos.writeObject(this.VIG_FUTURA);
+					
+					// String
+				
+						writeString(this.ESTADO,dos);
+					
+					// java.util.Date
+				
+						writeDate(this.FECHA_EXPEDICION,dos);
+					
+					// String
+				
+						writeString(this.OBJETO,dos);
+					
+					// java.util.Date
+				
+						writeDate(this.FECHA_EXPIRACION,dos);
+					
+					// String
+				
+						writeString(this.NUMERO_OFICIO,dos);
+					
+					// java.util.Date
+				
+						writeDate(this.FECHA_OFICIO,dos);
+					
+					// String
+				
+						writeString(this.REGISTRO_SIPD,dos);
+					
+					// BigDecimal
+				
+       			    	dos.writeObject(this.ID_LIMAY);
+					
+					// String
+				
+						writeString(this.USUARIO_ELABORO,dos);
+					
+					// String
+				
+						writeString(this.CONVENIO,dos);
+					
+					// BigDecimal
+				
+       			    	dos.writeObject(this.NUM_SOL_ADQ);
+					
+        	} catch (IOException e) {
+	            throw new RuntimeException(e);
+        }
+
+
+    }
+
+
+    public String toString() {
+
+		StringBuilder sb = new StringBuilder();
+		sb.append(super.toString());
+		sb.append("[");
+		sb.append("VIGENCIA="+String.valueOf(VIGENCIA));
+		sb.append(",CODIGO_COMPANIA="+CODIGO_COMPANIA);
+		sb.append(",CODIGO_UNIDAD_EJECUTORA="+CODIGO_UNIDAD_EJECUTORA);
+		sb.append(",NUMERO_DISPONIBILIDAD="+String.valueOf(NUMERO_DISPONIBILIDAD));
+		sb.append(",ID_RESPONSABLE_PRESUPUESTO="+String.valueOf(ID_RESPONSABLE_PRESUPUESTO));
+		sb.append(",ID_SOLICITANTE="+String.valueOf(ID_SOLICITANTE));
+		sb.append(",FECHA_REGISTRO="+String.valueOf(FECHA_REGISTRO));
+		sb.append(",NUMERO_IMPRESIONES="+String.valueOf(NUMERO_IMPRESIONES));
+		sb.append(",MODALIDAD_GIRO="+String.valueOf(MODALIDAD_GIRO));
+		sb.append(",PARA_MODIFICACION="+String.valueOf(PARA_MODIFICACION));
+		sb.append(",PARA_SUSPENSION="+String.valueOf(PARA_SUSPENSION));
+		sb.append(",APLICA_SUSPENSION="+String.valueOf(APLICA_SUSPENSION));
+		sb.append(",VIG_FUTURA="+String.valueOf(VIG_FUTURA));
+		sb.append(",ESTADO="+ESTADO);
+		sb.append(",FECHA_EXPEDICION="+String.valueOf(FECHA_EXPEDICION));
+		sb.append(",OBJETO="+OBJETO);
+		sb.append(",FECHA_EXPIRACION="+String.valueOf(FECHA_EXPIRACION));
+		sb.append(",NUMERO_OFICIO="+NUMERO_OFICIO);
+		sb.append(",FECHA_OFICIO="+String.valueOf(FECHA_OFICIO));
+		sb.append(",REGISTRO_SIPD="+REGISTRO_SIPD);
+		sb.append(",ID_LIMAY="+String.valueOf(ID_LIMAY));
+		sb.append(",USUARIO_ELABORO="+USUARIO_ELABORO);
+		sb.append(",CONVENIO="+CONVENIO);
+		sb.append(",NUM_SOL_ADQ="+String.valueOf(NUM_SOL_ADQ));
+	    sb.append("]");
+
+	    return sb.toString();
+    }
+
+    /**
+     * Compare keys
+     */
+    public int compareTo(after_tOracleInput_1Struct other) {
+
+		int returnValue = -1;
+		
+	    return returnValue;
+    }
+
+
+    private int checkNullsAndCompare(Object object1, Object object2) {
+        int returnValue = 0;
+		if (object1 instanceof Comparable && object2 instanceof Comparable) {
+            returnValue = ((Comparable) object1).compareTo(object2);
+        } else if (object1 != null && object2 != null) {
+            returnValue = compareStrings(object1.toString(), object2.toString());
+        } else if (object1 == null && object2 != null) {
+            returnValue = 1;
+        } else if (object1 != null && object2 == null) {
+            returnValue = -1;
+        } else {
+            returnValue = 0;
+        }
+
+        return returnValue;
+    }
+
+    private int compareStrings(String string1, String string2) {
+        return string1.compareTo(string2);
+    }
+
+
+}
 public void tOracleInput_1Process(final java.util.Map<String, Object> globalMap) throws TalendException {
 	globalMap.put("tOracleInput_1_SUBPROCESS_STATE", 0);
 
@@ -5547,6 +6023,7 @@ public void tOracleInput_1Process(final java.util.Map<String, Object> globalMap)
 				globalResumeTicket = true;
 
 
+		tDBInput_1Process(globalMap);
 
 		row1Struct row1 = new row1Struct();
 row2Struct row2 = new row2Struct();
@@ -5949,6 +6426,18 @@ salida_disponibilidadFiStruct salida_disponibilidadFi_tmp = new salida_disponibi
 
 // ###############################
 // # Lookup's keys initialization
+	
+		org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row9Struct> tHash_Lookup_row9 = (org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row9Struct>) 
+				((org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row9Struct>) 
+					globalMap.get( "tHash_Lookup_row9" ))
+					;					
+					
+	
+		tHash_Lookup_row9.initGet();
+	
+
+row9Struct row9HashKey = new row9Struct();
+row9Struct row9Default = new row9Struct();
 // ###############################        
 
 // ###############################
@@ -6615,7 +7104,115 @@ if(row2 != null) {
 		  boolean rejectedInnerJoin_tMap_1 = false;
 		  boolean mainRowRejected_tMap_1 = false;
             				    								  
-		// ###############################
+		
+
+				///////////////////////////////////////////////
+				// Starting Lookup Table "row9" 
+				///////////////////////////////////////////////
+
+
+				
+				
+                            
+ 					    boolean forceLooprow9 = false;
+       		  	    	
+       		  	    	
+ 							row9Struct row9ObjectFromLookup = null;
+                          
+		           		  	if(!rejectedInnerJoin_tMap_1) { // G_TM_M_020
+
+								
+
+								
+	  					
+	  							
+			  					
+			  					
+	  					
+		  							tHash_Lookup_row9.lookup( row9HashKey );
+
+	  							
+
+	  							
+
+ 								
+								  
+								  if(!tHash_Lookup_row9.hasNext()) { // G_TM_M_090
+
+  								
+		  				
+	  								
+						
+									
+	
+		  								forceLooprow9 = true;
+	  					
+  									
+  									  		
+ 								
+								  
+								  } // G_TM_M_090
+
+  								
+
+
+
+							} // G_TM_M_020
+			           		  	  
+							
+								
+								else { // G 20 - G 21
+   									forceLooprow9 = true;
+			           		  	} // G 21
+                    		  	
+                    		
+
+							row9Struct row9 = null;
+                    		  	 
+							
+
+								while ((tHash_Lookup_row9 != null && tHash_Lookup_row9.hasNext()) || forceLooprow9) { // G_TM_M_043
+
+								
+									 // CALL close loop of lookup 'row9'
+									
+                    		  	 
+							   
+                    		  	 
+	       		  	    	row9Struct fromLookup_row9 = null;
+							row9 = row9Default;
+										 
+							
+								
+								if(!forceLooprow9) { // G 46
+								
+							
+								 
+							
+								
+								fromLookup_row9 = tHash_Lookup_row9.next();
+
+							
+
+							if(fromLookup_row9 != null) {
+								row9 = fromLookup_row9;
+							}
+							
+							
+							
+			  							
+								
+	                    		  	
+		                    
+	                    	
+	                    		} // G 46
+	                    		  	
+								forceLooprow9 = false;
+									 	
+							
+	            	
+	            	
+	            // ###############################
         { // start of Var scope
         
 	        // ###############################
@@ -6629,7 +7226,7 @@ salida_necesidad = null;
 
 
 // # Output table : 'salida_necesidad'
-salida_necesidad_tmp.id = context.curr_id;
+salida_necesidad_tmp.id = row9.id ;
 salida_necesidad_tmp.numero = row2.NUMERO_DISPONIBILIDAD ;
 salida_necesidad_tmp.vigencia = row2.VIGENCIA ;
 salida_necesidad_tmp.objeto = row2.OBJETO == null ? "N/A" : StringHandling.LEFT(StringHandling.TRIM(row2.OBJETO),680) ;
@@ -7369,7 +7966,9 @@ if(salida_disponibilidad_financiera != null) {
 
 
 
-
+	
+		} // close loop of lookup 'row9' // G_TM_M_043
+	
 	
 	/**
 	 * [tMap_1 process_data_end ] start
@@ -7524,6 +8123,14 @@ end_Hash.put("tConvertType_1", System.currentTimeMillis());
 
 // ###############################
 // # Lookup hashes releasing
+					if(tHash_Lookup_row9 != null) {
+						tHash_Lookup_row9.endGet();
+					}
+					globalMap.remove( "tHash_Lookup_row9" );
+
+					
+					
+				
 // ###############################      
 
 
@@ -7847,6 +8454,9 @@ end_Hash.put("tAdvancedHash_salida_disponibilidad_financiera", System.currentTim
 				throw error;
 			}finally{
 				
+					     			//free memory for "tMap_1"
+					     			globalMap.remove("tHash_Lookup_row9"); 
+				     			
 				try{
 					
 	
@@ -11126,6 +11736,610 @@ end_Hash.put("tAdvancedHash_row8", System.currentTimeMillis());
 		globalMap.put("tPostgresqlInput_1_SUBPROCESS_STATE", 1);
 	}
 	
+
+
+public static class row9Struct implements routines.system.IPersistableRow<row9Struct> {
+    final static byte[] commonByteArrayLock_FINANCIERA_MIGR_volcado_cdp = new byte[0];
+    static byte[] commonByteArray_FINANCIERA_MIGR_volcado_cdp = new byte[0];
+
+	
+			    public Integer id;
+
+				public Integer getId () {
+					return this.id;
+				}
+				
+
+
+	private Integer readInteger(ObjectInputStream dis) throws IOException{
+		Integer intReturn;
+        int length = 0;
+        length = dis.readByte();
+		if (length == -1) {
+			intReturn = null;
+		} else {
+	    	intReturn = dis.readInt();
+		}
+		return intReturn;
+	}
+
+	private void writeInteger(Integer intNum, ObjectOutputStream dos) throws IOException{
+		if(intNum == null) {
+            dos.writeByte(-1);
+		} else {
+			dos.writeByte(0);
+	    	dos.writeInt(intNum);
+    	}
+	}
+
+    public void readData(ObjectInputStream dis) {
+
+		synchronized(commonByteArrayLock_FINANCIERA_MIGR_volcado_cdp) {
+
+        	try {
+
+        		int length = 0;
+		
+						this.id = readInteger(dis);
+					
+        	} catch (IOException e) {
+	            throw new RuntimeException(e);
+
+		
+
+        }
+
+		
+
+      }
+
+
+    }
+
+    public void writeData(ObjectOutputStream dos) {
+        try {
+
+		
+					// Integer
+				
+						writeInteger(this.id,dos);
+					
+        	} catch (IOException e) {
+	            throw new RuntimeException(e);
+        }
+
+
+    }
+
+
+    public String toString() {
+
+		StringBuilder sb = new StringBuilder();
+		sb.append(super.toString());
+		sb.append("[");
+		sb.append("id="+String.valueOf(id));
+	    sb.append("]");
+
+	    return sb.toString();
+    }
+
+    /**
+     * Compare keys
+     */
+    public int compareTo(row9Struct other) {
+
+		int returnValue = -1;
+		
+	    return returnValue;
+    }
+
+
+    private int checkNullsAndCompare(Object object1, Object object2) {
+        int returnValue = 0;
+		if (object1 instanceof Comparable && object2 instanceof Comparable) {
+            returnValue = ((Comparable) object1).compareTo(object2);
+        } else if (object1 != null && object2 != null) {
+            returnValue = compareStrings(object1.toString(), object2.toString());
+        } else if (object1 == null && object2 != null) {
+            returnValue = 1;
+        } else if (object1 != null && object2 == null) {
+            returnValue = -1;
+        } else {
+            returnValue = 0;
+        }
+
+        return returnValue;
+    }
+
+    private int compareStrings(String string1, String string2) {
+        return string1.compareTo(string2);
+    }
+
+
+}
+public void tDBInput_1Process(final java.util.Map<String, Object> globalMap) throws TalendException {
+	globalMap.put("tDBInput_1_SUBPROCESS_STATE", 0);
+
+ final boolean execStat = this.execStat;
+	
+		String iterateId = "";
+	
+	
+	String currentComponent = "";
+	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+
+	try {
+			// TDI-39566 avoid throwing an useless Exception
+			boolean resumeIt = true;
+			if (globalResumeTicket == false && resumeEntryMethodName != null) {
+				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
+				resumeIt = resumeEntryMethodName.equals(currentMethodName);
+			}
+			if (resumeIt || globalResumeTicket) { //start the resume
+				globalResumeTicket = true;
+
+
+
+		row9Struct row9 = new row9Struct();
+
+
+
+
+	
+	/**
+	 * [tAdvancedHash_row9 begin ] start
+	 */
+
+	
+
+	
+		
+		ok_Hash.put("tAdvancedHash_row9", false);
+		start_Hash.put("tAdvancedHash_row9", System.currentTimeMillis());
+		
+	
+	currentComponent="tAdvancedHash_row9";
+
+	
+			if (execStat) {
+				if(resourceMap.get("inIterateVComp") == null){
+					
+						runStat.updateStatOnConnection("row9" + iterateId, 0, 0);
+					
+				}
+			} 
+
+		
+		int tos_count_tAdvancedHash_row9 = 0;
+		
+    	class BytesLimit65535_tAdvancedHash_row9{
+    		public void limitLog4jByte() throws Exception{
+    			
+    		}
+    	}
+    	
+        new BytesLimit65535_tAdvancedHash_row9().limitLog4jByte();
+
+			   		// connection name:row9
+			   		// source node:tDBInput_1 - inputs:(after_tOracleInput_1) outputs:(row9,row9) | target node:tAdvancedHash_row9 - inputs:(row9) outputs:()
+			   		// linked node: tMap_1 - inputs:(row2,row9) outputs:(salida_necesidad)
+			   
+			   		org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE matchingModeEnum_row9 = 
+			   			org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE.ALL_ROWS;
+			   			
+			   
+	   			org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row9Struct> tHash_Lookup_row9 =org.talend.designer.components.lookup.memory.AdvancedMemoryLookup.
+	   						<row9Struct>getLookup(matchingModeEnum_row9);
+	   						   
+		   	   	   globalMap.put("tHash_Lookup_row9", tHash_Lookup_row9);
+		   	   	   
+				
+           
+
+ 
+
+
+
+/**
+ * [tAdvancedHash_row9 begin ] stop
+ */
+
+
+
+	
+	/**
+	 * [tDBInput_1 begin ] start
+	 */
+
+	
+
+	
+		
+		ok_Hash.put("tDBInput_1", false);
+		start_Hash.put("tDBInput_1", System.currentTimeMillis());
+		
+	
+	currentComponent="tDBInput_1";
+
+	
+		int tos_count_tDBInput_1 = 0;
+		
+    	class BytesLimit65535_tDBInput_1{
+    		public void limitLog4jByte() throws Exception{
+    			
+    		}
+    	}
+    	
+        new BytesLimit65535_tDBInput_1().limitLog4jByte();
+	
+    
+	
+		    int nb_line_tDBInput_1 = 0;
+		    java.sql.Connection conn_tDBInput_1 = null;
+				String driverClass_tDBInput_1 = "org.postgresql.Driver";
+			    java.lang.Class.forName(driverClass_tDBInput_1);
+			   	String dbUser_tDBInput_1 = "test";
+			   	
+        		
+        		
+        		 
+	final String decryptedPassword_tDBInput_1 = routines.system.PasswordEncryptUtil.decryptPassword("f3e656537b1a4d67");
+			   	
+		        String dbPwd_tDBInput_1 = decryptedPassword_tDBInput_1;
+		        
+				
+			String url_tDBInput_1 = "jdbc:postgresql://" + "172.20.0.2" + ":" + "5432" + "/" + "test";
+				
+				conn_tDBInput_1 = java.sql.DriverManager.getConnection(url_tDBInput_1,dbUser_tDBInput_1,dbPwd_tDBInput_1);
+		        
+				conn_tDBInput_1.setAutoCommit(false);
+			
+		    
+			java.sql.Statement stmt_tDBInput_1 = conn_tDBInput_1.createStatement();
+
+		    String dbquery_tDBInput_1 = "select (COALESCE(SUM(id),0)+1) as id from financiera.disponibilidad order by id desc limit 1";
+			
+
+            	globalMap.put("tDBInput_1_QUERY",dbquery_tDBInput_1);
+		    java.sql.ResultSet rs_tDBInput_1 = null;
+
+		    try {
+		    	rs_tDBInput_1 = stmt_tDBInput_1.executeQuery(dbquery_tDBInput_1);
+		    	java.sql.ResultSetMetaData rsmd_tDBInput_1 = rs_tDBInput_1.getMetaData();
+		    	int colQtyInRs_tDBInput_1 = rsmd_tDBInput_1.getColumnCount();
+
+		    String tmpContent_tDBInput_1 = null;
+		    
+		    
+		    while (rs_tDBInput_1.next()) {
+		        nb_line_tDBInput_1++;
+		        
+							if(colQtyInRs_tDBInput_1 < 1) {
+								row9.id = null;
+							} else {
+		                          
+            if(rs_tDBInput_1.getObject(1) != null) {
+                row9.id = rs_tDBInput_1.getInt(1);
+            } else {
+                    row9.id = null;
+            }
+		                    }
+					
+
+
+ 
+
+
+
+/**
+ * [tDBInput_1 begin ] stop
+ */
+	
+	/**
+	 * [tDBInput_1 main ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tDBInput_1";
+
+	
+
+ 
+
+
+	tos_count_tDBInput_1++;
+
+/**
+ * [tDBInput_1 main ] stop
+ */
+	
+	/**
+	 * [tDBInput_1 process_data_begin ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tDBInput_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tDBInput_1 process_data_begin ] stop
+ */
+
+	
+	/**
+	 * [tAdvancedHash_row9 main ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tAdvancedHash_row9";
+
+	
+
+			//row9
+			//row9
+
+
+			
+				if(execStat){
+					runStat.updateStatOnConnection("row9"+iterateId,1, 1);
+				} 
+			
+
+		
+
+
+			   
+			   
+
+					row9Struct row9_HashRow = new row9Struct();
+		   	   	   
+				
+				row9_HashRow.id = row9.id;
+				
+			tHash_Lookup_row9.put(row9_HashRow);
+			
+            
+
+
+
+
+ 
+
+
+	tos_count_tAdvancedHash_row9++;
+
+/**
+ * [tAdvancedHash_row9 main ] stop
+ */
+	
+	/**
+	 * [tAdvancedHash_row9 process_data_begin ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tAdvancedHash_row9";
+
+	
+
+ 
+
+
+
+/**
+ * [tAdvancedHash_row9 process_data_begin ] stop
+ */
+	
+	/**
+	 * [tAdvancedHash_row9 process_data_end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tAdvancedHash_row9";
+
+	
+
+ 
+
+
+
+/**
+ * [tAdvancedHash_row9 process_data_end ] stop
+ */
+
+
+
+	
+	/**
+	 * [tDBInput_1 process_data_end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tDBInput_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tDBInput_1 process_data_end ] stop
+ */
+	
+	/**
+	 * [tDBInput_1 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tDBInput_1";
+
+	
+
+	}
+}finally{
+	stmt_tDBInput_1.close();
+
+	if(conn_tDBInput_1 != null && !conn_tDBInput_1.isClosed()) {
+		
+			conn_tDBInput_1.commit();
+			
+		
+			conn_tDBInput_1.close();
+			
+	}
+	
+}
+globalMap.put("tDBInput_1_NB_LINE",nb_line_tDBInput_1);
+ 
+
+ok_Hash.put("tDBInput_1", true);
+end_Hash.put("tDBInput_1", System.currentTimeMillis());
+
+
+
+
+/**
+ * [tDBInput_1 end ] stop
+ */
+
+	
+	/**
+	 * [tAdvancedHash_row9 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tAdvancedHash_row9";
+
+	
+
+tHash_Lookup_row9.endPut();
+
+			if(execStat){
+				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
+			 		runStat.updateStatOnConnection("row9"+iterateId,2, 0); 
+			 	}
+			}
+		
+ 
+
+ok_Hash.put("tAdvancedHash_row9", true);
+end_Hash.put("tAdvancedHash_row9", System.currentTimeMillis());
+
+
+
+
+/**
+ * [tAdvancedHash_row9 end ] stop
+ */
+
+
+
+				}//end the resume
+
+				
+
+
+
+	
+			}catch(java.lang.Exception e){	
+				
+				TalendException te = new TalendException(e, currentComponent, globalMap);
+				
+				throw te;
+			}catch(java.lang.Error error){	
+				
+					runStat.stopThreadStat();
+				
+				throw error;
+			}finally{
+				
+				try{
+					
+	
+	/**
+	 * [tDBInput_1 finally ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tDBInput_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tDBInput_1 finally ] stop
+ */
+
+	
+	/**
+	 * [tAdvancedHash_row9 finally ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tAdvancedHash_row9";
+
+	
+
+ 
+
+
+
+/**
+ * [tAdvancedHash_row9 finally ] stop
+ */
+
+
+
+				}catch(java.lang.Exception e){	
+					//ignore
+				}catch(java.lang.Error error){
+					//ignore
+				}
+				resourceMap = null;
+			}
+		
+
+		globalMap.put("tDBInput_1_SUBPROCESS_STATE", 1);
+	}
+	
     public String resuming_logs_dir_path = null;
     public String resuming_checkpoint_path = null;
     public String parent_part_launcher = null;
@@ -11520,6 +12734,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     284576 characters generated by Talend Open Studio for Data Integration 
- *     on the 4 de agosto de 2018 07:52:07 PM COT
+ *     309519 characters generated by Talend Open Studio for Data Integration 
+ *     on the 5 de agosto de 2018 09:38:51 AM COT
  ************************************************************************************************/
