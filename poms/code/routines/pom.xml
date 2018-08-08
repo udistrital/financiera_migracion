@@ -11,7 +11,7 @@
   <groupId>org.example.financiera_migr.code</groupId>
   <artifactId>routines</artifactId>
   <version>7.0.1</version>
-  <name>FINANCIERA_MIGR Routines</name>
+  <name>MIGRACIONES Routines</name>
   <properties>
     <talend.codes.package>routines</talend.codes.package>
   </properties>

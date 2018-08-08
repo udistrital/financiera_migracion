@@ -11,17 +11,17 @@
   <groupId>org.example.financiera_migr.job</groupId>
   <artifactId>volcado_rubros</artifactId>
   <version>0.1.0</version>
-  <name>FINANCIERA_MIGR volcado_rubros-0.1.0 (0.1,Job Designs)</name>
+  <name>MIGRACIONES volcado_rubros-0.1.0 (0.1,Job Designs)</name>
   <properties>
     <output.resources.dir>${talend.job.name}/src/main/resources</output.resources.dir>
     <talend.job.applyContextToChildren>false</talend.job.applyContextToChildren>
     <current.test.resources.dir>${basedir}/src/test/resources</current.test.resources.dir>
     <current.int-resources.dir>${basedir}/src/main/resources</current.int-resources.dir>
     <talend.job.version>0.1</talend.job.version>
-    <talend.project.name.lowercase>financiera_migr</talend.project.name.lowercase>
-    <talend.job.path>financiera_migr/volcado_rubros_0_1</talend.job.path>
+    <talend.project.name.lowercase>migraciones</talend.project.name.lowercase>
+    <talend.job.path>migraciones/volcado_rubros_0_1</talend.job.path>
     <maven.build.timestamp.format>yyyy-MM-dd HHmmssSSS</maven.build.timestamp.format>
-    <talend.project.name>FINANCIERA_MIGR</talend.project.name>
+    <talend.project.name>MIGRACIONES</talend.project.name>
     <talend.product.version>7.0.1.20180411_1414</talend.product.version>
     <talend.job.finalName>volcado_rubros_0_1</talend.job.finalName>
     <talend.pigudf.groupid>org.example.financiera_migr.pigudf</talend.pigudf.groupid>

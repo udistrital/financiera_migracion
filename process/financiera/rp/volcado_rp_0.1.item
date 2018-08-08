@@ -475,13 +475,13 @@
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="V9_X"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;172.20.0.2&quot;"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;172.30.3.207&quot;"/>
     <elementParameter field="TEXT" name="PORT" value="&quot;5432&quot;"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;test&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;udistrital_core_db&quot;"/>
     <elementParameter field="TEXT" name="TYPE" value="POSTGRESQL" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;financiera&quot;"/>
-    <elementParameter field="TEXT" name="USER" value="&quot;test&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="8DG0mZgdk10="/>
+    <elementParameter field="TEXT" name="USER" value="&quot;migracioncdp_job&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="FN/5SJFchcCCYuZ7jnwHObQEf35ShMoVyQHKRxY7iQGRc9ps7/IsFg=="/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;registro_presupuestal&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
@@ -611,13 +611,13 @@
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="V9_X"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;172.20.0.2&quot;"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;172.30.3.207&quot;"/>
     <elementParameter field="TEXT" name="PORT" value="&quot;5432&quot;"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;test&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;udistrital_core_db&quot;"/>
     <elementParameter field="TEXT" name="TYPE" value="POSTGRESQL" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;administrativa&quot;"/>
-    <elementParameter field="TEXT" name="USER" value="&quot;test&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="8DG0mZgdk10="/>
+    <elementParameter field="TEXT" name="USER" value="&quot;migracioncdp_job&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="FN/5SJFchcCCYuZ7jnwHObQEf35ShMoVyQHKRxY7iQGRc9ps7/IsFg=="/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;solicitud_rp&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
@@ -936,13 +936,13 @@
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="V9_X"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;172.20.0.2&quot;"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;172.30.3.207&quot;"/>
     <elementParameter field="TEXT" name="TYPE" value="POSTGRESQL" show="false"/>
     <elementParameter field="TEXT" name="PORT" value="&quot;5432&quot;"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;test&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;udistrital_core_db&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;financiera&quot;"/>
-    <elementParameter field="TEXT" name="USER" value="&quot;test&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="8DG0mZgdk10="/>
+    <elementParameter field="TEXT" name="USER" value="&quot;migracioncdp_job&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="FN/5SJFchcCCYuZ7jnwHObQEf35ShMoVyQHKRxY7iQGRc9ps7/IsFg=="/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_bk9fEGCjEeatGJv7WGjxOg - disponibilidad" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;disponibilidad&quot;"/>

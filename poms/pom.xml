@@ -6,7 +6,7 @@
   <artifactId>code.Master</artifactId>
   <version>7.0.1</version>
   <packaging>pom</packaging>
-  <name>FINANCIERA_MIGR Codes Master</name>
+  <name>MIGRACIONES Codes Master</name>
   <url>http://www.talend.org/</url>
   <modules>
     <module>jobs/process/financiera/apropiacion/ajuste_arbol_0.1</module>
@@ -24,9 +24,10 @@
     <module>jobs/process/financiera/rp/volcado_rp_desagregacion_0.1</module>
     <module>jobs/process/financiera/secuencia_jobs_0.1</module>
     <module>code/routines</module>
+    <module>jobs/process/financiera/migracion_cdp_0.1</module>
   </modules>
   <properties>
-    <talend.project.name>FINANCIERA_MIGR</talend.project.name>
+    <talend.project.name>MIGRACIONES</talend.project.name>
     <encoding>UTF-8</encoding>
   </properties>
   <build>
