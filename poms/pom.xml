@@ -25,6 +25,7 @@
     <module>jobs/process/financiera/secuencia_jobs_0.1</module>
     <module>code/routines</module>
     <module>jobs/process/financiera/migracion_cdp_0.1</module>
+    <module>jobs/process/financiera/movimiento_apropiacion/migracion_movimientos_apropiacion_0.1</module>
   </modules>
   <properties>
     <talend.project.name>MIGRACIONES</talend.project.name>
