@@ -1,4 +1,4 @@
-# Migraciones Financiera
+# :no_entry: REPOSITORIO INACTIVO  Migraciones Financiera
 
 Proyecto para la migración de datos desde un servidor de base de datos de Sicapital hacia un servidor postgrescon la estructura de Flyway para la fecha 2017/08/02.
 
